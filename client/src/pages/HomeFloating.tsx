@@ -799,8 +799,8 @@ export default function HomeFloating() {
                 transition={{ delay: 1.6 }}
               >
                 {[
-                  { href: "https://github.com/RexLin1223", icon: Github, label: "GitHub" },
-                  { href: "https://www.linkedin.com/in/tzung-yuan-lin-9247b4253/", icon: Linkedin, label: "LinkedIn" },
+                  { href: "https://github.com/Yuan1285270", icon: Github, label: "GitHub" },
+                  { href: "https://www.linkedin.com/in/tsungyuan0218", icon: Linkedin, label: "LinkedIn" },
                   { href: "mailto:t3good1@gmail.com", icon: Mail, label: "Email" },
                 ].map((social, i) => (
                   <motion.a
@@ -1129,7 +1129,7 @@ export default function HomeFloating() {
                 pdf: "/certificates/DevJam_TW_2025.pdf",
               },
               {
-                image: "/images/5c8fc512-eb03-4c8e-930a-5d702131f5f0.png",
+                image: "/images/temple_certificate.png",
                 title: "Temple University Exchange",
                 titleZh: "天普大學交換計畫",
                 year: "2025",
@@ -1189,13 +1189,13 @@ export default function HomeFloating() {
                 {t("contact.email")}
               </Button>
             </a>
-            <a href="https://github.com/RexLin1223" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Yuan1285270" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400/20 font-bold">
                 <Github size={20} className="mr-2" />
                 {t("contact.github")}
               </Button>
             </a>
-            <a href="https://www.linkedin.com/in/tzung-yuan-lin-9247b4253/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/tsungyuan0218" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400/20 font-bold">
                 <Linkedin size={20} className="mr-2" />
                 {t("contact.linkedin")}
