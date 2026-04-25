@@ -537,13 +537,13 @@ export default function HomeFloating() {
   const skills = {
     "Programming": ["C/C++", "Python", "SQL", "JavaScript", "HTML/CSS", "PHP"],
     "Tools & Platforms": ["GitHub", "Google Cloud", "Render", "FastAPI", "Arduino", "Raspberry Pi"],
-    "Specializations": ["Backend Development", "AI/ML Integration", "IoT & Hardware", "Full-Stack"],
+    "Specializations": ["Backend Development", "AI/ML Integration", "Full-Stack", "Cloud Architecture"],
   };
 
   const skillsZh = {
     "程式語言": ["C/C++", "Python", "SQL", "JavaScript", "HTML/CSS", "PHP"],
     "工具與平台": ["GitHub", "Google Cloud", "Render", "FastAPI", "Arduino", "樹莓派"],
-    "專業領域": ["後端開發", "AI/ML 整合", "物聯網與硬體", "全棧開發"],
+    "專業領域": ["後端開發", "AI/ML 整合", "全棧開發", "雲端架構"],
   };
 
   return (
@@ -704,28 +704,21 @@ export default function HomeFloating() {
               </motion.div>
 
               {/* Main Title */}
-              <div className="space-y-2">
-                <motion.h1
-                  className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
-                    {language === "en" ? "Tsung-Yuan" : "林琮原"}
-                  </span>
-                </motion.h1>
-                <motion.h1
-                  className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight"
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+              <motion.h1
+                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                <span className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-500 bg-clip-text text-transparent">
+                  {language === "en" ? "Tsung-Yuan" : "林琮原"}
+                </span>
+                {language === "en" && (
                   <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-500 bg-clip-text text-transparent">
-                    {language === "en" ? "Lin" : ""}
+                    {" Lin"}
                   </span>
-                </motion.h1>
-              </div>
+                )}
+              </motion.h1>
 
               {/* Subtitle with Typewriter */}
               <motion.div
@@ -740,15 +733,15 @@ export default function HomeFloating() {
                       language === "en"
                         ? [
                             "Full-Stack Developer",
-                            "AI Engineer",
-                            "IoT Innovator",
-                            "Hackathon Champion",
+                            "AI Developer",
+                            "Competitive Programmer",
+                            "Hackathon Enthusiast",
                           ]
                         : [
                             "全棧開發工程師",
-                            "AI 工程師",
-                            "物聯網創新者",
-                            "黑客松冠軍",
+                            "AI 開發者",
+                            "競賽程式設計師",
+                            "黑客松愛好者",
                           ]
                     }
                     speed={60}
@@ -1129,14 +1122,14 @@ export default function HomeFloating() {
                 year: "2023",
               },
               {
-                image: "/certificates/TOEIC_835.jpg",
+                image: "/images/5c8fc512-eb03-4c8e-930a-5d702131f5f0.png",
                 title: "DevJam TW 2025 Participant",
                 titleZh: "DevJam TW 2025 參與證書",
                 year: "2025",
                 pdf: "/certificates/DevJam_TW_2025.pdf",
               },
               {
-                image: "/certificates/TOEIC_835.jpg",
+                image: "/images/8c97dd46-99bc-4313-a689-b970daaeceaa.png",
                 title: "Temple University Exchange",
                 titleZh: "天普大學交換計畫",
                 year: "2025",
