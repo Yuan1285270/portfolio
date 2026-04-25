@@ -1122,7 +1122,7 @@ export default function HomeFloating() {
                 year: "2023",
               },
               {
-                image: "/images/8c97dd46-99bc-4313-a689-b970daaeceaa.png",
+                image: "/images/devjam_certificate.png",
                 title: "DevJam TW 2025 Participant",
                 titleZh: "DevJam TW 2025 參與證書",
                 year: "2025",
