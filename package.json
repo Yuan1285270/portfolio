@@ -4,12 +4,12 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build --outDir dist/public",
+    "dev": "cd client && vite --host",
+    "build": "cd client && vite build --outDir ../dist/public",
     "build:server": "esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
-    "check": "tsc --noEmit",
+    "check": "cd client && tsc --noEmit",
     "format": "prettier --write ."
   },
   "dependencies": {
