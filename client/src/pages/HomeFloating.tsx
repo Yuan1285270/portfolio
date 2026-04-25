@@ -1129,6 +1129,12 @@ export default function HomeFloating() {
                 pdf: "/certificates/DevJam_TW_2025.pdf",
               },
               {
+                image: "/images/aifintech_certificate.png",
+                title: "AI FinTech Hackathon Finalist",
+                titleZh: "AI 金融科技創新黑客松決賽",
+                year: "2025",
+              },
+              {
                 image: "/images/temple_certificate.png",
                 title: "Temple University Exchange",
                 titleZh: "天普大學交換計畫",
