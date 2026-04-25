@@ -734,7 +734,7 @@ export default function HomeFloating() {
                             "Hackathon Enthusiast",
                           ]
                         : [
-                            "全棧開發工程師",
+                            "全端開發工程師",
                             "AI 開發者",
                             "競賽程式設計師",
                             "黑客松愛好者",
@@ -832,7 +832,24 @@ export default function HomeFloating() {
         className="relative py-24 bg-black border-t border-yellow-400/20"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <h2 className="text-4xl font-black text-yellow-400 mb-12">{t("about.title")}</h2>
+          {/* Profile Photo */}
+          <motion.div
+            className="flex justify-center mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-yellow-400/50 shadow-xl shadow-yellow-500/20">
+              <img
+                src="/images/profile.jpg"
+                alt="Tsung-Yuan Lin"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
+          <h2 className="text-4xl font-black text-yellow-400 mb-12 text-center">{t("about.title")}</h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="space-y-4 p-6 rounded-lg bg-gradient-to-br from-slate-900 to-black border-2 border-yellow-400/30 hover:border-yellow-400 transition-all">

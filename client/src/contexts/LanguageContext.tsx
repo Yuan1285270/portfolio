@@ -67,7 +67,7 @@ const translations = {
     "nav.contact": "聯絡",
     "nav.certificates": "證書",
     "hero.title": "林琮原",
-    "hero.subtitle": "全棧開發者 & AI 工程師",
+    "hero.subtitle": "全端開發者 & AI 工程師",
     "hero.description": "逢甲大學資訊工程與電腦科學系學生，擁有全棧開發、AI 整合和物聯網系統的專業知識。目前在美國天普大學進行交換計畫。",
     "hero.viewProjects": "查看專案",
     "hero.contactMe": "聯絡我",
