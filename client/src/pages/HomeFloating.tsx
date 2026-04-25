@@ -726,13 +726,11 @@ export default function HomeFloating() {
                     texts={
                       language === "en"
                         ? [
-                            "Full-Stack Developer",
                             "AI Builder",
                             "Competitive Programmer",
                             "Hackathon Enthusiast",
                           ]
                         : [
-                            "全端開發工程師",
                             "AI 開發者",
                             "競賽程式設計師",
                             "黑客松愛好者",

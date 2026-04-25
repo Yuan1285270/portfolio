@@ -18,7 +18,7 @@ const translations = {
     "nav.contact": "Contact",
     "nav.certificates": "Certificates",
     "hero.title": "Tsung-Yuan Lin",
-    "hero.subtitle": "Full-Stack Developer & AI Builder",
+    "hero.subtitle": "AI Builder",
     "hero.description": "Information Engineering and Computer Science student at Feng Chia University with expertise in full-stack development, AI integration, and IoT systems. Currently on exchange at Temple University.",
     "hero.viewProjects": "View Projects",
     "hero.contactMe": "Contact Me",
