@@ -1127,6 +1127,7 @@ export default function HomeFloating() {
                 titleZh: "DevJam TW 2025 參與證書",
                 year: "2025",
                 pdf: "/certificates/DevJam_TW_2025.pdf",
+                wide: true,
               },
               {
                 image: "/images/aifintech_certificate.png",
@@ -1140,6 +1141,7 @@ export default function HomeFloating() {
                 titleZh: "天普大學交換計畫",
                 year: "2025",
                 pdf: "/certificates/Temple_Exchange_Fall2025.pdf",
+                wide: true,
               },
             ].map((cert, index) => (
               <motion.div
@@ -1148,7 +1150,7 @@ export default function HomeFloating() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative aspect-[3/4] rounded-xl overflow-hidden border-2 border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer bg-gradient-to-br from-slate-900 to-black"
+                className={`group relative rounded-xl overflow-hidden border-2 border-yellow-400/30 hover:border-yellow-400 transition-all duration-300 cursor-pointer bg-gradient-to-br from-slate-900 to-black ${cert.wide ? 'col-span-2 aspect-[4/3]' : 'aspect-[3/4]'}`}
               >
                 <img
                   src={cert.image}
