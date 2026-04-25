@@ -733,7 +733,7 @@ export default function HomeFloating() {
                       language === "en"
                         ? [
                             "Full-Stack Developer",
-                            "AI Developer",
+                            "AI Builder",
                             "Competitive Programmer",
                             "Hackathon Enthusiast",
                           ]
@@ -753,13 +753,13 @@ export default function HomeFloating() {
 
               {/* Description */}
               <motion.p
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
               >
                 {language === "en"
-                  ? "Information Engineering and Computer Science student at Feng Chia University. Crafting intelligent solutions through code, AI, and creative problem-solving."
+                  ? "Computer Science student at Feng Chia University. Crafting intelligent solutions through code, AI, and creative problem-solving."
                   : "逢甲大學資訊工程與電腦科學系學生。透過程式碼、AI 與創意思考，打造智慧解決方案。"}
               </motion.p>
 
@@ -850,7 +850,7 @@ export default function HomeFloating() {
                 <div>
                   <p className="font-semibold text-white">{t("about.temple")}</p>
                   <p className="text-sm">{t("about.exchange")}</p>
-                  <p className="text-sm">{t("about.datascience")}</p>
+                  <p className="text-sm text-yellow-400 font-bold">{t("about.templegpa")}</p>
                 </div>
               </div>
             </div>
