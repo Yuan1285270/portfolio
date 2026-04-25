@@ -753,7 +753,7 @@ export default function HomeFloating() {
 
               {/* Description */}
               <motion.p
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl text-left"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
