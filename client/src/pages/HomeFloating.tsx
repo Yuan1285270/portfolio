@@ -698,7 +698,7 @@ export default function HomeFloating() {
               >
                 <div className="h-[1px] w-12 bg-yellow-400/60" />
                 <span className="text-yellow-400/80 text-sm font-medium tracking-[0.2em] uppercase">
-                  {language === "en" ? "Portfolio 2025" : "作品集 2025"}
+                  {language === "en" ? "Portfolio 2026" : "作品集 2026"}
                 </span>
                 <Sparkles size={16} className="text-yellow-400/60" />
               </motion.div>
@@ -722,7 +722,7 @@ export default function HomeFloating() {
 
               {/* Subtitle with Typewriter */}
               <motion.div
-                className="text-xl sm:text-2xl lg:text-3xl font-light text-gray-300 min-h-[2.5em]"
+                className="text-xl sm:text-2xl lg:text-3xl font-light text-gray-300 min-h-[2.5em] mt-8"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
@@ -1008,11 +1008,11 @@ export default function HomeFloating() {
 
                 <div className="space-y-6 mt-4">
                   {/* Project Image */}
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-yellow-400/30">
+                  <div className="relative rounded-lg overflow-hidden border-2 border-yellow-400/30 max-h-[60vh]">
                     <img
                       src={selectedProject.image}
                       alt={language === "en" ? selectedProject.title : selectedProject.titleZh}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
 
@@ -1122,14 +1122,14 @@ export default function HomeFloating() {
                 year: "2023",
               },
               {
-                image: "/images/5c8fc512-eb03-4c8e-930a-5d702131f5f0.png",
+                image: "/images/8c97dd46-99bc-4313-a689-b970daaeceaa.png",
                 title: "DevJam TW 2025 Participant",
                 titleZh: "DevJam TW 2025 參與證書",
                 year: "2025",
                 pdf: "/certificates/DevJam_TW_2025.pdf",
               },
               {
-                image: "/images/8c97dd46-99bc-4313-a689-b970daaeceaa.png",
+                image: "/images/5c8fc512-eb03-4c8e-930a-5d702131f5f0.png",
                 title: "Temple University Exchange",
                 titleZh: "天普大學交換計畫",
                 year: "2025",
