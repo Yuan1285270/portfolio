@@ -536,13 +536,13 @@ export default function HomeFloating() {
 
   const skills = {
     "Programming": ["C/C++", "Python", "SQL", "JavaScript", "HTML/CSS", "PHP"],
-    "Tools & Platforms": ["GitHub", "Google Cloud", "Render", "FastAPI", "Arduino", "Raspberry Pi"],
+    "Tools & Platforms": ["GitHub", "Google Cloud", "Render", "FastAPI", "OpenClaw", "Hermes", "Codex", "Linux"],
     "Specializations": ["Backend Development", "AI/ML Integration", "Full-Stack", "Cloud Architecture"],
   };
 
   const skillsZh = {
     "程式語言": ["C/C++", "Python", "SQL", "JavaScript", "HTML/CSS", "PHP"],
-    "工具與平台": ["GitHub", "Google Cloud", "Render", "FastAPI", "Arduino", "樹莓派"],
+    "工具與平台": ["GitHub", "Google Cloud", "Render", "FastAPI", "OpenClaw", "Hermes", "Codex", "Linux"],
     "專業領域": ["後端開發", "AI/ML 整合", "全棧開發", "雲端架構"],
   };
 
@@ -753,7 +753,7 @@ export default function HomeFloating() {
 
               {/* Description */}
               <motion.p
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto"
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
