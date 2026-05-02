@@ -562,10 +562,10 @@ export default function HomeFloating() {
     },
     {
       id: 104,
-      title: "DC Phishing UI Clone",
+      title: "DC Login UI Clone",
       titleZh: "DC 登入頁面復刻",
-      description: "Hand-coded a pixel-perfect Discord login page clone from scratch with custom CSS animations and form validation",
-      descriptionZh: "從零手刻 Discord 登入頁面復刻，包含自訂 CSS 動畫與表單驗證",
+      description: "Hand-coded the Discord login page UI from scratch with custom CSS animations and responsive form layout",
+      descriptionZh: "從零手刻 Discord 登入頁面 UI，包含自訂 CSS 動畫與響應式表單排版",
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Yuan1285270/finals_dc",
     },
