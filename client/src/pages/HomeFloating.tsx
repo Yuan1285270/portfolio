@@ -532,6 +532,45 @@ export default function HomeFloating() {
     },
   ];
 
+  const sideProjects = [
+    {
+      id: 101,
+      title: "Stock Prediction",
+      titleZh: "股票預測",
+      description: "Rule-based stock screening tool estimating future EPS and dividends using historical financial data",
+      descriptionZh: "使用歷史財務數據估計未來 EPS 和股息的規則式選股工具",
+      tech: ["Python", "Pandas", "yfinance"],
+      github: "https://github.com/Yuan1285270/StockPrediction",
+    },
+    {
+      id: 102,
+      title: "US Tech Salary EDA",
+      titleZh: "美國科技業薪資分析",
+      description: "Analysis of 100K+ tech job salaries across remote work, location, and skill requirements",
+      descriptionZh: "分析 10 萬+ 科技職位薪資，涵蓋遠端工作、地點和技能需求",
+      tech: ["Python", "Pandas", "Matplotlib", "API"],
+      github: "https://github.com/Yuan1285270/USTechJobsSalaryEDA",
+    },
+    {
+      id: 103,
+      title: "QuizBow",
+      titleZh: "QuizBow",
+      description: "Interactive quiz game platform deployed on Vercel",
+      descriptionZh: "部署於 Vercel 的互動式問答遊戲平台",
+      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      github: "https://github.com/Yuan1285270/QuizeBow",
+    },
+    {
+      id: 104,
+      title: "DC Phishing Detection",
+      titleZh: "DC 釣魚偵測",
+      description: "Discord phishing detection and analysis tool",
+      descriptionZh: "Discord 釣魚偵測與分析工具",
+      tech: ["Python", "Discord API", "Data Analysis"],
+      github: "https://github.com/Yuan1285270/finals_dc",
+    },
+  ];
+
   const skills = {
     "Programming": ["C/C++", "Python", "SQL", "JavaScript", "HTML/CSS", "PHP"],
     "Tools & Platforms": ["GitHub", "Google Cloud", "Render", "FastAPI", "OpenClaw", "Hermes", "Codex", "Linux"],
