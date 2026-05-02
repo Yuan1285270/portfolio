@@ -374,6 +374,7 @@ export default function HomeFloating() {
       highlights: "Complete order and product management",
       highlightsZh: "完整的訂單和產品管理",
       image: "/images/Screenshot2025-11-16at11.34.00PM.png",
+      github: "https://github.com/Yuan1285270/DatabaseAllin",
     },
     {
       id: 2,
@@ -385,6 +386,7 @@ export default function HomeFloating() {
       highlights: "Personalized financial insights and budget tracking",
       highlightsZh: "個人化財務洞察與預算追蹤",
       image: "/images/Screenshot2025-11-16at11.34.42PM.png",
+      github: "https://github.com/Yuan1285270/AI_Fintech_APIs",
     },
     {
       id: 3,
@@ -396,6 +398,7 @@ export default function HomeFloating() {
       highlights: "Built with Google Cloud",
       highlightsZh: "使用 Google Cloud 建置",
       image: "/images/Screenshot2025-11-16at11.34.56PM.png",
+      github: "https://github.com/Yuan1285270/Devjam2025",
     },
     {
       id: 4,
@@ -429,6 +432,7 @@ export default function HomeFloating() {
       highlights: "Collaborated with Malaysian and French classmates",
       highlightsZh: "與馬來西亞和法國同學合作開發",
       image: "/images/5c8fc512-eb03-4c8e-930a-5d702131f5f0.png",
+      video: "/videos/learn-chinese-demo.mov",
     },
   ];
 
@@ -941,7 +945,9 @@ export default function HomeFloating() {
                   <img
                     src={project.image}
                     alt={language === "en" ? project.title : project.titleZh}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                    className={`w-full h-full transition-all duration-300 opacity-80 group-hover:opacity-100 group-hover:scale-110 ${
+                      project.id === 5 || project.id === 6 ? "object-contain" : "object-cover"
+                    }`}
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}
@@ -1016,13 +1022,38 @@ export default function HomeFloating() {
                 </DialogHeader>
 
                 <div className="space-y-6 mt-4">
-                  {/* Project Image */}
+                  {/* GitHub Link */}
+                  {selectedProject.github && (
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={selectedProject.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-semibold hover:from-yellow-300 hover:to-amber-400 transition-all"
+                      >
+                        <Github size={18} />
+                        {language === "en" ? "View on GitHub" : "在 GitHub 上查看"}
+                      </a>
+                    </div>
+                  )}
                   <div className="relative rounded-lg overflow-hidden border-2 border-yellow-400/30 max-h-[60vh]">
-                    <img
-                      src={selectedProject.image}
-                      alt={language === "en" ? selectedProject.title : selectedProject.titleZh}
-                      className="w-full h-full object-contain"
-                    />
+                    {selectedProject.video ? (
+                      <video
+                        src={selectedProject.video}
+                        className="w-full h-full object-contain"
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={selectedProject.image}
+                        alt={language === "en" ? selectedProject.title : selectedProject.titleZh}
+                        className="w-full h-full object-contain"
+                      />
+                    )}
                   </div>
 
                   {/* Tech Stack */}
@@ -1054,6 +1085,54 @@ export default function HomeFloating() {
             )}
           </DialogContent>
         </Dialog>
+      </section>
+
+      {/* Side Projects Section */}
+      <section
+        ref={(el) => {
+          if (el) sectionRefs.current["sideprojects"] = el;
+        }}
+        className="py-20 bg-gradient-to-b from-slate-900 to-black border-t-2 border-yellow-400/50"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl font-black text-yellow-400/80 mb-8">
+            {language === "en" ? "Side Projects" : "小型專案"}
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {sideProjects.map((project) => (
+              <a
+                key={project.id}
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-gradient-to-br from-slate-900 to-black rounded-lg border-2 border-yellow-400/20 p-5 hover:border-yellow-400/60 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors mb-2">
+                      {language === "en" ? project.title : project.titleZh}
+                    </h3>
+                    <p className="text-sm text-gray-400 mb-3">
+                      {language === "en" ? project.description : project.descriptionZh}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 bg-yellow-400/10 text-yellow-300 rounded text-xs font-medium border border-yellow-400/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <ExternalLink size={18} className="text-yellow-400/50 group-hover:text-yellow-400 ml-4 flex-shrink-0 transition-colors" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Achievements Section */}

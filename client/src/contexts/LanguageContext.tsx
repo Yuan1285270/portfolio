@@ -14,6 +14,7 @@ const translations = {
   en: {
     "nav.about": "About",
     "nav.projects": "Projects",
+    "nav.sideprojects": "Side Projects",
     "nav.achievements": "Achievements",
     "nav.contact": "Contact",
     "nav.certificates": "Certificates",
@@ -63,6 +64,7 @@ const translations = {
   zh: {
     "nav.about": "關於",
     "nav.projects": "專案",
+    "nav.sideprojects": "小型專案",
     "nav.achievements": "成就",
     "nav.contact": "聯絡",
     "nav.certificates": "證書",
