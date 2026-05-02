@@ -555,9 +555,9 @@ export default function HomeFloating() {
       id: 103,
       title: "QuizBow",
       titleZh: "QuizBow",
-      description: "Interactive quiz game platform deployed on Vercel",
-      descriptionZh: "部署於 Vercel 的互動式問答遊戲平台",
-      tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      description: "Built an interactive archery quiz game for educational presentations with custom hit-detection and animated feedback",
+      descriptionZh: "為教育簡報打造互動式射箭問答遊戲，具備自訂命中偵測與動畫回饋",
+      tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/Yuan1285270/QuizeBow",
     },
     {
