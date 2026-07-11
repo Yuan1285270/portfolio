@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const metadataBase = new URL(`${protocol}://${host}`);
   const title = "Tsung-Yuan Lin — Full-Stack Developer";
   const description =
-    "Tsung-Yuan Lin builds ambitious full-stack, AI, cloud, and IoT products through code and creative problem-solving.";
+    "Tsung-Yuan Lin builds award-winning full-stack, AI, cloud, and IoT products through code and creative problem-solving.";
 
   return {
     metadataBase,

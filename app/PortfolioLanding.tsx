@@ -9,9 +9,12 @@ import {
 } from "framer-motion";
 import {
   ArrowUpRight,
+  FileText,
   Github,
   Linkedin,
   Mail,
+  MapPin,
+  Trophy,
 } from "lucide-react";
 import {
   useEffect,
@@ -69,6 +72,135 @@ const capabilities = [
     name: "IoT & Hardware",
     description:
       "Connecting software with Raspberry Pi, sensors, computer vision, and real-world safety systems.",
+  },
+];
+
+const awards = [
+  {
+    year: "2025",
+    rank: "2nd Place · Health ML Track",
+    title: "OwlHacks 2025",
+    location: "Philadelphia, USA",
+    detail: "Next Frontier Health ML track · Task Cleaner",
+    proof: "/certificates/owl-hacks-2025-second-place.pdf",
+  },
+  {
+    year: "2025",
+    rank: "Finalist",
+    title: "Hack to the Top — AI FinTech Innovation Hackathon",
+    location: "Taiwan",
+    detail: "SpendiX · AI-powered personal finance",
+    proof: "/portfolio/originals/fintech-event-hq.webp",
+  },
+  {
+    year: "2025",
+    rank: "Participant",
+    title: "DevJam TW 2025",
+    location: "Taiwan",
+    detail: "Smart Drop · AI crop fertilization assistant",
+    proof: "/certificates/devjam-tw-2025.pdf",
+  },
+  {
+    year: "2024",
+    rank: "Outstanding Award",
+    title: "IT Month Information Application Skills Competition",
+    location: "Taichung",
+    detail: "Individual division · C/C++",
+    proof: "/portfolio/originals/it-month-hq.webp",
+  },
+  {
+    year: "2024",
+    rank: "2nd Place",
+    title: "IT Month Information Application Skills Competition",
+    location: "Taichung",
+    detail: "Team division",
+    proof: "/portfolio/originals/it-month-hq.webp",
+  },
+  {
+    year: "2024",
+    rank: "Finalist",
+    title: "National College Programming Contest (NCPC)",
+    location: "Taiwan",
+    detail: "National collegiate programming finals",
+    proof: "/portfolio/originals/ncpc.jpg",
+  },
+  {
+    year: "2024",
+    rank: "Bronze Medal",
+    title: "Mountain City Digital Hackathon",
+    location: "Nantou, Taiwan",
+    detail: "AI Travel Content Writer · Nantou tourism",
+    proof: "/portfolio/originals/mountain-city.jpg",
+  },
+  {
+    year: "2024",
+    rank: "3rd Tier Prize",
+    title: "Cross-Strait Youth Maker Competition",
+    location: "China",
+    detail: "Cycle Guardian · smart bicycle safety system",
+  },
+];
+
+const awardEvidence = [
+  {
+    year: "2025",
+    title: "OwlHacks · 2nd Place",
+    category: "International hackathon",
+    image: "/portfolio/awards/owl-hacks-2025.png",
+    imageAlt: "OwlHacks 2025 second place certificate",
+    width: 1489,
+    height: 2105,
+    href: "/certificates/owl-hacks-2025-second-place.pdf",
+  },
+  {
+    year: "2025",
+    title: "AI FinTech · Finalist",
+    category: "Competition moment",
+    image: "/portfolio/originals/fintech-event-hq.webp",
+    imageAlt: "SpendiX team at the Hack to the Top AI FinTech event",
+    width: 4032,
+    height: 3024,
+    href: "/portfolio/originals/fintech-event-hq.webp",
+  },
+  {
+    year: "2025",
+    title: "DevJam TW",
+    category: "Community milestone",
+    image: "/portfolio/awards/devjam-2025.webp",
+    imageAlt: "DevJam TW 2025 participation certificate",
+    width: 2248,
+    height: 1590,
+    href: "/certificates/devjam-tw-2025.pdf",
+  },
+  {
+    year: "2024",
+    title: "Mountain City · Bronze",
+    category: "Bronze award moment",
+    image: "/portfolio/originals/mountain-city.jpg",
+    imageAlt: "Mountain City Digital Hackathon bronze medal award moment",
+    width: 2048,
+    height: 1152,
+    href: "/portfolio/originals/mountain-city.jpg",
+  },
+  {
+    year: "2024",
+    title: "IT Month · Two Outcomes",
+    category: "Competition moment",
+    image: "/portfolio/originals/it-month-hq.webp",
+    imageAlt: "Tsung-Yuan's team at the IT Month competition",
+    width: 4032,
+    height: 3024,
+    href: "/portfolio/originals/it-month-hq.webp",
+  },
+  {
+    year: "2025",
+    title: "Temple · Global Exchange",
+    category: "Academic milestone",
+    image: "/portfolio/awards/temple-exchange.webp",
+    imageAlt: "Temple University global exchange completion certificate",
+    width: 2094,
+    height: 1546,
+    href: "/certificates/temple-exchange-fall-2025.pdf",
   },
 ];
 
@@ -388,6 +520,7 @@ function HeroSection() {
         <nav className="hero-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#services">Skills</a>
+          <a href="#awards">Awards</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -469,8 +602,12 @@ function AboutSection() {
             <span>Feng Chia GPA</span>
           </div>
           <div>
-            <strong>Temple</strong>
-            <span>Exchange program</span>
+            <strong>3.93 / 4.0</strong>
+            <span>Temple GPA</span>
+          </div>
+          <div>
+            <strong>7.0 / 835</strong>
+            <span>IELTS · TOEIC</span>
           </div>
           <div>
             <strong>8×</strong>
@@ -507,6 +644,130 @@ function ServicesSection() {
             </article>
           </FadeIn>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function AwardsSection() {
+  return (
+    <section id="awards" className="awards-section" aria-labelledby="awards-heading">
+      <div className="awards-shell">
+        <div className="awards-header">
+          <FadeIn>
+            <p className="awards-kicker">
+              <Trophy aria-hidden="true" size={18} /> Recognition · 2024—2025
+            </p>
+            <h2 id="awards-heading" className="hero-heading awards-heading">
+              Awards
+            </h2>
+          </FadeIn>
+
+          <FadeIn className="awards-intro" delay={0.1} y={24}>
+            <p>
+              From national programming contests in Taiwan to an international
+              machine-learning hackathon in the United States, each result marks
+              a different kind of problem solved under pressure.
+            </p>
+            <div className="awards-stats" aria-label="Award highlights">
+              <div>
+                <strong>5</strong>
+                <span>Placed awards</span>
+              </div>
+              <div>
+                <strong>8</strong>
+                <span>Competition milestones</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>Regions represented</span>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+
+        <ol className="awards-timeline" aria-label="Awards timeline">
+          {awards.map((award, index) => (
+            <li key={`${award.year}-${award.title}-${award.rank}`}>
+              <FadeIn delay={index * 0.05} y={24}>
+                <article className="award-row">
+                  <span className="award-index">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="award-year">{award.year}</span>
+                  <div className="award-copy">
+                    <span className="award-rank">{award.rank}</span>
+                    <h3>{award.title}</h3>
+                    <p>
+                      <MapPin aria-hidden="true" size={14} /> {award.location}
+                      <span aria-hidden="true"> · </span>
+                      {award.detail}
+                    </p>
+                  </div>
+                  {award.proof ? (
+                    <a
+                      className="award-proof"
+                      href={award.proof}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`View proof for ${award.title}${award.proof.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
+                    >
+                      <FileText aria-hidden="true" size={18} />
+                      <span>View proof</span>
+                    </a>
+                  ) : (
+                    <span className="award-proof award-proof--empty" aria-hidden="true">
+                      —
+                    </span>
+                  )}
+                </article>
+              </FadeIn>
+            </li>
+          ))}
+        </ol>
+
+        <div className="awards-evidence">
+          <FadeIn className="awards-evidence-header">
+            <div>
+              <p>Selected proof</p>
+              <h3>Receipts, not decoration.</h3>
+            </div>
+            <p>
+              Certificates and event records pulled directly from the portfolio
+              archive.
+            </p>
+          </FadeIn>
+
+          <div className="awards-evidence-grid">
+            {awardEvidence.map((evidence, index) => (
+              <FadeIn key={evidence.title} delay={index * 0.08} y={26}>
+                <a
+                  className="award-evidence-card"
+                  href={evidence.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
+                >
+                  <span className="award-evidence-image">
+                    <img
+                      src={evidence.image}
+                      alt={evidence.imageAlt}
+                      width={evidence.width}
+                      height={evidence.height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                  <span className="award-evidence-copy">
+                    <span>
+                      {evidence.year} · {evidence.category}
+                    </span>
+                    <strong>{evidence.title}</strong>
+                    <ArrowUpRight aria-hidden="true" size={20} />
+                  </span>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -643,6 +904,7 @@ export function PortfolioLanding() {
       <HeroSection />
       <MarqueeSection />
       <AboutSection />
+      <AwardsSection />
       <ServicesSection />
       <ProjectsSection />
     </main>
