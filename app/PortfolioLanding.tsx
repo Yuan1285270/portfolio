@@ -23,20 +23,20 @@ import {
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
 const marqueeProjects = [
-  { src: "/portfolio/all-en.webp", alt: "ALL-EN e-commerce system" },
-  { src: "/portfolio/spendix.webp", alt: "SpendiX personal finance app" },
-  { src: "/portfolio/smart-drop.webp", alt: "Smart Drop agriculture app" },
-  { src: "/portfolio/ai-travel.webp", alt: "AI travel content writer" },
-  { src: "/portfolio/cycle-guardian.webp", alt: "Cycle Guardian safety system" },
-  { src: "/portfolio/learn-chinese.webp", alt: "Learn Chinese Together app" },
+  { src: "/portfolio/originals/all-en.png", alt: "ALL-EN e-commerce system" },
+  { src: "/portfolio/originals/spendix.jpg", alt: "SpendiX personal finance app" },
+  { src: "/portfolio/originals/smart-drop.jpg", alt: "Smart Drop agriculture app" },
+  { src: "/portfolio/originals/ai-travel.png", alt: "AI travel content writer" },
+  { src: "/portfolio/originals/cycle-guardian.png", alt: "Cycle Guardian safety system" },
+  { src: "/portfolio/originals/learn-chinese.png", alt: "Learn Chinese Together app" },
 ];
 
 const marqueeJourney = [
-  { src: "/portfolio/fintech-event.webp", alt: "AI FinTech hackathon" },
-  { src: "/portfolio/ncpc.webp", alt: "National programming contest" },
-  { src: "/portfolio/it-month.webp", alt: "IT Month competition" },
-  { src: "/portfolio/cycle-showcase.webp", alt: "Cycle Guardian showcase" },
-  { src: "/portfolio/yuan-profile.webp", alt: "Tsung-Yuan at Horseshoe Bend" },
+  { src: "/portfolio/originals/fintech-event-hq.webp", alt: "AI FinTech hackathon" },
+  { src: "/portfolio/originals/ncpc.jpg", alt: "National programming contest" },
+  { src: "/portfolio/originals/it-month-hq.webp", alt: "IT Month competition" },
+  { src: "/portfolio/originals/cycle-showcase-hq.webp", alt: "Cycle Guardian showcase" },
+  { src: "/portfolio/originals/mountain-city.jpg", alt: "Mountain City Hackathon" },
 ];
 
 const capabilities = [
@@ -81,10 +81,10 @@ const projects = [
       "A full-featured commerce platform with product, order, and customer management plus an AI shopping assistant.",
     highlight: "Complete order and product management",
     tech: ["PHP", "MySQL", "JavaScript"],
-    image: "/portfolio/all-en.webp",
+    image: "/portfolio/originals/all-en.png",
     imageAlt: "ALL-EN e-commerce storefront",
-    imageWidth: 1600,
-    imageHeight: 913,
+    imageWidth: 2046,
+    imageHeight: 1168,
     github: "https://github.com/Yuan1285270/DatabaseAllin",
   },
   {
@@ -95,10 +95,10 @@ const projects = [
       "A personal finance product that uses K-Means clustering and AI insights to make spending patterns easier to understand.",
     highlight: "Personalized insights and budget tracking",
     tech: ["FastAPI", "Machine Learning", "Gemini"],
-    image: "/portfolio/spendix.webp",
+    image: "/portfolio/originals/spendix.jpg",
     imageAlt: "SpendiX personal finance identity",
-    imageWidth: 1600,
-    imageHeight: 903,
+    imageWidth: 2048,
+    imageHeight: 1156,
     github: "https://github.com/Yuan1285270/AI_Fintech_APIs",
   },
   {
@@ -109,10 +109,10 @@ const projects = [
       "An AI-powered crop fertilization assistant that combines conversational guidance with live weather context.",
     highlight: "Built with Google Cloud and Gemini",
     tech: ["FastAPI", "Google Cloud", "Flutter"],
-    image: "/portfolio/smart-drop.webp",
+    image: "/portfolio/originals/smart-drop.jpg",
     imageAlt: "Smart Drop mobile product concept",
-    imageWidth: 1600,
-    imageHeight: 896,
+    imageWidth: 2048,
+    imageHeight: 1147,
     github: "https://github.com/Yuan1285270/Devjam2025",
   },
 ];
@@ -405,10 +405,10 @@ function HeroSection() {
         <Magnet>
           <figure className="hero-portrait-shell">
             <img
-              src="/portfolio/yuan-profile.webp"
+              src="/portfolio/originals/yuan-profile.jpg"
               alt="Tsung-Yuan Lin at Horseshoe Bend"
-              width={1200}
-              height={1600}
+              width={1536}
+              height={2048}
               fetchPriority="high"
             />
             <div className="hero-portrait-shine" aria-hidden="true" />

@@ -61,8 +61,8 @@ test("ships the finished portfolio source without starter artifacts", async () =
 
   await Promise.all([
     access(new URL("../public/og.png", import.meta.url)),
-    access(new URL("../public/portfolio/yuan-profile.webp", import.meta.url)),
-    access(new URL("../public/portfolio/all-en.webp", import.meta.url)),
+    access(new URL("../public/portfolio/originals/yuan-profile.jpg", import.meta.url)),
+    access(new URL("../public/portfolio/originals/all-en.png", import.meta.url)),
   ]);
 
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
