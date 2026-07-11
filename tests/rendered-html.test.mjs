@@ -32,9 +32,12 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /<title>Tsung-Yuan Lin — CS Student \+ AI &amp; Full-Stack Developer<\/title>/i);
   assert.match(html, /Hi, I(?:&#x27;|')m Yuan/i);
   assert.match(html, /Short stories/i);
-  assert.match(html, /Concord System Management Corp/i);
+  assert.match(html, /American Life/i);
+  assert.match(html, /康和資訊系統股份有限公司/i);
+  assert.match(html, /https:\/\/www\.econcord\.com\.tw\//i);
   assert.match(html, /3\.91 \/ 4\.3/i);
   assert.match(html, />C1</i);
+  assert.match(html, /IELTS Academic · C1/i);
   assert.match(html, /Capabilities/i);
   assert.match(html, /OwlHacks 2025/i);
   assert.match(html, /Mountain City Digital Hackathon/i);
@@ -72,6 +75,8 @@ test("ships the finished portfolio source without starter artifacts", async () =
     access(new URL("../public/portfolio/originals/all-en.png", import.meta.url)),
     access(new URL("../public/portfolio/awards/owl-hacks-2025.png", import.meta.url)),
     access(new URL("../public/portfolio/showreels/owlhacks-2025.mp4", import.meta.url)),
+    access(new URL("../public/portfolio/showreels/american-life-2025.mp4", import.meta.url)),
+    access(new URL("../public/portfolio/awards/ielts-c1.jpg", import.meta.url)),
     access(new URL("../public/certificates/owl-hacks-2025-second-place.pdf", import.meta.url)),
   ]);
 

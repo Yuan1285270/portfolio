@@ -42,12 +42,12 @@ const momentRowOne = [
     label: "IT Month · 2024",
   },
   {
-    src: "/portfolio/moments/mountain-city-team.jpg",
-    alt: "Mountain City Digital Hackathon bronze award moment",
+    src: "/portfolio/moments-v2/nantou-group.jpg",
+    alt: "AI Travel Writer team at the Mountain City Digital Hackathon",
     label: "Mountain City · 2024",
   },
   {
-    src: "/portfolio/moments/cycle-team.jpg",
+    src: "/portfolio/moments-v2/cross-team.jpg",
     alt: "Cycle Guardian team at the Cross-Strait Youth Maker Competition",
     label: "Cycle Guardian · 2024",
   },
@@ -60,29 +60,29 @@ const momentRowOne = [
 
 const momentRowTwo = [
   {
-    src: "/portfolio/moments/ncpc-team.jpg",
-    alt: "Team at the National College Programming Contest",
-    label: "NCPC · 2024",
+    src: "/portfolio/moments-v2/cross-candid.jpg",
+    alt: "Cycle Guardian teammates building together at the maker competition",
+    label: "Maker candid · 2024",
   },
   {
-    src: "/portfolio/moments/owl-team.jpg",
-    alt: "OwlHacks teammates working together",
-    label: "OwlHacks · 2025",
-  },
-  {
-    src: "/portfolio/moments/fintech-event.jpg",
-    alt: "SpendiX team discussing their work during Hack to the Top",
-    label: "SpendiX · 2025",
-  },
-  {
-    src: "/portfolio/moments/tcse-presenter.jpg",
-    alt: "Tsung-Yuan presenting research at TCSE 2026",
+    src: "/portfolio/moments-v2/tcse-group.jpg",
+    alt: "Tsung-Yuan with faculty after presenting at TCSE 2026",
     label: "TCSE · 2026",
   },
   {
-    src: "/portfolio/moments/cross-demo.jpg",
-    alt: "Cycle Guardian team demonstrating their prototype",
-    label: "Cycle Guardian · 2024",
+    src: "/portfolio/moments-v2/sparkful-fun.jpg",
+    alt: "A candid team moment at the Sparkful activity",
+    label: "Sparkful · Team life",
+  },
+  {
+    src: "/portfolio/moments-v2/exchange-scholarship.jpg",
+    alt: "Tsung-Yuan receiving an overseas study scholarship",
+    label: "Study abroad scholarship",
+  },
+  {
+    src: "/portfolio/moments-v2/american-life.jpg",
+    alt: "Tsung-Yuan enjoying a meal during exchange life in the United States",
+    label: "American life · 2025",
   },
 ];
 
@@ -90,18 +90,18 @@ const showreels = [
   {
     title: "OwlHacks 2025",
     eyebrow: "Philadelphia · Hackathon",
-    duration: "00:32",
+    duration: "00:30",
     src: "/portfolio/showreels/owlhacks-2025.mp4",
     poster: "/portfolio/showreels/owlhacks-2025.jpg",
-    description: "Certificate, build moments, and whiteboard work from Temple University's OwlHacks.",
+    description: "Build moments, whiteboard work, and the live event at Temple University's OwlHacks.",
   },
   {
     title: "Hack to the Top",
     eyebrow: "AI FinTech · Finalist",
-    duration: "00:32",
+    duration: "00:30",
     src: "/portfolio/showreels/ai-fintech-2025.mp4",
     poster: "/portfolio/showreels/ai-fintech-2025.jpg",
-    description: "Team, event, and finalist moments from building and presenting SpendiX.",
+    description: "Team and event moments from building and presenting SpendiX.",
   },
   {
     title: "Cross-Strait Maker",
@@ -117,7 +117,7 @@ const showreels = [
     duration: "00:30",
     src: "/portfolio/showreels/nantou-hackathon-2024.mp4",
     poster: "/portfolio/showreels/nantou-hackathon-2024.jpg",
-    description: "Award moment, venue, certificate, and AI Travel Content Writer.",
+    description: "Team, venue, and the AI Travel Content Writer prototype.",
   },
   {
     title: "NCPC 2024",
@@ -130,10 +130,18 @@ const showreels = [
   {
     title: "TCSE 2026",
     eyebrow: "English Oral Presentation",
-    duration: "00:35",
+    duration: "00:47",
     src: "/portfolio/showreels/tcse-2026.mp4",
     poster: "/portfolio/showreels/tcse-2026.jpg",
-    description: "Research presentation on coordinated social-media behavior detection.",
+    description: "The complete original cut of the research presentation on coordinated social-media behavior detection.",
+  },
+  {
+    title: "American Life",
+    eyebrow: "Temple University · Exchange",
+    duration: "01:50",
+    src: "/portfolio/showreels/american-life-2025.mp4",
+    poster: "/portfolio/showreels/american-life-2025.jpg",
+    description: "A 110-second highlight of arriving, exploring, studying, and building a life in Philadelphia.",
   },
   {
     title: "Learn Chinese Together",
@@ -185,7 +193,6 @@ const awards = [
     title: "OwlHacks 2025",
     location: "Philadelphia, USA",
     detail: "Next Frontier Health ML track · Task Cleaner",
-    proof: "/certificates/owl-hacks-2025-second-place.pdf",
   },
   {
     year: "2025",
@@ -193,7 +200,6 @@ const awards = [
     title: "Hack to the Top — AI FinTech Innovation Hackathon",
     location: "Taiwan",
     detail: "SpendiX · AI-powered personal finance",
-    proof: "/portfolio/awards/ai-fintech-finalist.jpg",
   },
   {
     year: "2025",
@@ -201,7 +207,6 @@ const awards = [
     title: "DevJam TW 2025",
     location: "Taiwan",
     detail: "Smart Drop · AI crop fertilization assistant",
-    proof: "/certificates/devjam-tw-2025.pdf",
   },
   {
     year: "2024",
@@ -209,7 +214,6 @@ const awards = [
     title: "IT Month Information Application Skills Competition",
     location: "Taichung",
     detail: "Individual division · C/C++",
-    proof: "/portfolio/awards/it-month-outstanding.jpg",
   },
   {
     year: "2024",
@@ -217,7 +221,6 @@ const awards = [
     title: "IT Month Information Application Skills Competition",
     location: "Taichung",
     detail: "Team division",
-    proof: "/portfolio/originals/it-month-hq.webp",
   },
   {
     year: "2024",
@@ -225,7 +228,6 @@ const awards = [
     title: "National College Programming Contest (NCPC)",
     location: "Taiwan",
     detail: "National collegiate programming finals",
-    proof: "/portfolio/originals/ncpc.jpg",
   },
   {
     year: "2024",
@@ -309,6 +311,16 @@ const awardEvidence = [
     width: 2094,
     height: 1546,
     href: "/certificates/temple-exchange-fall-2025.pdf",
+  },
+  {
+    year: "2024",
+    title: "IELTS Academic · C1",
+    category: "English proficiency record",
+    image: "/portfolio/awards/ielts-c1.jpg",
+    imageAlt: "Redacted IELTS Academic test report showing overall band 7.0 and CEFR C1",
+    width: 1200,
+    height: 1719,
+    href: "/portfolio/awards/ielts-c1.jpg",
   },
 ];
 
@@ -637,14 +649,14 @@ function VideoShowcase() {
     <section id="films" className="video-section" aria-labelledby="films-heading">
       <FadeIn className="video-header">
         <div>
-          <p>Activity films · 30–40 second cuts</p>
+          <p>Activity films · edited highlights</p>
           <h2 id="films-heading" className="hero-heading">
             Short stories
           </h2>
         </div>
         <p>
-          Each reel combines files from the same activity. Swipe, drag, or use
-          the arrows to move between them.
+          Each reel combines files from the same activity. Sound starts on—press
+          play, then swipe, drag, or use the arrows to move between them.
         </p>
       </FadeIn>
 
@@ -714,12 +726,11 @@ function VideoShowcase() {
                 key={reel.src}
                 src={reel.src}
                 poster={reel.poster}
-                autoPlay={!reduceMotion}
-                muted
                 loop
                 controls
                 playsInline
                 preload="metadata"
+                aria-label={`${reel.title} video — sound on`}
                 onPointerDown={(event) => event.stopPropagation()}
               />
               <span className="video-card__shade" aria-hidden="true" />
@@ -819,7 +830,7 @@ function HeroSection() {
 
 function AboutSection() {
   const aboutText =
-    "I'm Tsung-Yuan Lin, a CS student at Feng Chia University and an AI & Full-Stack Developer. I completed a Fall 2025 exchange at Temple University and joined the AI team at Concord System Management Corp. (SYSTEX Group) as a Software Development Intern in July 2026. I focus on AI-enabled products, backend systems, and full-stack development.";
+    "I'm Tsung-Yuan Lin, a CS student at Feng Chia University and an AI & Full-Stack Developer. I completed a Fall 2025 exchange at Temple University and joined the AI team at 康和資訊系統股份有限公司 (SYSTEX Group) as a Software Development Intern in July 2026. I focus on AI-enabled products, backend systems, and full-stack development.";
 
   return (
     <section id="about" className="about-section" aria-labelledby="about-heading">
@@ -868,7 +879,12 @@ function AboutSection() {
           <span>Current role</span>
           <div>
             <h3>Software Development Intern</h3>
-            <p>Concord System Management Corp. (SYSTEX Group) · AI Team · Jul 2026–Present</p>
+            <p>
+              <a href="https://www.econcord.com.tw/" target="_blank" rel="noreferrer">
+                康和資訊系統股份有限公司
+              </a>{" "}
+              · SYSTEX Group · AI Team · Jul 2026–Present
+            </p>
           </div>
         </FadeIn>
 
@@ -970,11 +986,7 @@ function AwardsSection() {
                       <FileText aria-hidden="true" size={18} />
                       <span>{award.proofLabel ?? "View proof"}</span>
                     </a>
-                  ) : (
-                    <span className="award-proof award-proof--empty" aria-hidden="true">
-                      —
-                    </span>
-                  )}
+                  ) : null}
                 </article>
               </FadeIn>
             </li>
@@ -1003,7 +1015,9 @@ function AwardsSection() {
                   rel="noreferrer"
                   aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
                 >
-                  <span className="award-evidence-image">
+                  <span
+                    className={`award-evidence-image${evidence.height > evidence.width ? " award-evidence-image--portrait" : ""}`}
+                  >
                     <img
                       src={evidence.image}
                       alt={evidence.imageAlt}

@@ -890,6 +890,19 @@ footer {
   line-height: 1.45;
 }
 
+.current-role p a {
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: underline;
+  text-decoration-color: rgba(229, 107, 217, 0.46);
+  text-underline-offset: 0.2em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.current-role p a:hover {
+  color: #ffffff;
+  text-decoration-color: #e56bd9;
+}
+
 .about-cta {
   margin-top: clamp(0rem, 2vw, 1.5rem);
 }
@@ -1188,12 +1201,6 @@ footer {
   transform: translateY(-2px);
 }
 
-.award-proof--empty {
-  width: 3rem;
-  color: rgba(215, 226, 234, 0.2);
-  border-color: transparent;
-}
-
 .awards-evidence {
   margin-top: clamp(6rem, 11vw, 10rem);
   padding-top: clamp(3rem, 5vw, 4.5rem);
@@ -1266,14 +1273,17 @@ footer {
   display: grid;
   place-items: center;
   overflow: hidden;
-  padding: clamp(0.55rem, 1.2vw, 0.9rem);
-  background: #ecebea;
+  background: #161616;
+}
+
+.award-evidence-image--portrait {
+  aspect-ratio: 3 / 4;
 }
 
 .award-evidence-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .award-evidence-copy {
@@ -1637,6 +1647,12 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+@media (min-width: 1200px) {
+  .awards-evidence-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 640px) {
   .hero-nav {
     padding: 1.75rem 2.5rem 0;
@@ -1769,10 +1785,6 @@ button:focus-visible {
   .award-proof {
     justify-self: start;
     margin-top: 0.4rem;
-  }
-
-  .award-proof--empty {
-    display: none;
   }
 
   .awards-evidence-grid {
