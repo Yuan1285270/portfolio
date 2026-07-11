@@ -52,9 +52,9 @@ const momentRowOne = [
     label: "Cycle Guardian · 2024",
   },
   {
-    src: "/portfolio/originals/yuan-profile.jpg",
-    alt: "Portrait of Tsung-Yuan Lin",
-    label: "Yuan · 2026",
+    src: "/portfolio/moments-v2/cycle-demo-team.jpg",
+    alt: "Cycle Guardian team presenting its prototype, poster, and software demo",
+    label: "Prototype showcase · 2024",
   },
 ];
 
@@ -80,9 +80,9 @@ const momentRowTwo = [
     label: "Study abroad scholarship",
   },
   {
-    src: "/portfolio/moments-v2/american-life.jpg",
-    alt: "Tsung-Yuan enjoying a meal during exchange life in the United States",
-    label: "American life · 2025",
+    src: "/portfolio/moments-v2/ncpc-team.jpg",
+    alt: "Tsung-Yuan and teammates at the NCPC national programming final",
+    label: "NCPC · 2024",
   },
 ];
 
@@ -90,7 +90,7 @@ const showreels = [
   {
     title: "OwlHacks 2025",
     eyebrow: "Philadelphia · Hackathon",
-    duration: "00:30",
+    duration: "00:28",
     src: "/portfolio/showreels/owlhacks-2025.mp4",
     poster: "/portfolio/showreels/owlhacks-2025.jpg",
     description: "Build moments, whiteboard work, and the live event at Temple University's OwlHacks.",
@@ -98,15 +98,15 @@ const showreels = [
   {
     title: "Hack to the Top",
     eyebrow: "AI FinTech · Finalist",
-    duration: "00:30",
+    duration: "00:17",
     src: "/portfolio/showreels/ai-fintech-2025.mp4",
     poster: "/portfolio/showreels/ai-fintech-2025.jpg",
-    description: "Team and event moments from building and presenting SpendiX.",
+    description: "A tighter cut of the team, SpendiX concept, live event, and coding sessions.",
   },
   {
     title: "Cross-Strait Maker",
     eyebrow: "Cycle Guardian · 3rd Tier Prize",
-    duration: "00:32",
+    duration: "00:23",
     src: "/portfolio/showreels/cross-strait-maker-2024.mp4",
     poster: "/portfolio/showreels/cross-strait-maker-2024.jpg",
     description: "Prototype, team, and venue moments from the maker competition.",
@@ -114,15 +114,15 @@ const showreels = [
   {
     title: "Mountain City Hackathon",
     eyebrow: "Nantou · Bronze Medal",
-    duration: "00:30",
+    duration: "00:15",
     src: "/portfolio/showreels/nantou-hackathon-2024.mp4",
     poster: "/portfolio/showreels/nantou-hackathon-2024.jpg",
-    description: "Team, venue, and the AI Travel Content Writer prototype.",
+    description: "Only the hackathon: award, venue, team, and the AI Travel Content Writer prototype.",
   },
   {
     title: "NCPC 2024",
     eyebrow: "National Finalist",
-    duration: "00:30",
+    duration: "00:20",
     src: "/portfolio/showreels/ncpc-2024.mp4",
     poster: "/portfolio/showreels/ncpc-2024.jpg",
     description: "A short walk through Taiwan's national collegiate programming final.",
@@ -138,10 +138,10 @@ const showreels = [
   {
     title: "American Life",
     eyebrow: "Temple University · Exchange",
-    duration: "01:50",
+    duration: "02:30",
     src: "/portfolio/showreels/american-life-2025.mp4",
     poster: "/portfolio/showreels/american-life-2025.jpg",
-    description: "A 110-second highlight of arriving, exploring, studying, and building a life in Philadelphia.",
+    description: "The first 150 seconds of the original exchange-life film, cropped to its central portrait frame.",
   },
   {
     title: "Learn Chinese Together",
@@ -288,8 +288,8 @@ const awardEvidence = [
     category: "Bronze certificate",
     image: "/portfolio/awards/mountain-city-bronze.jpg",
     imageAlt: "Mountain City Digital Hackathon bronze certificate",
-    width: 1792,
-    height: 2592,
+    width: 1400,
+    height: 2026,
     href: "/portfolio/awards/mountain-city-bronze.jpg",
   },
   {
@@ -298,8 +298,8 @@ const awardEvidence = [
     category: "Award certificate",
     image: "/portfolio/awards/it-month-outstanding.jpg",
     imageAlt: "IT Month individual outstanding award certificate",
-    width: 1732,
-    height: 2592,
+    width: 1400,
+    height: 2096,
     href: "/portfolio/awards/it-month-outstanding.jpg",
   },
   {
@@ -308,8 +308,8 @@ const awardEvidence = [
     category: "Academic milestone",
     image: "/portfolio/awards/temple-exchange.jpg",
     imageAlt: "Temple University global exchange completion certificate",
-    width: 2094,
-    height: 1546,
+    width: 1400,
+    height: 1034,
     href: "/certificates/temple-exchange-fall-2025.pdf",
   },
   {
@@ -319,8 +319,21 @@ const awardEvidence = [
     image: "/portfolio/awards/ielts-c1.jpg",
     imageAlt: "Redacted IELTS Academic test report showing overall band 7.0 and CEFR C1",
     width: 1200,
-    height: 1719,
+    height: 1720,
     href: "/portfolio/awards/ielts-c1.jpg",
+  },
+];
+
+const awardEvidenceGroups = [
+  {
+    id: "portrait",
+    label: "Portrait certificates",
+    items: awardEvidence.filter((evidence) => evidence.height > evidence.width),
+  },
+  {
+    id: "landscape",
+    label: "Landscape records",
+    items: awardEvidence.filter((evidence) => evidence.width >= evidence.height),
   },
 ];
 
@@ -649,7 +662,7 @@ function VideoShowcase() {
     <section id="films" className="video-section" aria-labelledby="films-heading">
       <FadeIn className="video-header">
         <div>
-          <p>Activity films · edited highlights</p>
+          <p>Activity films · edited stories</p>
           <h2 id="films-heading" className="hero-heading">
             Short stories
           </h2>
@@ -797,16 +810,16 @@ function HeroSection() {
         <Magnet>
           <figure className="hero-portrait-shell">
             <img
-              src="/portfolio/originals/yuan-profile.jpg"
-              alt="Tsung-Yuan Lin at Horseshoe Bend"
-              width={1536}
-              height={2048}
+              src="/portfolio/originals/yuan-steak.jpg"
+              alt="Tsung-Yuan Lin enjoying a steak dinner during his exchange in Philadelphia"
+              width={1200}
+              height={1600}
               fetchPriority="high"
             />
             <div className="hero-portrait-shine" aria-hidden="true" />
             <figcaption>
               <span>Tsung-Yuan Lin</span>
-              <span>Taiwan · 2026</span>
+              <span>Philadelphia · 2025</span>
             </figcaption>
           </figure>
         </Magnet>
@@ -830,7 +843,7 @@ function HeroSection() {
 
 function AboutSection() {
   const aboutText =
-    "I'm Tsung-Yuan Lin, a CS student at Feng Chia University and an AI & Full-Stack Developer. I completed a Fall 2025 exchange at Temple University and joined the AI team at 康和資訊系統股份有限公司 (SYSTEX Group) as a Software Development Intern in July 2026. I focus on AI-enabled products, backend systems, and full-stack development.";
+    "I'm Tsung-Yuan Lin, a CS student at Feng Chia University and an AI & Full-Stack Developer. I completed a Fall 2025 exchange at Temple University and joined the AI team at Concord System Management Corp. as a Software Development Intern in July 2026. I focus on AI-enabled products, backend systems, and full-stack development.";
 
   return (
     <section id="about" className="about-section" aria-labelledby="about-heading">
@@ -881,9 +894,9 @@ function AboutSection() {
             <h3>Software Development Intern</h3>
             <p>
               <a href="https://www.econcord.com.tw/" target="_blank" rel="noreferrer">
-                康和資訊系統股份有限公司
+                Concord System Management Corp.
               </a>{" "}
-              · SYSTEX Group · AI Team · Jul 2026–Present
+              · AI Team · Jul 2026–Present
             </p>
           </div>
         </FadeIn>
@@ -1005,37 +1018,44 @@ function AwardsSection() {
             </p>
           </FadeIn>
 
-          <div className="awards-evidence-grid">
-            {awardEvidence.map((evidence, index) => (
-              <FadeIn key={evidence.title} delay={index * 0.08} y={26}>
-                <a
-                  className="award-evidence-card"
-                  href={evidence.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
-                >
-                  <span
-                    className={`award-evidence-image${evidence.height > evidence.width ? " award-evidence-image--portrait" : ""}`}
-                  >
-                    <img
-                      src={evidence.image}
-                      alt={evidence.imageAlt}
-                      width={evidence.width}
-                      height={evidence.height}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </span>
-                  <span className="award-evidence-copy">
-                    <span>
-                      {evidence.year} · {evidence.category}
-                    </span>
-                    <strong>{evidence.title}</strong>
-                    <ArrowUpRight aria-hidden="true" size={20} />
-                  </span>
-                </a>
-              </FadeIn>
+          <div className="awards-evidence-layout">
+            {awardEvidenceGroups.map((group) => (
+              <div className="awards-evidence-group" key={group.id}>
+                <p className="awards-evidence-group__label">{group.label}</p>
+                <div className={`awards-evidence-grid awards-evidence-grid--${group.id}`}>
+                  {group.items.map((evidence, index) => (
+                    <FadeIn key={evidence.title} delay={index * 0.08} y={26}>
+                      <a
+                        className="award-evidence-card"
+                        href={evidence.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
+                      >
+                        <span
+                          className={`award-evidence-image${evidence.height > evidence.width ? " award-evidence-image--portrait" : ""}`}
+                        >
+                          <img
+                            src={evidence.image}
+                            alt={evidence.imageAlt}
+                            width={evidence.width}
+                            height={evidence.height}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </span>
+                        <span className="award-evidence-copy">
+                          <span>
+                            {evidence.year} · {evidence.category}
+                          </span>
+                          <strong>{evidence.title}</strong>
+                          <ArrowUpRight aria-hidden="true" size={20} />
+                        </span>
+                      </a>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
