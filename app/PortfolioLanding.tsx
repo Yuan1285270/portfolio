@@ -9,37 +9,140 @@ import {
 } from "framer-motion";
 import {
   ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
   FileText,
   Github,
   Linkedin,
   Mail,
   MapPin,
+  Pause,
+  Play,
   Trophy,
 } from "lucide-react";
 import {
   useEffect,
   useRef,
   useState,
+  type CSSProperties,
   type ReactNode,
 } from "react";
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
-const marqueeProjects = [
-  { src: "/portfolio/originals/all-en.png", alt: "ALL-EN e-commerce system" },
-  { src: "/portfolio/originals/spendix.jpg", alt: "SpendiX personal finance app" },
-  { src: "/portfolio/originals/smart-drop.jpg", alt: "Smart Drop agriculture app" },
-  { src: "/portfolio/originals/ai-travel.png", alt: "AI travel content writer" },
-  { src: "/portfolio/originals/cycle-guardian.png", alt: "Cycle Guardian safety system" },
-  { src: "/portfolio/originals/learn-chinese.png", alt: "Learn Chinese Together app" },
+const momentRowOne = [
+  {
+    src: "/portfolio/moments/fintech-team.jpg",
+    alt: "SpendiX team at the Hack to the Top AI FinTech Innovation Hackathon",
+    label: "AI FinTech · 2025",
+  },
+  {
+    src: "/portfolio/moments/it-month-team.jpg",
+    alt: "Team at the 2024 IT Month Information Application Skills Competition",
+    label: "IT Month · 2024",
+  },
+  {
+    src: "/portfolio/moments/mountain-city-team.jpg",
+    alt: "Mountain City Digital Hackathon bronze award moment",
+    label: "Mountain City · 2024",
+  },
+  {
+    src: "/portfolio/moments/cycle-team.jpg",
+    alt: "Cycle Guardian team at the Cross-Strait Youth Maker Competition",
+    label: "Cycle Guardian · 2024",
+  },
+  {
+    src: "/portfolio/originals/yuan-profile.jpg",
+    alt: "Portrait of Tsung-Yuan Lin",
+    label: "Yuan · 2026",
+  },
 ];
 
-const marqueeJourney = [
-  { src: "/portfolio/originals/fintech-event-hq.webp", alt: "AI FinTech hackathon" },
-  { src: "/portfolio/originals/ncpc.jpg", alt: "National programming contest" },
-  { src: "/portfolio/originals/it-month-hq.webp", alt: "IT Month competition" },
-  { src: "/portfolio/originals/cycle-showcase-hq.webp", alt: "Cycle Guardian showcase" },
-  { src: "/portfolio/originals/mountain-city.jpg", alt: "Mountain City Hackathon" },
+const momentRowTwo = [
+  {
+    src: "/portfolio/moments/ncpc-team.jpg",
+    alt: "Team at the National College Programming Contest",
+    label: "NCPC · 2024",
+  },
+  {
+    src: "/portfolio/moments/owl-team.jpg",
+    alt: "OwlHacks teammates working together",
+    label: "OwlHacks · 2025",
+  },
+  {
+    src: "/portfolio/moments/fintech-event.jpg",
+    alt: "SpendiX team discussing their work during Hack to the Top",
+    label: "SpendiX · 2025",
+  },
+  {
+    src: "/portfolio/moments/tcse-presenter.jpg",
+    alt: "Tsung-Yuan presenting research at TCSE 2026",
+    label: "TCSE · 2026",
+  },
+  {
+    src: "/portfolio/moments/cross-demo.jpg",
+    alt: "Cycle Guardian team demonstrating their prototype",
+    label: "Cycle Guardian · 2024",
+  },
+];
+
+const showreels = [
+  {
+    title: "OwlHacks 2025",
+    eyebrow: "Philadelphia · Hackathon",
+    duration: "00:32",
+    src: "/portfolio/showreels/owlhacks-2025.mp4",
+    poster: "/portfolio/showreels/owlhacks-2025.jpg",
+    description: "Certificate, build moments, and whiteboard work from Temple University's OwlHacks.",
+  },
+  {
+    title: "Hack to the Top",
+    eyebrow: "AI FinTech · Finalist",
+    duration: "00:32",
+    src: "/portfolio/showreels/ai-fintech-2025.mp4",
+    poster: "/portfolio/showreels/ai-fintech-2025.jpg",
+    description: "Team, event, and finalist moments from building and presenting SpendiX.",
+  },
+  {
+    title: "Cross-Strait Maker",
+    eyebrow: "Cycle Guardian · 3rd Tier Prize",
+    duration: "00:32",
+    src: "/portfolio/showreels/cross-strait-maker-2024.mp4",
+    poster: "/portfolio/showreels/cross-strait-maker-2024.jpg",
+    description: "Prototype, team, and venue moments from the maker competition.",
+  },
+  {
+    title: "Mountain City Hackathon",
+    eyebrow: "Nantou · Bronze Medal",
+    duration: "00:30",
+    src: "/portfolio/showreels/nantou-hackathon-2024.mp4",
+    poster: "/portfolio/showreels/nantou-hackathon-2024.jpg",
+    description: "Award moment, venue, certificate, and AI Travel Content Writer.",
+  },
+  {
+    title: "NCPC 2024",
+    eyebrow: "National Finalist",
+    duration: "00:30",
+    src: "/portfolio/showreels/ncpc-2024.mp4",
+    poster: "/portfolio/showreels/ncpc-2024.jpg",
+    description: "A short walk through Taiwan's national collegiate programming final.",
+  },
+  {
+    title: "TCSE 2026",
+    eyebrow: "English Oral Presentation",
+    duration: "00:35",
+    src: "/portfolio/showreels/tcse-2026.mp4",
+    poster: "/portfolio/showreels/tcse-2026.jpg",
+    description: "Research presentation on coordinated social-media behavior detection.",
+  },
+  {
+    title: "Learn Chinese Together",
+    eyebrow: "App Demo",
+    duration: "00:38",
+    src: "/portfolio/showreels/learn-chinese-together.mp4",
+    poster: "/portfolio/showreels/learn-chinese-together.jpg",
+    description: "A compact walkthrough of the interactive language-learning app.",
+  },
 ];
 
 const capabilities = [
@@ -59,7 +162,7 @@ const capabilities = [
     number: "03",
     name: "Full-Stack Products",
     description:
-      "Building responsive web and mobile experiences with React, TypeScript, Flutter, and pragmatic UX.",
+      "Building responsive web products with React, TypeScript, and pragmatic UX.",
   },
   {
     number: "04",
@@ -90,7 +193,7 @@ const awards = [
     title: "Hack to the Top — AI FinTech Innovation Hackathon",
     location: "Taiwan",
     detail: "SpendiX · AI-powered personal finance",
-    proof: "/portfolio/originals/fintech-event-hq.webp",
+    proof: "/portfolio/awards/ai-fintech-finalist.jpg",
   },
   {
     year: "2025",
@@ -106,7 +209,7 @@ const awards = [
     title: "IT Month Information Application Skills Competition",
     location: "Taichung",
     detail: "Individual division · C/C++",
-    proof: "/portfolio/originals/it-month-hq.webp",
+    proof: "/portfolio/awards/it-month-outstanding.jpg",
   },
   {
     year: "2024",
@@ -130,7 +233,9 @@ const awards = [
     title: "Mountain City Digital Hackathon",
     location: "Nantou, Taiwan",
     detail: "AI Travel Content Writer · Nantou tourism",
-    proof: "/portfolio/originals/mountain-city.jpg",
+    proof:
+      "https://www.iecs.fcu.edu.tw/news/%E5%8A%89%E6%98%8E%E6%A9%9F%E8%80%81%E5%B8%AB%E6%8C%87%E5%B0%8E%E5%90%8C%E5%AD%B8%E7%8D%B2%E5%B1%B1%E5%9F%8E%E6%95%B8%E4%BD%8D%E9%BB%91%E5%AE%A2%E6%9D%BE%E9%8A%85%E7%8D%8E/",
+    proofLabel: "School article",
   },
   {
     year: "2024",
@@ -138,6 +243,9 @@ const awards = [
     title: "Cross-Strait Youth Maker Competition",
     location: "China",
     detail: "Cycle Guardian · smart bicycle safety system",
+    proof:
+      "https://www.iecs.fcu.edu.tw/news/%E9%83%AD%E5%B4%87%E9%9F%8B%E8%80%81%E5%B8%AB%E6%8C%87%E5%B0%8E%E5%AD%B8%E7%94%9F%E7%8D%B22024%E6%B5%B7%E5%B3%BD%E5%85%A9%E5%B2%B8%E9%9D%92%E5%B0%91%E5%B9%B4%E5%89%B5%E5%AE%A2%E5%A4%A7%E8%B3%BD%E7%8D%B2%E5%8F%83%E7%AD%89%E7%8D%8E/",
+    proofLabel: "School article",
   },
 ];
 
@@ -155,12 +263,12 @@ const awardEvidence = [
   {
     year: "2025",
     title: "AI FinTech · Finalist",
-    category: "Competition moment",
-    image: "/portfolio/originals/fintech-event-hq.webp",
-    imageAlt: "SpendiX team at the Hack to the Top AI FinTech event",
-    width: 4032,
-    height: 3024,
-    href: "/portfolio/originals/fintech-event-hq.webp",
+    category: "Finalist certificate",
+    image: "/portfolio/awards/ai-fintech-finalist.jpg",
+    imageAlt: "Hack to the Top AI FinTech finalist certificate",
+    width: 1241,
+    height: 1754,
+    href: "/portfolio/awards/ai-fintech-finalist.jpg",
   },
   {
     year: "2025",
@@ -175,28 +283,28 @@ const awardEvidence = [
   {
     year: "2024",
     title: "Mountain City · Bronze",
-    category: "Bronze award moment",
-    image: "/portfolio/originals/mountain-city.jpg",
-    imageAlt: "Mountain City Digital Hackathon bronze medal award moment",
-    width: 2048,
-    height: 1152,
-    href: "/portfolio/originals/mountain-city.jpg",
+    category: "Bronze certificate",
+    image: "/portfolio/awards/mountain-city-bronze.jpg",
+    imageAlt: "Mountain City Digital Hackathon bronze certificate",
+    width: 1792,
+    height: 2592,
+    href: "/portfolio/awards/mountain-city-bronze.jpg",
   },
   {
     year: "2024",
-    title: "IT Month · Two Outcomes",
-    category: "Competition moment",
-    image: "/portfolio/originals/it-month-hq.webp",
-    imageAlt: "Tsung-Yuan's team at the IT Month competition",
-    width: 4032,
-    height: 3024,
-    href: "/portfolio/originals/it-month-hq.webp",
+    title: "IT Month · Outstanding Award",
+    category: "Award certificate",
+    image: "/portfolio/awards/it-month-outstanding.jpg",
+    imageAlt: "IT Month individual outstanding award certificate",
+    width: 1732,
+    height: 2592,
+    href: "/portfolio/awards/it-month-outstanding.jpg",
   },
   {
     year: "2025",
     title: "Temple · Global Exchange",
     category: "Academic milestone",
-    image: "/portfolio/awards/temple-exchange.webp",
+    image: "/portfolio/awards/temple-exchange.jpg",
     imageAlt: "Temple University global exchange completion certificate",
     width: 2094,
     height: 1546,
@@ -240,7 +348,7 @@ const projects = [
     description:
       "An AI-powered crop fertilization assistant that combines conversational guidance with live weather context.",
     highlight: "Built with Google Cloud and Gemini",
-    tech: ["FastAPI", "Google Cloud", "Flutter"],
+    tech: ["FastAPI", "Google Cloud", "Gemini", "OpenWeather API"],
     image: "/portfolio/originals/smart-drop.jpg",
     imageAlt: "Smart Drop mobile product concept",
     imageWidth: 2048,
@@ -432,83 +540,223 @@ function AnimatedText({ text }: { text: string }) {
   );
 }
 
-function MarqueeRow({
+function MarqueeBand({
   items,
-  rowRef,
+  duration,
+  reverse = false,
+  paused,
 }: {
-  items: typeof marqueeProjects;
-  rowRef: React.RefObject<HTMLDivElement | null>;
+  items: typeof momentRowOne;
+  duration: number;
+  reverse?: boolean;
+  paused: boolean;
 }) {
   return (
-    <div ref={rowRef} className="marquee-track">
-      {[0, 1, 2].flatMap((repeat) =>
-        items.map((item, index) => (
-          <figure className="marquee-tile" key={`${repeat}-${item.src}`}>
-            <img
-              src={item.src}
-              alt={repeat === 0 ? item.alt : ""}
-              width={420}
-              height={270}
-              loading="lazy"
-              decoding="async"
-            />
-            {repeat === 0 && (
-              <figcaption>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {item.alt}
-              </figcaption>
-            )}
-          </figure>
-        )),
-      )}
+    <div className="marquee-viewport">
+      <div
+        className={`marquee-track${reverse ? " marquee-track--reverse" : ""}${paused ? " is-paused" : ""}`}
+        style={{ "--marquee-duration": `${duration}s` } as CSSProperties}
+      >
+        {[0, 1].map((repeat) => (
+          <div
+            className="marquee-group"
+            key={repeat}
+            aria-hidden={repeat === 1 ? "true" : undefined}
+          >
+            {items.map((item, index) => (
+              <figure className="marquee-tile" key={`${repeat}-${item.src}`}>
+                <img
+                  src={item.src}
+                  alt={repeat === 0 ? item.alt : ""}
+                  width={1400}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                />
+                {repeat === 0 && (
+                  <figcaption>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    {item.label}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
 function MarqueeSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const rowOneRef = useRef<HTMLDivElement>(null);
-  const rowTwoRef = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
-
-  useEffect(() => {
-    if (reduceMotion) return;
-
-    let frame = 0;
-    const updateRows = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const section = sectionRef.current;
-        const rowOne = rowOneRef.current;
-        const rowTwo = rowTwoRef.current;
-        if (!section || !rowOne || !rowTwo) return;
-
-        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-        const offset =
-          (window.scrollY - sectionTop + window.innerHeight) * 0.3;
-        rowOne.style.transform = `translate3d(${offset - 200}px, 0, 0)`;
-        rowTwo.style.transform = `translate3d(${-1 * (offset - 200)}px, 0, 0)`;
-      });
-    };
-
-    updateRows();
-    window.addEventListener("scroll", updateRows, { passive: true });
-    window.addEventListener("resize", updateRows, { passive: true });
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", updateRows);
-      window.removeEventListener("resize", updateRows);
-    };
-  }, [reduceMotion]);
+  const [paused, setPaused] = useState(false);
+  const isPaused = paused || Boolean(reduceMotion);
 
   return (
     <section
-      ref={sectionRef}
       className="marquee-section"
-      aria-label="Selected work and competition moments"
+      aria-labelledby="moments-heading"
     >
-      <MarqueeRow items={marqueeProjects} rowRef={rowOneRef} />
-      <MarqueeRow items={marqueeJourney} rowRef={rowTwoRef} />
+      <div className="marquee-header">
+        <div>
+          <p>People, teams, and places</p>
+          <h2 id="moments-heading">Selected moments</h2>
+        </div>
+        <button
+          type="button"
+          className="marquee-toggle"
+          aria-pressed={isPaused}
+          onClick={() => setPaused((current) => !current)}
+          disabled={Boolean(reduceMotion)}
+        >
+          {isPaused ? <Play aria-hidden="true" size={16} /> : <Pause aria-hidden="true" size={16} />}
+          {isPaused ? "Resume" : "Pause"}
+        </button>
+      </div>
+      <MarqueeBand items={momentRowOne} duration={15} paused={isPaused} />
+      <MarqueeBand items={momentRowTwo} duration={13} reverse paused={isPaused} />
+    </section>
+  );
+}
+
+function VideoShowcase() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+  const wrap = (index: number) =>
+    (index + showreels.length) % showreels.length;
+  const go = (delta: number) =>
+    setActiveIndex((current) => wrap(current + delta));
+  const visibleSlides = [
+    { index: wrap(activeIndex - 1), slot: "previous" as const },
+    { index: activeIndex, slot: "active" as const },
+    { index: wrap(activeIndex + 1), slot: "next" as const },
+  ];
+
+  return (
+    <section id="films" className="video-section" aria-labelledby="films-heading">
+      <FadeIn className="video-header">
+        <div>
+          <p>Activity films · 30–40 second cuts</p>
+          <h2 id="films-heading" className="hero-heading">
+            Short stories
+          </h2>
+        </div>
+        <p>
+          Each reel combines files from the same activity. Swipe, drag, or use
+          the arrows to move between them.
+        </p>
+      </FadeIn>
+
+      <motion.div
+        className="video-stage"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Activity video carousel"
+        tabIndex={0}
+        drag={reduceMotion ? false : "x"}
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.16}
+        dragMomentum={false}
+        onDragEnd={(_, info) => {
+          if (info.offset.x < -64 || info.velocity.x < -550) go(1);
+          if (info.offset.x > 64 || info.velocity.x > 550) go(-1);
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            go(-1);
+          }
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            go(1);
+          }
+          if (event.key === "Home") {
+            event.preventDefault();
+            setActiveIndex(0);
+          }
+          if (event.key === "End") {
+            event.preventDefault();
+            setActiveIndex(showreels.length - 1);
+          }
+        }}
+      >
+        {visibleSlides.map(({ index, slot }) => {
+          const reel = showreels[index];
+          const className = `video-card video-card--${slot}`;
+
+          if (slot !== "active") {
+            return (
+              <button
+                type="button"
+                className={className}
+                key={`${reel.src}-${slot}`}
+                onClick={() => go(slot === "previous" ? -1 : 1)}
+                aria-label={`${slot === "previous" ? "Previous" : "Next"} video: ${reel.title}`}
+              >
+                <img src={reel.poster} alt="" width={720} height={1280} loading="lazy" />
+                <span className="video-card__shade" aria-hidden="true" />
+                <span className="video-card__side-copy">
+                  <span>{reel.duration}</span>
+                  <strong>{reel.title}</strong>
+                </span>
+              </button>
+            );
+          }
+
+          return (
+            <article
+              className={className}
+              key={`${reel.src}-${slot}`}
+              aria-label={`${index + 1} of ${showreels.length} — ${reel.title}`}
+            >
+              <video
+                key={reel.src}
+                src={reel.src}
+                poster={reel.poster}
+                autoPlay={!reduceMotion}
+                muted
+                loop
+                controls
+                playsInline
+                preload="metadata"
+                onPointerDown={(event) => event.stopPropagation()}
+              />
+              <span className="video-card__shade" aria-hidden="true" />
+              <div className="video-card__copy">
+                <span>{reel.eyebrow}</span>
+                <h3>{reel.title}</h3>
+                <p>{reel.description}</p>
+              </div>
+              <span className="video-card__duration">{reel.duration}</span>
+            </article>
+          );
+        })}
+      </motion.div>
+
+      <div className="video-controls">
+        <button type="button" onClick={() => go(-1)} aria-label="Previous activity video">
+          <ChevronLeft aria-hidden="true" />
+        </button>
+        <div className="video-dots" aria-label="Choose an activity video">
+          {showreels.map((reel, index) => (
+            <button
+              type="button"
+              key={reel.src}
+              className={index === activeIndex ? "is-active" : ""}
+              aria-label={`Show ${reel.title}`}
+              aria-current={index === activeIndex ? "true" : undefined}
+              onClick={() => setActiveIndex(index)}
+            />
+          ))}
+        </div>
+        <button type="button" onClick={() => go(1)} aria-label="Next activity video">
+          <ChevronRight aria-hidden="true" />
+        </button>
+      </div>
+      <p className="video-status" aria-live="polite">
+        {String(activeIndex + 1).padStart(2, "0")} / {String(showreels.length).padStart(2, "0")} · {showreels[activeIndex].title}
+      </p>
     </section>
   );
 }
@@ -519,7 +767,7 @@ function HeroSection() {
       <FadeIn className="hero-nav-wrap" y={-20}>
         <nav className="hero-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
-          <a href="#services">Skills</a>
+          <a href="#films">Films</a>
           <a href="#awards">Awards</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -529,7 +777,7 @@ function HeroSection() {
       <div className="hero-heading-wrap">
         <FadeIn delay={0.15} y={40}>
           <h1 id="hero-heading" className="hero-heading hero-title">
-            Hi, i&apos;m yuan
+            Hi, I&apos;m Yuan
           </h1>
         </FadeIn>
       </div>
@@ -556,8 +804,9 @@ function HeroSection() {
       <div className="hero-bottom">
         <FadeIn className="hero-intro" delay={0.35} y={20}>
           <p>
-            A full-stack developer driven by AI, cloud systems, and creative
-            problem-solving
+            <span>CS Student + AI &amp;</span>
+            <br />
+            <span>Full-Stack Developer</span>
           </p>
         </FadeIn>
         <FadeIn className="hero-contact" delay={0.5} y={20}>
@@ -570,7 +819,7 @@ function HeroSection() {
 
 function AboutSection() {
   const aboutText =
-    "I'm Tsung-Yuan Lin, a Computer Science student at Feng Chia University with a 3.8/4.3 GPA. I build full-stack products that connect AI, cloud services, and real-world systems, and I completed an exchange program at Temple University. I'm most energized by competitive programming, hackathons, and turning ambitious ideas into reliable products.";
+    "I'm Tsung-Yuan Lin, a CS student at Feng Chia University and an AI & Full-Stack Developer. I completed a Fall 2025 exchange at Temple University and joined the AI team at Concord System Management Corp. (SYSTEX Group) as a Software Development Intern in July 2026. I focus on AI-enabled products, backend systems, and full-stack development.";
 
   return (
     <section id="about" className="about-section" aria-labelledby="about-heading">
@@ -598,7 +847,7 @@ function AboutSection() {
 
         <FadeIn className="about-facts" delay={0.1}>
           <div>
-            <strong>3.8 / 4.3</strong>
+            <strong>3.91 / 4.3</strong>
             <span>Feng Chia GPA</span>
           </div>
           <div>
@@ -606,12 +855,20 @@ function AboutSection() {
             <span>Temple GPA</span>
           </div>
           <div>
-            <strong>7.0 / 835</strong>
-            <span>IELTS · TOEIC</span>
+            <strong>C1</strong>
+            <span>English</span>
           </div>
           <div>
             <strong>8×</strong>
             <span>Competition milestones</span>
+          </div>
+        </FadeIn>
+
+        <FadeIn className="current-role" delay={0.16} y={20}>
+          <span>Current role</span>
+          <div>
+            <h3>Software Development Intern</h3>
+            <p>Concord System Management Corp. (SYSTEX Group) · AI Team · Jul 2026–Present</p>
           </div>
         </FadeIn>
 
@@ -711,7 +968,7 @@ function AwardsSection() {
                       aria-label={`View proof for ${award.title}${award.proof.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
                     >
                       <FileText aria-hidden="true" size={18} />
-                      <span>View proof</span>
+                      <span>{award.proofLabel ?? "View proof"}</span>
                     </a>
                   ) : (
                     <span className="award-proof award-proof--empty" aria-hidden="true">
@@ -727,12 +984,12 @@ function AwardsSection() {
         <div className="awards-evidence">
           <FadeIn className="awards-evidence-header">
             <div>
-              <p>Selected proof</p>
-              <h3>Receipts, not decoration.</h3>
+              <p>Selected certificates</p>
+              <h3>Certificates &amp; records.</h3>
             </div>
             <p>
-              Certificates and event records pulled directly from the portfolio
-              archive.
+              Competition certificates and official records from the portfolio
+              archive. School coverage is linked in the timeline above.
             </p>
           </FadeIn>
 
@@ -773,6 +1030,20 @@ function AwardsSection() {
   );
 }
 
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const update = () => setMatches(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [query]);
+
+  return matches;
+}
+
 function ProjectCard({
   project,
   index,
@@ -782,13 +1053,18 @@ function ProjectCard({
 }) {
   const container = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
   });
-  const targetScale = 1 - (projects.length - 1 - index) * 0.03;
+  const targetScale = 1 - (projects.length - index) * 0.035;
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
+  const cardY = useTransform(scrollYProgress, [0, 1], [0, -12]);
+  const scrimOpacity = useTransform(scrollYProgress, [0.08, 1], [0, 0.24]);
+  const stackMotion = !reduceMotion && isDesktop;
   const headingId = `project-${project.number}`;
+  const reveal = reduceMotion ? false : { opacity: 0, y: 34 };
 
   return (
     <div ref={container} className="project-card-space">
@@ -796,26 +1072,46 @@ function ProjectCard({
         className="project-card"
         aria-labelledby={headingId}
         style={{
-          scale: reduceMotion ? 1 : scale,
+          scale: stackMotion ? scale : 1,
+          y: stackMotion ? cardY : 0,
           top: `calc(var(--project-sticky-top) + ${index * 28}px)`,
+          zIndex: index + 1,
         }}
       >
-        <div className="project-card__top">
+        <motion.div
+          className="project-card__top"
+          initial={reveal}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.35 }}
+          transition={{ duration: reduceMotion ? 0 : 0.58, ease: EASE }}
+        >
           <span className="project-number">{project.number}</span>
           <div className="project-title-block">
             <span>{project.category}</span>
             <h3 id={headingId}>{project.title}</h3>
           </div>
           <LiveProjectButton href={project.github} />
-        </div>
+        </motion.div>
 
         <div className="project-media-grid">
           <div className="project-info-column">
-            <div className="project-info-panel project-info-panel--primary">
+            <motion.div
+              className="project-info-panel project-info-panel--primary"
+              initial={reveal}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: reduceMotion ? 0 : 0.62, delay: reduceMotion ? 0 : 0.07, ease: EASE }}
+            >
               <span>Build focus</span>
               <p>{project.description}</p>
-            </div>
-            <div className="project-info-panel project-info-panel--secondary">
+            </motion.div>
+            <motion.div
+              className="project-info-panel project-info-panel--secondary"
+              initial={reveal}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: reduceMotion ? 0 : 0.62, delay: reduceMotion ? 0 : 0.14, ease: EASE }}
+            >
               <span>Impact</span>
               <strong>{project.highlight}</strong>
               <div className="project-tech" aria-label="Technology stack">
@@ -823,15 +1119,19 @@ function ProjectCard({
                   <span key={technology}>{technology}</span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <a
+          <motion.a
             className="project-image-link"
             href={project.github}
             target="_blank"
             rel="noreferrer"
             aria-label={`Open ${project.title} repository`}
+            initial={reduceMotion ? false : { opacity: 0, scale: 1.035, clipPath: "inset(10% 0 0 0 round 3rem)" }}
+            whileInView={{ opacity: 1, scale: 1, clipPath: "inset(0% 0 0 0 round 3rem)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: reduceMotion ? 0 : 0.72, delay: reduceMotion ? 0 : 0.1, ease: EASE }}
           >
             <img
               src={project.image}
@@ -844,8 +1144,13 @@ function ProjectCard({
             <span>
               Open repository <ArrowUpRight aria-hidden="true" size={18} />
             </span>
-          </a>
+          </motion.a>
         </div>
+        <motion.span
+          className="project-card__scrim"
+          aria-hidden="true"
+          style={{ opacity: stackMotion ? scrimOpacity : 0 }}
+        />
       </motion.article>
     </div>
   );
@@ -856,7 +1161,7 @@ function ProjectsSection() {
     <section id="projects" className="projects-section" aria-labelledby="projects-heading">
       <FadeIn>
         <h2 id="projects-heading" className="hero-heading section-heading projects-heading">
-          Project
+          Projects
         </h2>
       </FadeIn>
 
@@ -868,11 +1173,11 @@ function ProjectsSection() {
 
       <footer id="contact" className="contact-footer">
         <FadeIn className="contact-footer__inner" y={40}>
-          <p className="contact-kicker">Available for the next ambitious build</p>
+          <p className="contact-kicker">Open to collaboration and future opportunities</p>
           <h2>
-            Let&apos;s make
+            Let&apos;s build useful
             <br />
-            something real.
+            AI &amp; software.
           </h2>
           <a className="contact-email" href="mailto:t3good1@gmail.com">
             t3good1@gmail.com <ArrowUpRight aria-hidden="true" />
@@ -903,6 +1208,7 @@ export function PortfolioLanding() {
     <main id="top" className="site-wrapper">
       <HeroSection />
       <MarqueeSection />
+      <VideoShowcase />
       <AboutSection />
       <AwardsSection />
       <ServicesSection />

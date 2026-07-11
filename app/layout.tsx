@@ -20,9 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.includes("localhost") ? "http" : "https");
   const metadataBase = new URL(`${protocol}://${host}`);
-  const title = "Tsung-Yuan Lin — Full-Stack Developer";
+  const title = "Tsung-Yuan Lin — CS Student + AI & Full-Stack Developer";
   const description =
-    "Tsung-Yuan Lin builds award-winning full-stack, AI, cloud, and IoT products through code and creative problem-solving.";
+    "Portfolio of Tsung-Yuan Lin, a CS student and AI & Full-Stack Developer with experience in AI systems, software development, research, and hackathons.";
 
   return {
     metadataBase,
@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: new URL("/og.png", metadataBase).toString(),
           width: 1200,
           height: 630,
-          alt: "Tsung-Yuan Lin — Full-Stack Developer",
+          alt: "Tsung-Yuan Lin — CS Student + AI & Full-Stack Developer",
         },
       ],
     },
