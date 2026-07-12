@@ -32,7 +32,9 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /<title>Tsung-Yuan Lin — CS Student \+ AI &amp; Full-Stack Developer<\/title>/i);
   assert.match(html, /Hi, I(?:&#x27;|')m Yuan/i);
   assert.match(html, /Short stories/i);
-  assert.match(html, /American Life/i);
+  assert.match(html, /Semester in Philadelphia/i);
+  assert.match(html, /Looking forward to/i);
+  assert.match(html, /working together\./i);
   assert.match(html, /Concord System Management Corp\./i);
   assert.match(html, /https:\/\/www\.econcord\.com\.tw\//i);
   assert.match(html, /3\.91 \/ 4\.3/i);

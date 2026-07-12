@@ -136,12 +136,12 @@ const showreels = [
     description: "The complete original cut of the research presentation on coordinated social-media behavior detection.",
   },
   {
-    title: "American Life",
+    title: "Semester in Philadelphia",
     eyebrow: "Temple University · Exchange",
-    duration: "02:30",
+    duration: "01:50",
     src: "/portfolio/showreels/american-life-2025.mp4",
     poster: "/portfolio/showreels/american-life-2025.jpg",
-    description: "The first 150 seconds of the original exchange-life film, cropped to its central portrait frame.",
+    description: "A 110-second look at my Temple University exchange, from arrival to campus life and exploring Philadelphia.",
   },
   {
     title: "Learn Chinese Together",
@@ -1209,9 +1209,9 @@ function ProjectsSection() {
         <FadeIn className="contact-footer__inner" y={40}>
           <p className="contact-kicker">Open to collaboration and future opportunities</p>
           <h2>
-            Let&apos;s build useful
+            Looking forward to
             <br />
-            AI &amp; software.
+            working together.
           </h2>
           <a className="contact-email" href="mailto:t3good1@gmail.com">
             t3good1@gmail.com <ArrowUpRight aria-hidden="true" />
