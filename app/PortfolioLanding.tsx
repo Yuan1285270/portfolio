@@ -75,9 +75,9 @@ const momentRowTwo = [
     label: "Sparkful · Team life",
   },
   {
-    src: "/portfolio/moments-v2/exchange-scholarship.jpg",
-    alt: "Tsung-Yuan receiving an overseas study scholarship",
-    label: "Study abroad scholarship",
+    src: "/portfolio/moments-v2/it-month-faculty.jpg",
+    alt: "Tsung-Yuan and teammates with their professor after receiving IT Month awards",
+    label: "IT Month · With faculty",
   },
   {
     src: "/portfolio/moments-v2/ncpc-team.jpg",
@@ -294,13 +294,13 @@ const awardEvidence = [
   },
   {
     year: "2024",
-    title: "IT Month · Outstanding Award",
-    category: "Award certificate",
-    image: "/portfolio/awards/it-month-outstanding.jpg",
-    imageAlt: "IT Month individual outstanding award certificate",
-    width: 1400,
-    height: 2096,
-    href: "/portfolio/awards/it-month-outstanding.jpg",
+    title: "Cross-Strait Maker · 3rd Tier Prize",
+    category: "Maker competition certificate",
+    image: "/portfolio/awards/cross-strait-third-prize.jpg",
+    imageAlt: "Cross-Strait Youth Maker Competition third tier prize certificate for Cycle Guardian",
+    width: 1200,
+    height: 1880,
+    href: "/portfolio/awards/cross-strait-third-prize.jpg",
   },
   {
     year: "2025",

@@ -38,6 +38,7 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /3\.91 \/ 4\.3/i);
   assert.match(html, />C1</i);
   assert.match(html, /IELTS Academic · C1/i);
+  assert.match(html, /Cross-Strait Maker · 3rd Tier Prize/i);
   assert.match(html, /Portrait certificates/i);
   assert.match(html, /Landscape records/i);
   assert.match(html, /Capabilities/i);
@@ -79,6 +80,8 @@ test("ships the finished portfolio source without starter artifacts", async () =
     access(new URL("../public/portfolio/showreels/owlhacks-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/showreels/american-life-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/awards/ielts-c1.jpg", import.meta.url)),
+    access(new URL("../public/portfolio/awards/cross-strait-third-prize.jpg", import.meta.url)),
+    access(new URL("../public/portfolio/moments-v2/it-month-faculty.jpg", import.meta.url)),
     access(new URL("../public/certificates/owl-hacks-2025-second-place.pdf", import.meta.url)),
   ]);
 
