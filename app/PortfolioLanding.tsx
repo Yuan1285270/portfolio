@@ -570,11 +570,13 @@ function MarqueeBand({
   duration,
   reverse = false,
   paused,
+  eager = false,
 }: {
   items: typeof momentRowOne;
   duration: number;
   reverse?: boolean;
   paused: boolean;
+  eager?: boolean;
 }) {
   return (
     <div className="marquee-viewport">
@@ -595,7 +597,8 @@ function MarqueeBand({
                   alt={repeat === 0 ? item.alt : ""}
                   width={1400}
                   height={900}
-                  loading="lazy"
+                  loading={eager && repeat === 0 ? "eager" : "lazy"}
+                  fetchPriority={eager && repeat === 0 && index < 2 ? "high" : "auto"}
                   decoding="async"
                 />
                 {repeat === 0 && (
@@ -639,7 +642,7 @@ function MarqueeSection() {
           {isPaused ? "Resume" : "Pause"}
         </button>
       </div>
-      <MarqueeBand items={momentRowOne} duration={15} paused={isPaused} />
+      <MarqueeBand items={momentRowOne} duration={15} paused={isPaused} eager />
       <MarqueeBand items={momentRowTwo} duration={13} reverse paused={isPaused} />
     </section>
   );
