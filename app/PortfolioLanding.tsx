@@ -136,12 +136,12 @@ const showreels = [
     description: "The complete original cut of the research presentation on coordinated social-media behavior detection.",
   },
   {
-    title: "Semester in Philadelphia",
-    eyebrow: "Temple University · Exchange",
+    title: "In America",
+    eyebrow: "United States · Travel Diary",
     duration: "01:50",
     src: "/portfolio/showreels/american-life-2025.mp4",
     poster: "/portfolio/showreels/american-life-2025.jpg",
-    description: "A 110-second look at my Temple University exchange, from arrival to campus life and exploring Philadelphia.",
+    description: "A 110-second travel diary through the places and experiences that shaped my time in the United States.",
   },
   {
     title: "Learn Chinese Together",
