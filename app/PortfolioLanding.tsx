@@ -642,8 +642,8 @@ function MarqueeSection() {
           {isPaused ? "Resume" : "Pause"}
         </button>
       </div>
-      <MarqueeBand items={momentRowOne} duration={15} paused={isPaused} eager />
-      <MarqueeBand items={momentRowTwo} duration={13} reverse paused={isPaused} />
+      <MarqueeBand items={momentRowOne} duration={22} paused={isPaused} eager />
+      <MarqueeBand items={momentRowTwo} duration={20} reverse paused={isPaused} />
     </section>
   );
 }
