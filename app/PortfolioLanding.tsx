@@ -47,9 +47,9 @@ const momentRowOne = [
     label: "Mountain City · 2024",
   },
   {
-    src: "/portfolio/moments-v2/cross-team.jpg",
-    alt: "Cycle Guardian team at the Cross-Strait Youth Maker Competition",
-    label: "Cycle Guardian · 2024",
+    src: "/portfolio/moments-v2/it-month-faculty.jpg",
+    alt: "Tsung-Yuan and teammates with their professor after receiving IT Month awards",
+    label: "IT Month · With faculty",
   },
   {
     src: "/portfolio/moments-v2/cycle-demo-team.jpg",
@@ -75,9 +75,9 @@ const momentRowTwo = [
     label: "Sparkful · Team life",
   },
   {
-    src: "/portfolio/moments-v2/it-month-faculty.jpg",
-    alt: "Tsung-Yuan and teammates with their professor after receiving IT Month awards",
-    label: "IT Month · With faculty",
+    src: "/portfolio/moments-v2/exchange-scholarship.jpg",
+    alt: "Tsung-Yuan receiving an overseas study scholarship",
+    label: "Study abroad scholarship",
   },
   {
     src: "/portfolio/moments-v2/ncpc-team.jpg",
