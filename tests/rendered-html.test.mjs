@@ -50,6 +50,8 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /ALL-EN/i);
   assert.match(html, /SpendiX/i);
   assert.match(html, /Smart Drop/i);
+  assert.match(html, /MCA-Detector/i);
+  assert.match(html, /mca\.tsungyuan\.dev/i);
   assert.match(html, /property="og:image"/i);
   assert.match(html, /\/og\.png/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
@@ -78,6 +80,7 @@ test("ships the finished portfolio source without starter artifacts", async () =
     access(new URL("../public/og.png", import.meta.url)),
     access(new URL("../public/portfolio/originals/yuan-steak.jpg", import.meta.url)),
     access(new URL("../public/portfolio/originals/all-en.png", import.meta.url)),
+    access(new URL("../public/portfolio/originals/mca-detector.webp", import.meta.url)),
     access(new URL("../public/portfolio/awards/owl-hacks-2025.png", import.meta.url)),
     access(new URL("../public/portfolio/showreels/owlhacks-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/showreels/american-life-2025.mp4", import.meta.url)),

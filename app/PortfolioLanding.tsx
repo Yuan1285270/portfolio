@@ -337,7 +337,23 @@ const awardEvidenceGroups = [
   },
 ];
 
-const projects = [
+type Project = {
+  number: string;
+  category: string;
+  title: string;
+  description: string;
+  highlight: string;
+  tech: string[];
+  image: string;
+  imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
+  href: string;
+  cta?: string;
+  mediaCta?: string;
+};
+
+const projects: Project[] = [
   {
     number: "01",
     category: "E-commerce",
@@ -350,7 +366,7 @@ const projects = [
     imageAlt: "ALL-EN e-commerce storefront",
     imageWidth: 2046,
     imageHeight: 1168,
-    github: "https://github.com/Yuan1285270/DatabaseAllin",
+    href: "https://github.com/Yuan1285270/DatabaseAllin",
   },
   {
     number: "02",
@@ -364,7 +380,7 @@ const projects = [
     imageAlt: "SpendiX personal finance identity",
     imageWidth: 2048,
     imageHeight: 1156,
-    github: "https://github.com/Yuan1285270/AI_Fintech_APIs",
+    href: "https://github.com/Yuan1285270/AI_Fintech_APIs",
   },
   {
     number: "03",
@@ -378,7 +394,23 @@ const projects = [
     imageAlt: "Smart Drop mobile product concept",
     imageWidth: 2048,
     imageHeight: 1147,
-    github: "https://github.com/Yuan1285270/Devjam2025",
+    href: "https://github.com/Yuan1285270/Devjam2025",
+  },
+  {
+    number: "04",
+    category: "AI / Research Infrastructure",
+    title: "MCA-Detector",
+    description:
+      "An evidence-linked research workspace for investigating coordinated social behavior across PTT Stock and Reddit BTC with hybrid retrieval, graph traversal, topic analysis, and market context.",
+    highlight: "63,881 searchable documents · 2.27M OHLCV records",
+    tech: ["FastAPI", "PostgreSQL", "Hybrid RAG", "ECharts", "Azure", "Cloudflare"],
+    image: "/portfolio/originals/mca-detector.webp",
+    imageAlt: "MCA-Detector research workspace landing page with the message See the signals, find the evidence",
+    imageWidth: 1440,
+    imageHeight: 900,
+    href: "https://mca.tsungyuan.dev/?view=landing&dataset=ptt-stock-2025",
+    cta: "Open live",
+    mediaCta: "Explore MCA",
   },
 ];
 
@@ -493,7 +525,13 @@ function ContactButton({ label = "Contact me" }: { label?: string }) {
   );
 }
 
-function LiveProjectButton({ href }: { href: string }) {
+function LiveProjectButton({
+  href,
+  label = "View code",
+}: {
+  href: string;
+  label?: string;
+}) {
   return (
     <a
       className="live-project-button"
@@ -501,7 +539,7 @@ function LiveProjectButton({ href }: { href: string }) {
       target="_blank"
       rel="noreferrer"
     >
-      <span>View code</span>
+      <span>{label}</span>
       <ArrowUpRight aria-hidden="true" size={18} />
     </a>
   );
@@ -1085,7 +1123,7 @@ function ProjectCard({
   project,
   index,
 }: {
-  project: (typeof projects)[number];
+  project: Project;
   index: number;
 }) {
   const container = useRef<HTMLDivElement>(null);
@@ -1127,7 +1165,7 @@ function ProjectCard({
             <span>{project.category}</span>
             <h3 id={headingId}>{project.title}</h3>
           </div>
-          <LiveProjectButton href={project.github} />
+          <LiveProjectButton href={project.href} label={project.cta} />
         </motion.div>
 
         <div className="project-media-grid">
@@ -1161,10 +1199,10 @@ function ProjectCard({
 
           <motion.a
             className="project-image-link"
-            href={project.github}
+            href={project.href}
             target="_blank"
             rel="noreferrer"
-            aria-label={`Open ${project.title} repository`}
+            aria-label={project.mediaCta ?? `Open ${project.title} repository`}
             initial={reduceMotion ? false : { opacity: 0, scale: 1.035, clipPath: "inset(10% 0 0 0 round 3rem)" }}
             whileInView={{ opacity: 1, scale: 1, clipPath: "inset(0% 0 0 0 round 3rem)" }}
             viewport={{ once: true, amount: 0.2 }}
@@ -1179,7 +1217,7 @@ function ProjectCard({
               decoding="async"
             />
             <span>
-              Open repository <ArrowUpRight aria-hidden="true" size={18} />
+              {project.mediaCta ?? "Open repository"} <ArrowUpRight aria-hidden="true" size={18} />
             </span>
           </motion.a>
         </div>
