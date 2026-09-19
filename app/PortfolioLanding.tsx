@@ -30,6 +30,17 @@ import {
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
+function useStableReducedMotion() {
+  const preference = useReducedMotion();
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    setReduceMotion(Boolean(preference));
+  }, [preference]);
+
+  return reduceMotion;
+}
+
 const momentRowOne = [
   {
     src: "/portfolio/moments/fintech-team.jpg",
@@ -429,7 +440,7 @@ function FadeIn({
   x?: number;
   y?: number;
 }) {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
 
   return (
     <motion.div
@@ -458,7 +469,7 @@ function Magnet({
   strength?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [active, setActive] = useState(false);
 
@@ -578,7 +589,7 @@ function AnimatedCharacter({
 
 function AnimatedText({ text }: { text: string }) {
   const target = useRef<HTMLParagraphElement>(null);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
   const { scrollYProgress } = useScroll({
     target,
     offset: ["start 0.8", "end 0.2"],
@@ -655,7 +666,7 @@ function MarqueeBand({
 }
 
 function MarqueeSection() {
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
   const [paused, setPaused] = useState(false);
   const isPaused = paused || Boolean(reduceMotion);
 
@@ -688,7 +699,7 @@ function MarqueeSection() {
 
 function VideoShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
   const wrap = (index: number) =>
     (index + showreels.length) % showreels.length;
   const go = (delta: number) =>
@@ -1127,7 +1138,7 @@ function ProjectCard({
   index: number;
 }) {
   const container = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useStableReducedMotion();
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const { scrollYProgress } = useScroll({
     target: container,
