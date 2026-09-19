@@ -1673,8 +1673,9 @@ button:focus-visible {
 }
 
 @media (min-width: 1200px) {
-  .awards-evidence-grid--portrait {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+  .awards-evidence-grid--portrait,
+  .awards-evidence-grid--landscape {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

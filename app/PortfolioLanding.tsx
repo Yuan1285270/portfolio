@@ -199,6 +199,15 @@ const capabilities = [
 
 const awards = [
   {
+    year: "2026",
+    rank: "Bronze",
+    title: "ICPC Taiwan Private University Programming Contest",
+    location: "Taiwan",
+    detail: "GPT-5.5pro · Feng Chia University",
+    proof: "/certificates/icpc-pupc-2026-bronze.pdf",
+    proofLabel: "Certificate",
+  },
+  {
     year: "2025",
     rank: "2nd Place · Health ML Track",
     title: "OwlHacks 2025",
@@ -263,6 +272,27 @@ const awards = [
 ];
 
 const awardEvidence = [
+  {
+    year: "2026",
+    title: "TCSE 2026 · Paper Presentation",
+    category: "Research presentation",
+    image: "/portfolio/awards/tcse-2026-presentation.jpg",
+    imageAlt:
+      "TCSE 2026 certificate confirming acceptance and presentation of Detection of Coordinated Social Media Behavior with Large Language Models, Multi-Layer Account Graphs",
+    width: 1499,
+    height: 2200,
+    href: "/portfolio/awards/tcse-2026-presentation.jpg",
+  },
+  {
+    year: "2026",
+    title: "ICPC PUPC · Bronze",
+    category: "Programming contest",
+    image: "/portfolio/awards/icpc-pupc-2026-bronze.png",
+    imageAlt: "2026 ICPC Taiwan Private University Programming Contest bronze certificate",
+    width: 1872,
+    height: 1323,
+    href: "/certificates/icpc-pupc-2026-bronze.pdf",
+  },
   {
     year: "2025",
     title: "OwlHacks · 2nd Place",
@@ -367,6 +397,22 @@ type Project = {
 const projects: Project[] = [
   {
     number: "01",
+    category: "AI / Investment Research",
+    title: "MCA-Detector",
+    description:
+      "An AI-powered investment tool for investors, using PTT Stock and Reddit BTC social data to surface narratives, topics, and account connections.",
+    highlight: "63,881 social documents indexed · 2.27M OHLCV records",
+    tech: ["FastAPI", "PostgreSQL", "Hybrid RAG", "ECharts", "Azure", "Cloudflare"],
+    image: "/portfolio/originals/mca-detector.webp",
+    imageAlt: "MCA-Detector AI investment research platform powered by PTT Stock and Reddit BTC social data",
+    imageWidth: 1440,
+    imageHeight: 900,
+    href: "https://mca.tsungyuan.dev/?view=landing&dataset=ptt-stock-2025",
+    cta: "Open platform",
+    mediaCta: "Explore MCA",
+  },
+  {
+    number: "02",
     category: "E-commerce",
     title: "ALL-EN",
     description:
@@ -380,7 +426,7 @@ const projects: Project[] = [
     href: "https://github.com/Yuan1285270/DatabaseAllin",
   },
   {
-    number: "02",
+    number: "03",
     category: "AI / FinTech",
     title: "SpendiX",
     description:
@@ -394,7 +440,7 @@ const projects: Project[] = [
     href: "https://github.com/Yuan1285270/AI_Fintech_APIs",
   },
   {
-    number: "03",
+    number: "04",
     category: "Cloud / AgriTech",
     title: "Smart Drop",
     description:
@@ -406,22 +452,6 @@ const projects: Project[] = [
     imageWidth: 2048,
     imageHeight: 1147,
     href: "https://github.com/Yuan1285270/Devjam2025",
-  },
-  {
-    number: "04",
-    category: "AI / Research Infrastructure",
-    title: "MCA-Detector",
-    description:
-      "An evidence-linked research workspace for investigating coordinated social behavior across PTT Stock and Reddit BTC with hybrid retrieval, graph traversal, topic analysis, and market context.",
-    highlight: "63,881 searchable documents · 2.27M OHLCV records",
-    tech: ["FastAPI", "PostgreSQL", "Hybrid RAG", "ECharts", "Azure", "Cloudflare"],
-    image: "/portfolio/originals/mca-detector.webp",
-    imageAlt: "MCA-Detector research workspace landing page with the message See the signals, find the evidence",
-    imageWidth: 1440,
-    imageHeight: 900,
-    href: "https://mca.tsungyuan.dev/?view=landing&dataset=ptt-stock-2025",
-    cta: "Open live",
-    mediaCta: "Explore MCA",
   },
 ];
 
@@ -646,16 +676,14 @@ function MarqueeBand({
                   alt={repeat === 0 ? item.alt : ""}
                   width={1400}
                   height={900}
-                  loading={eager && repeat === 0 ? "eager" : "lazy"}
-                  fetchPriority={eager && repeat === 0 && index < 2 ? "high" : "auto"}
+                  loading="eager"
+                  fetchPriority={eager && repeat === 0 && index < 2 ? "high" : "low"}
                   decoding="async"
                 />
-                {repeat === 0 && (
-                  <figcaption>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    {item.label}
-                  </figcaption>
-                )}
+                <figcaption>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {item.label}
+                </figcaption>
               </figure>
             ))}
           </div>
@@ -935,7 +963,7 @@ function AboutSection() {
             <span>English</span>
           </div>
           <div>
-            <strong>8×</strong>
+            <strong>9×</strong>
             <span>Competition milestones</span>
           </div>
         </FadeIn>
@@ -994,7 +1022,7 @@ function AwardsSection() {
         <div className="awards-header">
           <FadeIn>
             <p className="awards-kicker">
-              <Trophy aria-hidden="true" size={18} /> Recognition · 2024—2025
+              <Trophy aria-hidden="true" size={18} /> Recognition · 2024—2026
             </p>
             <h2 id="awards-heading" className="hero-heading awards-heading">
               Awards
@@ -1009,11 +1037,11 @@ function AwardsSection() {
             </p>
             <div className="awards-stats" aria-label="Award highlights">
               <div>
-                <strong>5</strong>
+                <strong>6</strong>
                 <span>Placed awards</span>
               </div>
               <div>
-                <strong>8</strong>
+                <strong>9</strong>
                 <span>Competition milestones</span>
               </div>
               <div>
@@ -1253,7 +1281,7 @@ function ProjectsSection() {
 
       <div className="projects-list">
         {projects.map((project, index) => (
-          <ProjectCard key={project.number} project={project} index={index} />
+          <ProjectCard key={project.title} project={project} index={index} />
         ))}
       </div>
 
