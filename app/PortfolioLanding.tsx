@@ -43,6 +43,11 @@ function useStableReducedMotion() {
 
 const momentRowOne = [
   {
+    src: "/portfolio/moments-v2/sei-smart-finance-2026.jpg",
+    alt: "Tsung-Yuan and teammates after placing second in the 2026 SEI Smart Finance AI Innovation Competition",
+    label: "SEI Finance AI · 2nd Place",
+  },
+  {
     src: "/portfolio/moments/fintech-team.jpg",
     alt: "SpendiX team at the Hack to the Top AI FinTech Innovation Hackathon",
     label: "AI FinTech · 2025",
@@ -200,6 +205,15 @@ const capabilities = [
 const awards = [
   {
     year: "2026",
+    rank: "2nd Place",
+    title: "SEI Smart Finance AI Innovation Competition",
+    location: "Taiwan",
+    detail: "SYSTEX Elite Internship · Final round",
+    proof: "/portfolio/moments-v2/sei-smart-finance-2026.jpg",
+    proofLabel: "Event photo",
+  },
+  {
+    year: "2026",
     rank: "Bronze",
     title: "ICPC Taiwan Private University Programming Contest",
     location: "Taiwan",
@@ -296,7 +310,7 @@ const awardEvidence = [
   {
     year: "2025",
     title: "OwlHacks · 2nd Place",
-    category: "International hackathon",
+    category: "Temple University hackathon",
     image: "/portfolio/awards/owl-hacks-2025.png",
     imageAlt: "OwlHacks 2025 second place certificate",
     width: 1489,
@@ -963,7 +977,7 @@ function AboutSection() {
             <span>English</span>
           </div>
           <div>
-            <strong>9×</strong>
+            <strong>10×</strong>
             <span>Competition milestones</span>
           </div>
         </FadeIn>
@@ -1031,17 +1045,17 @@ function AwardsSection() {
 
           <FadeIn className="awards-intro" delay={0.1} y={24}>
             <p>
-              From national programming contests in Taiwan to an international
-              machine-learning hackathon in the United States, each result marks
-              a different kind of problem solved under pressure.
+              Across programming, AI, finance, and maker competitions in Taiwan,
+              the United States, and China, each result marks a different kind of
+              problem solved under pressure.
             </p>
             <div className="awards-stats" aria-label="Award highlights">
               <div>
-                <strong>6</strong>
+                <strong>7</strong>
                 <span>Placed awards</span>
               </div>
               <div>
-                <strong>9</strong>
+                <strong>10</strong>
                 <span>Competition milestones</span>
               </div>
               <div>
