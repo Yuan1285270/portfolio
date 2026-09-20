@@ -61,6 +61,8 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /mca\.tsungyuan\.dev/i);
   assert.ok(html.indexOf("MCA-Detector") < html.indexOf("ALL-EN"));
   assert.match(html, /ICPC Taiwan Private University Programming Contest/i);
+  assert.match(html, /ICPC Asia Taiwan Online Programming Contest \(TOPC\)/i);
+  assert.match(html, /TOPC · Honorable Mention/i);
   assert.match(html, /TCSE 2026 · Paper Presentation/i);
   assert.equal((html.match(/Prototype showcase · 2024/g) ?? []).length, 2);
   assert.equal((html.match(/SEI Finance AI · 2nd Place/g) ?? []).length, 2);
@@ -96,7 +98,9 @@ test("ships the finished portfolio source without starter artifacts", async () =
     access(new URL("../public/portfolio/originals/mca-detector.webp", import.meta.url)),
     access(new URL("../public/portfolio/awards/tcse-2026-presentation.jpg", import.meta.url)),
     access(new URL("../public/portfolio/awards/icpc-pupc-2026-bronze.png", import.meta.url)),
+    access(new URL("../public/portfolio/awards/topc-2024-honorable-mention.png", import.meta.url)),
     access(new URL("../public/certificates/icpc-pupc-2026-bronze.pdf", import.meta.url)),
+    access(new URL("../public/certificates/topc-2024-honorable-mention.pdf", import.meta.url)),
     access(new URL("../public/portfolio/awards/owl-hacks-2025.png", import.meta.url)),
     access(new URL("../public/portfolio/showreels/owlhacks-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/showreels/american-life-2025.mp4", import.meta.url)),

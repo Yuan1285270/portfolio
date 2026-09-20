@@ -247,6 +247,15 @@ const awards = [
   },
   {
     year: "2024",
+    rank: "Honorable Mention",
+    title: "ICPC Asia Taiwan Online Programming Contest (TOPC)",
+    location: "Taiwan",
+    detail: "ITT_GoToBed · Feng Chia University",
+    proof: "/certificates/topc-2024-honorable-mention.pdf",
+    proofLabel: "Certificate",
+  },
+  {
+    year: "2024",
     rank: "Finalist",
     title: "National College Programming Contest (NCPC)",
     location: "Taiwan",
@@ -355,6 +364,16 @@ const awardEvidence = [
     width: 1400,
     height: 1034,
     href: "/certificates/temple-exchange-fall-2025.pdf",
+  },
+  {
+    year: "2024",
+    title: "TOPC · Honorable Mention",
+    category: "Programming contest",
+    image: "/portfolio/awards/topc-2024-honorable-mention.png",
+    imageAlt: "2024 ICPC Asia Taiwan Online Programming Contest honorable mention certificate for team ITT_GoToBed",
+    width: 1755,
+    height: 1240,
+    href: "/certificates/topc-2024-honorable-mention.pdf",
   },
   {
     year: "2024",
@@ -966,7 +985,7 @@ function AboutSection() {
             <span>English</span>
           </div>
           <div>
-            <strong>10×</strong>
+            <strong>11×</strong>
             <span>Competition milestones</span>
           </div>
         </FadeIn>
@@ -1040,11 +1059,11 @@ function AwardsSection() {
             </p>
             <div className="awards-stats" aria-label="Award highlights">
               <div>
-                <strong>7</strong>
+                <strong>8</strong>
                 <span>Placed awards</span>
               </div>
               <div>
-                <strong>10</strong>
+                <strong>11</strong>
                 <span>Competition milestones</span>
               </div>
               <div>
