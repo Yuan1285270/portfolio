@@ -44,6 +44,9 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /Portrait certificates/i);
   assert.match(html, /Landscape records/i);
   assert.match(html, /Capabilities/i);
+  assert.match(html, /AI Integration/i);
+  assert.doesNotMatch(html, /AI \/ ML Integration/i);
+  assert.doesNotMatch(html, /IoT (?:&amp;|&) Hardware/i);
   assert.match(html, /OwlHacks 2025/i);
   assert.match(html, /SEI Smart Finance AI Innovation Competition/i);
   assert.match(html, /Temple University hackathon/i);
@@ -60,6 +63,8 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /ICPC Taiwan Private University Programming Contest/i);
   assert.match(html, /TCSE 2026 · Paper Presentation/i);
   assert.equal((html.match(/Prototype showcase · 2024/g) ?? []).length, 2);
+  assert.equal((html.match(/SEI Finance AI · 2nd Place/g) ?? []).length, 2);
+  assert.doesNotMatch(html, /Maker candid · 2024/i);
   assert.match(html, /property="og:image"/i);
   assert.match(html, /\/og\.png/i);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);

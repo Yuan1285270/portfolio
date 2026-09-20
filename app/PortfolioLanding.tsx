@@ -43,11 +43,6 @@ function useStableReducedMotion() {
 
 const momentRowOne = [
   {
-    src: "/portfolio/moments-v2/sei-smart-finance-2026.jpg",
-    alt: "Tsung-Yuan and teammates after placing second in the 2026 SEI Smart Finance AI Innovation Competition",
-    label: "SEI Finance AI · 2nd Place",
-  },
-  {
     src: "/portfolio/moments/fintech-team.jpg",
     alt: "SpendiX team at the Hack to the Top AI FinTech Innovation Hackathon",
     label: "AI FinTech · 2025",
@@ -76,9 +71,9 @@ const momentRowOne = [
 
 const momentRowTwo = [
   {
-    src: "/portfolio/moments-v2/cross-candid.jpg",
-    alt: "Cycle Guardian teammates building together at the maker competition",
-    label: "Maker candid · 2024",
+    src: "/portfolio/moments-v2/sei-smart-finance-2026.jpg",
+    alt: "Tsung-Yuan and teammates after placing second in the 2026 SEI Smart Finance AI Innovation Competition",
+    label: "SEI Finance AI · 2nd Place",
   },
   {
     src: "/portfolio/moments-v2/tcse-group.jpg",
@@ -178,9 +173,9 @@ const capabilities = [
   },
   {
     number: "02",
-    name: "AI / ML Integration",
+    name: "AI Integration",
     description:
-      "Turning models and LLMs into useful product features—from RAG and clustering to Gemini-powered workflows.",
+      "Building focused AI features with LLM APIs, retrieval workflows, and task-specific data pipelines.",
   },
   {
     number: "03",
@@ -193,12 +188,6 @@ const capabilities = [
     name: "Cloud Architecture",
     description:
       "Shipping and operating services on Google Cloud, Render, and modern deployment pipelines.",
-  },
-  {
-    number: "05",
-    name: "IoT & Hardware",
-    description:
-      "Connecting software with Raspberry Pi, sensors, computer vision, and real-world safety systems.",
   },
 ];
 
