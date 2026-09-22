@@ -1781,7 +1781,12 @@ button:focus-visible {
   object-position: center bottom;
 }
 
-.global-photo--campus img {
+.global-photo--first-day {
+  width: min(100%, 12rem);
+  justify-self: center;
+}
+
+.global-photo--first-day img {
   height: auto;
 }
 

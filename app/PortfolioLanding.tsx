@@ -1086,11 +1086,11 @@ function GlobalSection() {
             </a>
           </header>
           <div className="global-photos">
-            <figure className="global-photo global-photo--campus">
+            <figure className="global-photo global-photo--first-day">
               <div className="global-photo-frame">
-                <img src="/portfolio/global/temple-campus-original.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1200} height={1600} loading="lazy" decoding="async" />
+                <img src="/portfolio/global/temple-first-day.webp" alt="Tsung-Yuan in a three-photo First Day of School strip at Temple University" width={800} height={2400} loading="lazy" decoding="async" />
               </div>
-              <figcaption>Temple University</figcaption>
+              <figcaption>First day at Temple</figcaption>
             </figure>
             <figure className="global-photo global-photo--group">
               <div className="global-photo-frame">

@@ -35,9 +35,9 @@
   ],
   "narrative": {
     "northStar": "Dark Kanit portfolio",
-    "overview": "Photo-led exchange section for admissions and job applications: heading, exchange context, campus and group photographs, and exchange certificate only.",
+    "overview": "Photo-led exchange section for admissions and job applications: heading, exchange context, first-day and group photographs, and exchange certificate only.",
     "keyCharacteristics": [
-      "Unaltered campus portrait and landscape group photo; stack on mobile.",
+      "Unaltered first-day photo strip and landscape group photo; stack on mobile.",
       "Brief context only; no achievement slogans or classroom-score claims.",
       "Existing dark background and solid Kanit heading."
     ],
@@ -49,7 +49,7 @@
     "donts": [
       "Do not restore the three takeaway blocks or classroom-score claims.",
       "Do not restyle unrelated sections.",
-      "Do not rotate, skew, stretch, or perspective-correct the campus photograph. Preserve its original proportions and composition."
+      "Do not rotate, skew, stretch, or perspective-correct the first-day photograph. Preserve its original proportions and composition."
     ]
   }
 }

@@ -55,7 +55,7 @@ Photo-led exchange section between About and Awards, for graduate admissions and
 
 The 82rem shell uses a `0.85fr 1.3fr` feature grid. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. Both grids stack below 768px.
 
-Temple entrance: user-supplied `/Users/yuan/Desktop/IMG_3806.jpeg`, resized proportionally and encoded as WebP only. Display the complete original at `width: 100%; height: auto` without any rotation, affine matrix, skew, perspective correction, fixed aspect ratio, or square crop. Preserve the source's natural geometry and composition. The user explicitly rejected photographic distortion. Exchange group: iecs/0.jpg, 2:1 bottom crop retaining all people horizontally. Frames have 12px corners and context captions.
+First day at Temple: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, resized proportionally and encoded as WebP only. Display the complete three-photo strip at a maximum width of 12rem with `height: auto`, without cropping, rotation, skew, stretching, or perspective correction. Preserve the original 1:3 proportions. The user chose this instead of the entrance photograph. Exchange group: iecs/0.jpg, 2:1 bottom crop retaining all people horizontally. Frames have 12px corners and context captions.
 
 ## Type and interaction
 
