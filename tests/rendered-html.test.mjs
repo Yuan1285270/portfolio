@@ -47,7 +47,7 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /IT Month · Individual Outstanding Award/i);
   assert.match(html, /IT Month · Team 2nd Place/i);
   assert.match(html, /Portrait certificates/i);
-  assert.match(html, /Landscape records/i);
+  assert.match(html, /Landscape certificates/i);
   assert.match(html, /Capabilities/i);
   assert.match(html, /AI Integration/i);
   assert.doesNotMatch(html, /AI \/ ML Integration/i);
@@ -58,7 +58,7 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.doesNotMatch(html, /International hackathon/i);
   assert.doesNotMatch(html, /international machine-learning hackathon/i);
   assert.match(html, /Mountain City Digital Hackathon/i);
-  assert.match(html, /Placed awards/i);
+  assert.match(html, /Awards &amp; honors/i);
   assert.match(html, /ALL-EN/i);
   assert.match(html, /SpendiX/i);
   assert.match(html, /Smart Drop/i);

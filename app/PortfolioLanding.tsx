@@ -219,6 +219,15 @@ const awards = [
   },
   {
     year: "2025",
+    rank: "Honorable Mention",
+    title: "ICPC Taiwan Private University Programming Contest",
+    location: "Taiwan",
+    detail: "FCU_Trelalelotrelala · Feng Chia University",
+    proof: "/certificates/icpc-pupc-2025-honorable-mention.pdf",
+    proofLabel: "Certificate",
+  },
+  {
+    year: "2025",
     rank: "Finalist",
     title: "Hack to the Top — AI FinTech Innovation Hackathon",
     location: "Taiwan",
@@ -285,6 +294,7 @@ const awards = [
 
 const awardEvidence = [
   {
+    kind: "record",
     year: "2026",
     title: "TCSE 2026 · Paper Presentation",
     category: "Research presentation",
@@ -296,6 +306,7 @@ const awardEvidence = [
     href: "/portfolio/awards/tcse-2026-presentation.jpg",
   },
   {
+    kind: "award",
     year: "2026",
     title: "ICPC PUPC · Bronze",
     category: "Programming contest",
@@ -306,6 +317,18 @@ const awardEvidence = [
     href: "/certificates/icpc-pupc-2026-bronze.pdf",
   },
   {
+    kind: "award",
+    year: "2025",
+    title: "ICPC PUPC · Honorable Mention",
+    category: "Programming contest",
+    image: "/portfolio/awards/icpc-pupc-2025-honorable-mention.jpg",
+    imageAlt: "2025 ICPC Taiwan Private University Programming Contest honorable mention certificate for team FCU_Trelalelotrelala",
+    width: 1800,
+    height: 1272,
+    href: "/certificates/icpc-pupc-2025-honorable-mention.pdf",
+  },
+  {
+    kind: "award",
     year: "2025",
     title: "OwlHacks · 2nd Place",
     category: "Temple University hackathon",
@@ -316,19 +339,21 @@ const awardEvidence = [
     href: "/certificates/owl-hacks-2025-second-place.pdf",
   },
   {
+    kind: "record",
     year: "2025",
     title: "AI FinTech · Finalist",
-    category: "Finalist certificate",
+    category: "Final-round participation",
     image: "/portfolio/awards/ai-fintech-finalist.jpg",
-    imageAlt: "Hack to the Top AI FinTech finalist certificate",
+    imageAlt: "Hack to the Top AI FinTech participation certificate confirming the team reached the final round",
     width: 1241,
     height: 1754,
     href: "/portfolio/awards/ai-fintech-finalist.jpg",
   },
   {
+    kind: "record",
     year: "2025",
-    title: "DevJam TW",
-    category: "Community milestone",
+    title: "DevJam TW · Participation",
+    category: "Participation certificate",
     image: "/portfolio/awards/devjam-2025.webp",
     imageAlt: "DevJam TW 2025 participation certificate",
     width: 2248,
@@ -336,6 +361,7 @@ const awardEvidence = [
     href: "/certificates/devjam-tw-2025.pdf",
   },
   {
+    kind: "award",
     year: "2024",
     title: "Mountain City · Bronze",
     category: "Bronze certificate",
@@ -346,6 +372,7 @@ const awardEvidence = [
     href: "/portfolio/awards/mountain-city-bronze.jpg",
   },
   {
+    kind: "award",
     year: "2024",
     title: "IT Month · Individual Outstanding Award",
     category: "C/C++ programming · Individual",
@@ -356,6 +383,7 @@ const awardEvidence = [
     href: "/portfolio/awards/it-month-outstanding.jpg",
   },
   {
+    kind: "award",
     year: "2024",
     title: "IT Month · Team 2nd Place",
     category: "C/C++ programming · Team",
@@ -366,6 +394,7 @@ const awardEvidence = [
     href: "/portfolio/awards/it-month-team-second.jpg",
   },
   {
+    kind: "award",
     year: "2024",
     title: "Cross-Strait Maker · 3rd Tier Prize",
     category: "Maker competition certificate",
@@ -376,6 +405,7 @@ const awardEvidence = [
     href: "/portfolio/awards/cross-strait-third-prize.jpg",
   },
   {
+    kind: "record",
     year: "2025",
     title: "Temple · Global Exchange",
     category: "Academic milestone",
@@ -386,6 +416,7 @@ const awardEvidence = [
     href: "/certificates/temple-exchange-fall-2025.pdf",
   },
   {
+    kind: "award",
     year: "2024",
     title: "TOPC · Honorable Mention",
     category: "Programming contest",
@@ -396,6 +427,7 @@ const awardEvidence = [
     href: "/certificates/topc-2024-honorable-mention.pdf",
   },
   {
+    kind: "record",
     year: "2024",
     title: "IELTS Academic · C1",
     category: "English proficiency record",
@@ -407,18 +439,25 @@ const awardEvidence = [
   },
 ];
 
-const awardEvidenceGroups = [
-  {
-    id: "portrait",
-    label: "Portrait certificates",
-    items: awardEvidence.filter((evidence) => evidence.height > evidence.width),
-  },
-  {
-    id: "landscape",
-    label: "Landscape records",
-    items: awardEvidence.filter((evidence) => evidence.width >= evidence.height),
-  },
-];
+function groupEvidence(kind: "award" | "record") {
+  const items = awardEvidence.filter((evidence) => evidence.kind === kind);
+  return [
+    {
+      id: "portrait",
+      label: "Portrait certificates",
+      items: items.filter((evidence) => evidence.height > evidence.width),
+    },
+    {
+      id: "landscape",
+      label: "Landscape certificates",
+      items: items.filter((evidence) => evidence.width >= evidence.height),
+    },
+  ];
+}
+
+const awardEvidenceGroups = groupEvidence("award");
+const supportingEvidenceGroups = groupEvidence("record");
+const awardCount = awards.filter(({ rank }) => rank !== "Finalist" && rank !== "Participant").length;
 
 type Project = {
   number: string;
@@ -1006,7 +1045,7 @@ function AboutSection() {
             <span>English</span>
           </div>
           <div>
-            <strong>11×</strong>
+            <strong>{awards.length}×</strong>
             <span>Competition milestones</span>
           </div>
         </FadeIn>
@@ -1105,6 +1144,47 @@ function ServicesSection() {
   );
 }
 
+function CertificateGallery({ groups }: { groups: typeof awardEvidenceGroups }) {
+  return (
+    <div className="awards-evidence-layout">
+      {groups.map((group) => (
+        <div className="awards-evidence-group" key={group.id}>
+          <p className="awards-evidence-group__label">{group.label}</p>
+          <div className={`awards-evidence-grid awards-evidence-grid--${group.id}`}>
+            {group.items.map((evidence, index) => (
+              <FadeIn key={evidence.title} delay={index * 0.06} y={26}>
+                <a
+                  className="award-evidence-card"
+                  href={evidence.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
+                >
+                  <span className={`award-evidence-image${evidence.height > evidence.width ? " award-evidence-image--portrait" : ""}`}>
+                    <img
+                      src={evidence.image}
+                      alt={evidence.imageAlt}
+                      width={evidence.width}
+                      height={evidence.height}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                  <span className="award-evidence-copy">
+                    <span>{evidence.year} · {evidence.category}</span>
+                    <strong>{evidence.title}</strong>
+                    <ArrowUpRight aria-hidden="true" size={20} />
+                  </span>
+                </a>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function AwardsSection() {
   return (
     <section id="awards" className="awards-section" aria-labelledby="awards-heading">
@@ -1127,11 +1207,11 @@ function AwardsSection() {
             </p>
             <div className="awards-stats" aria-label="Award highlights">
               <div>
-                <strong>8</strong>
-                <span>Placed awards</span>
+                <strong>{awardCount}</strong>
+                <span>Awards &amp; honors</span>
               </div>
               <div>
-                <strong>11</strong>
+                <strong>{awards.length}</strong>
                 <span>Competition milestones</span>
               </div>
               <div>
@@ -1179,55 +1259,24 @@ function AwardsSection() {
         <div className="awards-evidence">
           <FadeIn className="awards-evidence-header">
             <div>
-              <p>Selected certificates</p>
-              <h3>Certificates &amp; records.</h3>
+              <h3>Award certificates.</h3>
             </div>
             <p>
-              Competition certificates and official records from the portfolio
-              archive. School coverage is linked in the timeline above.
+              Certificates for competition prizes and honorable mentions.
+              Open any certificate to read the full record.
             </p>
           </FadeIn>
 
-          <div className="awards-evidence-layout">
-            {awardEvidenceGroups.map((group) => (
-              <div className="awards-evidence-group" key={group.id}>
-                <p className="awards-evidence-group__label">{group.label}</p>
-                <div className={`awards-evidence-grid awards-evidence-grid--${group.id}`}>
-                  {group.items.map((evidence, index) => (
-                    <FadeIn key={evidence.title} delay={index * 0.08} y={26}>
-                      <a
-                        className="award-evidence-card"
-                        href={evidence.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`Open ${evidence.title}${evidence.href.endsWith(".pdf") ? " (PDF, opens in a new tab)" : " (opens in a new tab)"}`}
-                      >
-                        <span
-                          className={`award-evidence-image${evidence.height > evidence.width ? " award-evidence-image--portrait" : ""}`}
-                        >
-                          <img
-                            src={evidence.image}
-                            alt={evidence.imageAlt}
-                            width={evidence.width}
-                            height={evidence.height}
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </span>
-                        <span className="award-evidence-copy">
-                          <span>
-                            {evidence.year} · {evidence.category}
-                          </span>
-                          <strong>{evidence.title}</strong>
-                          <ArrowUpRight aria-hidden="true" size={20} />
-                        </span>
-                      </a>
-                    </FadeIn>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <CertificateGallery groups={awardEvidenceGroups} />
+
+          <details className="supporting-records">
+            <summary>
+              <span>Presentations &amp; other records</span>
+              <span className="supporting-records__hint">Research, finalist, language, exchange &amp; participation</span>
+              <ChevronRight aria-hidden="true" size={22} />
+            </summary>
+            <CertificateGallery groups={supportingEvidenceGroups} />
+          </details>
         </div>
       </div>
     </section>
