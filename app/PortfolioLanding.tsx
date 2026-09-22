@@ -914,6 +914,7 @@ function HeroSection() {
         <nav className="hero-nav" aria-label="Primary navigation">
           <a href="#about">About</a>
           <a href="#films">Films</a>
+          <a href="#global">Global</a>
           <a href="#awards">Awards</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -1026,6 +1027,63 @@ function AboutSection() {
         <FadeIn className="about-cta" delay={0.2}>
           <ContactButton label="Start a conversation" />
         </FadeIn>
+      </div>
+    </section>
+  );
+}
+
+function GlobalSection() {
+  return (
+    <section id="global" className="global-section" aria-labelledby="global-heading">
+      <div className="global-shell">
+        <header className="global-header">
+          <h2 id="global-heading">Beyond<br />borders</h2>
+          <div className="global-intro">
+            <p className="global-location">Temple University · Philadelphia · Fall 2025</p>
+            <p>A semester of building with local teammates, presenting in English, and finding my place in a new community.</p>
+            <a className="global-link" href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer">
+              View exchange certificate <ArrowUpRight size={18} aria-hidden="true" />
+              <span className="sr-only"> (PDF, opens in a new tab)</span>
+            </a>
+          </div>
+        </header>
+
+        <div className="global-layout">
+          <div className="global-life">
+            <figure className="global-photo">
+              <img src="/portfolio/global/temple-classmates.webp" alt="Tsung-Yuan with classmates in a classroom at Temple University" width={1065} height={799} loading="lazy" decoding="async" />
+              <figcaption>New classmates. Different perspectives. A shared semester.</figcaption>
+            </figure>
+            <div className="global-community">
+              <img src="/portfolio/global/temple-fencing.webp" alt="Tsung-Yuan and fellow fencers in fencing gear at a tournament" width={512} height={384} loading="lazy" decoding="async" />
+              <div>
+                <h3>Finding community through fencing.</h3>
+                <p>I joined the fencing club, trained three days a week, and placed sixth out of 49 in an individual tournament during my first month of learning.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="global-stories">
+            <article>
+              <h3>Building across cultures.</h3>
+              <p>At OwlHacks, I teamed up with local students whose ways of discussing ideas and choosing tools differed from mine. Working together taught me that cross-cultural collaboration takes more than a shared language.</p>
+              <a className="global-link" href="/certificates/owl-hacks-2025-second-place.pdf" target="_blank" rel="noreferrer">
+                2nd place · Health ML track <ArrowUpRight size={18} aria-hidden="true" />
+                <span className="sr-only"> — view certificate (PDF, opens in a new tab)</span>
+              </a>
+            </article>
+            <article>
+              <h3>Finding my voice in English.</h3>
+              <p>As the only international student in my presentation class, I worked through unfamiliar topics and learned to use pauses, eye contact, and gestures to make an idea land.</p>
+              <p className="global-outcome">Five presentations. The highest final-presentation score in class.</p>
+            </article>
+            <article>
+              <h3>Turning data into a story.</h3>
+              <p>In Scripting for Data, I used Python, Pandas, NumPy, and Matplotlib to explore data and work with APIs. My final project analyzed salaries in the US tech industry.</p>
+              <p className="global-outcome">Full marks on the final data-analysis project.</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -1366,6 +1424,7 @@ export function PortfolioLanding() {
       <MarqueeSection />
       <VideoShowcase />
       <AboutSection />
+      <GlobalSection />
       <AwardsSection />
       <ServicesSection />
       <ProjectsSection />
