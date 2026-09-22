@@ -67,6 +67,10 @@
 .exchange-campus-stories > div { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
 .exchange-campus-stories figure { width: 100%; }
 .exchange-campus-reflection { max-width: 44rem; margin-top: 2rem; }
+.exchange-campus-list { margin-top: 2rem; }
+.exchange-campus-list dl > div { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--exchange-rule); font-size: 1rem; line-height: 1.95; }
+.exchange-campus-list dt { color: var(--exchange-muted); }
+.exchange-campus-list dd { display: grid; gap: .25rem; }
 .exchange-closing { padding: clamp(3.5rem, 6vw, 5.5rem) 0 3.5rem; margin-top: clamp(3.5rem, 6vw, 5.5rem); border-top: 1px solid var(--exchange-rule); scroll-margin-top: 2rem; }
 .exchange-sharing-story { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: center; }
 .exchange-sharing-story .exchange-text-link { margin-top: 1rem; }
@@ -100,7 +104,7 @@
 .exchange-presentation-work { grid-column: 1 / -1; }
 .exchange-presentation-work > p { max-width: 46rem; font-size: 1rem; line-height: 1.95; }
 .exchange-artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); margin-top: 1.5rem; }
-.exchange-artifact-pair figure > a, .exchange-tableau > a { display: block; border-radius: 12px; }
+.exchange-artifact-pair figure > a, .exchange-tableau > a, .exchange-scripting-chart > a { display: block; border-radius: 12px; }
 .exchange-work-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; min-height: 44px; color: var(--mist); font-size: .95rem; line-height: 1.6; }
 .exchange-work-link small { display: block; color: var(--exchange-muted); font-size: .78rem; margin-top: .3rem; }
 .exchange-work-link svg { flex-shrink: 0; }
@@ -113,12 +117,19 @@
 .exchange-scripting { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
 .exchange-scripting p { max-width: 44rem; }
 .exchange-volleyball { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: center; margin-top: 3rem; }
+.exchange-volleyball h3 { font-size: clamp(1.8rem, 2.7vw, 2.4rem); line-height: 1.4; letter-spacing: -.025em; margin-bottom: 1.5rem; }
 .exchange-volleyball figure { width: 100%; max-width: 20rem; justify-self: start; }
 .exchange-career-intro { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: center; }
 .exchange-career-intro > figure { width: 100%; max-width: 20rem; justify-self: start; }
 .exchange-daily-stories article { align-items: center; }
 .exchange-daily-photo { width: 100%; }
 .exchange-daily-reflection { max-width: 44rem; margin-top: 2rem; }
+@media (min-width: 960px) {
+  .exchange-career-intro { grid-template-columns: 20rem minmax(0, 1fr); }
+  .exchange-career-intro > div { grid-column: 2; grid-row: 1; }
+  .exchange-career-intro > figure { grid-column: 1; grid-row: 1; }
+  .exchange-scripting { align-items: center; }
+}
 @media (max-width: 767px) {
   .exchange-artifact-pair, .exchange-volleyball, .exchange-career-intro { grid-template-columns: 1fr; gap: 2rem; }
   .exchange-volleyball figure, .exchange-career-intro > figure { justify-self: center; max-width: 20rem; }

@@ -142,10 +142,17 @@ export default function ExchangePage() {
               </figure>
             </article>
           </div>
-          <div className="exchange-scripting exchange-prose">
+          <article className="exchange-scripting exchange-course-row">
+            <div className="exchange-prose">
             <h3>Scripting for Data</h3>
-            <p>這是五門課中，我在技術實作上學到最多的一門。每週都有 Python 作業，練習 Pandas、NumPy、Matplotlib、探索性資料分析和 API；期末做的是美國科技業薪資分析。原本資工系的訓練，讓我在新的語言環境裡仍然能接上課程。</p>
-          </div>
+            <p>這是五門課中，我在技術實作上學到最多的一門。每週的 Python 作業從檔案、JSON 和 API，到用 Pandas 整理資料、Matplotlib 畫圖。例如用紐約餐廳稽查資料，練習篩選行政區、統計違規項目，以及把日期轉成可以比較的格式。</p>
+            <p>期末的題目是美國科技職缺薪資。我整理 Kaggle 的職缺資料，練習串接 Adzuna API、對齊兩份資料的欄位，再從地區、遠端工作和職缺描述裡提到的程式語言等角度做探索。除了比較薪資區間，也畫出散佈圖和直方圖，查看分布與極端值。</p>
+            </div>
+            <figure className="exchange-scripting-chart">
+              <a href="/portfolio/exchange/works/tech-jobs-salary-scatter.png" target="_blank" rel="noreferrer" aria-label="查看 Scripting for Data 期末專案原始散佈圖，另開分頁"><img src="/portfolio/exchange/works/tech-jobs-salary-scatter.png" alt="科技職缺薪資下限與上限的散佈圖，呈現資料分布和少數偏離主要群集的職缺" width={989} height={590} loading="lazy" decoding="async" /></a>
+              <figcaption><WorkLink href="/portfolio/exchange/works/tech-jobs-salary-scatter.png" title="Tech Jobs Salaries in the US" detail="2025 期末專案 · Notebook 原始圖表" />圖中為職缺刊登的薪資區間，並非實際錄取薪資。</figcaption>
+            </figure>
+          </article>
         </section>
 
         <section className="exchange-chapter exchange-teamwork" id="teamwork" aria-labelledby="teamwork-title">
@@ -234,12 +241,20 @@ export default function ExchangePage() {
               </figure>
             </div>
             <div className="exchange-prose">
-              <p>另外也走訪了 Stanford、Princeton、UPenn、UCLA 和 University of Washington。校園建築、圖書館，甚至紀念品店，都讓我感覺到學校很用心經營自己的形象。我也開始留意，校友、捐款和產業連結怎麼圍繞著一所大學。</p>
+              <p>從美東到西岸，我還走訪了五所大學。校園建築、圖書館，甚至紀念品店，都讓我感覺到學校很用心經營自己的形象。我也開始留意，校友、捐款和產業連結怎麼圍繞著一所大學。</p>
               <figure>
                 <img src="/portfolio/exchange/princeton-visit.webp" alt="積雪中的普林斯頓大學校園" width={1200} height={1600} loading="lazy" decoding="async" />
                 <figcaption>Princeton 校園</figcaption>
               </figure>
             </div>
+          </div>
+          <div className="exchange-campus-list">
+            <h3>這學期走訪的校園</h3>
+            <dl>
+              <div><dt>美東</dt><dd><span>哈佛大學 · Harvard University</span><span>麻省理工學院 · MIT</span><span>普林斯頓大學 · Princeton University</span><span>賓州大學 · University of Pennsylvania（UPenn）</span></dd></div>
+              <div><dt>加州</dt><dd><span>史丹佛大學 · Stanford University</span><span>加州大學洛杉磯分校 · UCLA</span></dd></div>
+              <div><dt>西雅圖</dt><dd><span>華盛頓大學 · University of Washington</span></dd></div>
+            </dl>
           </div>
           <div className="exchange-campus-reflection exchange-prose">
             <p>逛的時候很嚮往，寫心得時卻一直想到費用。這麼好的環境，什麼樣的學生有機會進來？如果光是學費就很難負擔，再多資源也未必輪得到自己。這是參訪後留在我心裡的問題，也讓我更能理解，這次交換得到的學費互免和獎學金有多重要。</p>
