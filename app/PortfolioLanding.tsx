@@ -1090,13 +1090,19 @@ function GlobalSection() {
               <div className="global-photo-frame">
                 <img src="/portfolio/global/temple-first-day.webp" alt="Tsung-Yuan in a three-photo First Day of School strip at Temple University" width={800} height={2400} loading="lazy" decoding="async" />
               </div>
-              <figcaption>First day at Temple</figcaption>
+              <figcaption className="sr-only">First day at Temple</figcaption>
+            </figure>
+            <figure className="global-photo global-photo--presentation">
+              <div className="global-photo-frame">
+                <img src="/portfolio/global/temple-presentation.webp" alt="Tsung-Yuan giving a classroom presentation at Temple University" width={854} height={844} loading="lazy" decoding="async" />
+              </div>
+              <figcaption className="sr-only">Classroom presentation</figcaption>
             </figure>
             <figure className="global-photo global-photo--group">
               <div className="global-photo-frame">
                 <img src="/portfolio/global/temple-exchange-group.webp" alt="Tsung-Yuan and fellow exchange students holding their certificates at Temple University" width={1800} height={1350} loading="lazy" decoding="async" />
               </div>
-              <figcaption>Exchange classmates</figcaption>
+              <figcaption className="sr-only">Exchange classmates</figcaption>
             </figure>
           </div>
         </div>

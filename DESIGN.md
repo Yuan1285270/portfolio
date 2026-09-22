@@ -49,13 +49,13 @@ components:
 
 ## Scope
 
-Photo-led exchange section between About and Awards, for graduate admissions and job applications. Keep the existing dark Kanit portfolio style. Content is limited to the heading, brief exchange context, two photographs, and an exchange-certificate link. The user explicitly removed the three takeaway blocks, classroom score claims, and achievement slogans; do not restore them.
+Photo-led exchange section between About and Awards, for graduate admissions and job applications. Keep the existing dark Kanit portfolio style. Content is limited to the heading, brief exchange context, three photographs, and an exchange-certificate link. The user explicitly removed the three takeaway blocks, classroom score claims, and achievement slogans; do not restore them.
 
 ## Layout and photographs
 
-The 82rem shell uses a `0.85fr 1.3fr` feature grid. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. Both grids stack below 768px.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid, stacking below 768px. The photos form one aligned rectangle: a full first-day strip on the left spanning two rows, with a classroom presentation and exchange group stacked on the right. Photo columns are `1fr 2.25fr`, with equal rows and consistent gaps; retain this collage on mobile.
 
-First day at Temple: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, resized proportionally and encoded as WebP only. Display the complete three-photo strip at a maximum width of 12rem with `height: auto`, without cropping, rotation, skew, stretching, or perspective correction. Preserve the original 1:3 proportions. The user chose this instead of the entrance photograph. Exchange group: iecs/0.jpg, 2:1 bottom crop retaining all people horizontally. Frames have 12px corners and context captions.
+First-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Presentation: `iecs/3-2.png`, bottom-aligned proportional cover crop that retains the presenter. Exchange group: `iecs/0.jpg`, proportional cover crop retaining every person horizontally. Never rotate, skew, stretch, or perspective-correct photographs. All frames have 12px corners. Captions are screen-reader-only to keep aligned photo edges.
 
 ## Type and interaction
 

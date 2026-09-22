@@ -37,3 +37,5 @@ The user explicitly rejected all three takeaway blocks and classroom score claim
 The user explicitly forbids distorting photographs. For the campus photo, use the newly supplied Desktop/IMG_3806.jpeg with its original proportions and composition. No CSS rotation, skew, affine matrix, or perspective correction. Desktop/IMG_4135.JPG is another supplied first-day-of-school photo, not a replacement for the requested group photo unless requested.
 
 The user subsequently replaced the entrance photograph with Desktop/IMG_4135.JPG (First Day of School strip). Display it complete at its original proportions, without geometric transforms. Keep the exchange group photo.
+
+The user requested a balanced, aligned photo composition and authorized selecting another photo. Pair the full first-day strip with a classroom presentation (iecs/3-2.png) above the existing group photo in an aligned rectangular collage. No achievement copy or image distortion.

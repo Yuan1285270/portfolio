@@ -1760,21 +1760,27 @@ button:focus-visible {
 
 .global-photos {
   display: grid;
-  grid-template-columns: 0.85fr 1.2fr;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.25fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: clamp(0.75rem, 1.5vw, 1.5rem);
+  align-items: stretch;
+}
+
+.global-photo {
+  min-width: 0;
+  min-height: 0;
 }
 
 .global-photo-frame {
+  position: relative;
+  height: 100%;
   overflow: hidden;
   border-radius: 12px;
 }
 
-.global-photo--group .global-photo-frame {
-  aspect-ratio: 2;
-}
-
 .global-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1782,18 +1788,20 @@ button:focus-visible {
 }
 
 .global-photo--first-day {
-  width: min(100%, 12rem);
-  justify-self: center;
+  grid-row: 1 / span 2;
+}
+
+.global-photo--first-day .global-photo-frame {
+  height: auto;
+  aspect-ratio: 1 / 3;
 }
 
 .global-photo--first-day img {
-  height: auto;
+  object-fit: contain;
 }
 
-.global-photo figcaption {
-  margin-top: 0.75rem;
-  font-size: 0.8rem;
-  color: #aebbc7;
+.global-photo--presentation img {
+  object-position: center 80%;
 }
 
 .global-link {
@@ -1824,8 +1832,7 @@ button:focus-visible {
   }
 
   .global-photos {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 }
 
