@@ -5,19 +5,19 @@ colors:
   ink: "#0c0c0c"
   mist: "#d7e2ea"
   paper: "#ffffff"
-  global-surface: "#111418"
+  global-surface: "#0c0c0c"
   global-muted: "#aebbc7"
   global-divider: "#38424a"
   global-underline: "#778793"
 typography:
   display:
     fontFamily: 'var(--font-kanit), "Kanit", sans-serif'
-    fontSize: "clamp(3.5rem, 7.8vw, 6rem)"
+    fontSize: "clamp(3.5rem, 6.5vw, 6rem)"
     fontWeight: 900
     lineHeight: 0.9
     letterSpacing: "-0.035em"
   title:
-    fontSize: "clamp(1.45rem, 2.2vw, 1.8rem)"
+    fontSize: "clamp(1.1rem, 1.6vw, 1.35rem)"
     fontWeight: 500
     lineHeight: 1.2
     letterSpacing: "-0.02em"
@@ -25,66 +25,44 @@ typography:
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.65
+  intro:
+    fontSize: "clamp(1rem, 1.6vw, 1.2rem)"
+    fontWeight: 300
+    lineHeight: 1.5
+  caption:
+    fontSize: "0.8rem"
   label:
     fontSize: "0.85rem"
     lineHeight: 1.5
 rounded:
-  photo: "3px"
+  photo: "12px"
 components:
   global-section:
     backgroundColor: "{colors.global-surface}"
     textColor: "{colors.mist}"
-    padding: "clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 6rem)"
+    padding: "clamp(4rem, 7vw, 7rem) clamp(1.5rem, 5vw, 6rem)"
   global-link-hover:
     textColor: "{colors.paper}"
 ---
 
 # Design System: Beyond Borders extension
 
-## Overview
+## Scope and direction
 
-**Creative North Star: "Dark Kanit portfolio"**
+A compact photographic interlude between About and Awards, within the incumbent dark Kanit portfolio. User feedback rejected the essay-like density and dim group photo. The revised section keeps one short introduction and three brief achievements; detailed stories and the fencing note are removed. Existing Awards still provides competition evidence.
 
-This records the completed Beyond Borders section within the existing portfolio. Large, solid lettering and original exchange photographs carry the section; concise stories sit directly on a dark surface. This is a scoped implementation record, not a redesign specification for other sections.
+## Layout and content
 
-**Key Characteristics:**
-- Solid uppercase display type.
-- Original photographs with restrained captions.
-- Flat story rows and underlined evidence links.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, two original portrait photographs on the right. The photo grid uses `1.15fr 0.9fr`, aligned at the bottom, preserving full 3:4 images. Temple campus and Philadelphia City Hall photos are from the user-supplied iecs directory (1-3.jpeg and 8-1.jpeg). Captions identify each location. The original class and fencing photographs are no longer displayed.
 
-## Colors
+Three short takeaways below the feature describe OwlHacks teamwork, English presentations, and the salary-analysis project. A single top rule groups them; no cards or long paragraphs. Both existing certificate links remain accessible.
 
-The incumbent ink background and mist text continue into a slightly lighter global surface. Global muted text supports paragraphs and captions; dividers separate stories. Paper is the evidence-link hover color. These neutrals describe this section, not the full site's accent palette.
+## Responsive behavior
 
-## Typography
+At 767px and below, the feature and takeaway grids become single columns; the two-photo composition remains side by side. Heading size is `clamp(3.5rem, 6.5vw, 6rem)`. Mobile photo captions remain below their images.
 
-All text inherits Kanit with a sans-serif fallback. The two-line heading uses the display token with uppercase transformation and a solid fill. Story titles use the title token; paragraphs use body and a maximum width of 60ch. The introduction uses weight 300, `clamp(1.2rem, 2vw, 1.55rem)`, and line-height 1.45. Outcomes use weight 500 and 0.95rem.
+## Visual tokens
 
-## Layout
+Background is the incumbent `--ink` (#0c0c0c); foreground is `--mist` (#d7e2ea); secondary text is #aebbc7. Heading is Kanit 900, line-height 0.9, tracking -0.035em. Images have 12px corners. Links retain 44px target height, underlining, an arrow, new-tab PDF announcements, and visible focus outlines.
 
-The section sits between About and Awards. Its centered container has a maximum width of 82rem. Header and main content share a `1.05fr 1fr` grid, with `clamp(2rem, 5vw, 5rem)` gaps. At widths of 767px or less, both grids become one column with 2rem gaps. Introductory copy expands from 38ch to 48ch on mobile.
-
-The fencing note pairs a 7.5rem image with text; mobile uses 6rem. Both original photographs retain their intrinsic aspect ratios and full width within their containers.
-
-## Elevation & Depth
-
-This section has no shadows. Surface tone, whitespace, and thin story dividers establish grouping. This does not change existing depth treatments elsewhere.
-
-## Shapes
-
-Photographs use the photo radius. Story rows remain unboxed, separated by 1px rules; the first row omits its top rule. Rows use 1.5rem vertical padding, with outer padding removed at the first and last edges.
-
-## Components
-
-Three professional stories cover cross-cultural OwlHacks teamwork, English presentations, and data analysis. A smaller fencing note accompanies the two original exchange photographs. Copy remains grounded in the supplied reflection and existing evidence.
-
-Exchange and OwlHacks evidence links retain the existing certificate URLs. Links use 0.9rem text, an 18px arrow, a minimum 44px target height, and a 5px underline offset. Hover changes color over 180ms; keyboard focus shows a 2px mist outline offset by 5px. PDF links announce their new-tab behavior to screen readers.
-
-Source: `app/PortfolioLanding.tsx` (`GlobalSection`) and `app/globals.css` (`.global-*`).
-
-## Do's and Don'ts
-
-- **Do** preserve the incumbent dark palette and Kanit typography when extending this section.
-- **Do** retain original photographs, source-backed claims, and working certificate links.
-- **Do** keep the heading solid and the mobile reading order intact.
-- **Don't** treat this scoped record as authorization to restyle unrelated sections.
+This is a scoped record and does not authorize restyling unrelated sections.

@@ -1036,54 +1036,44 @@ function GlobalSection() {
   return (
     <section id="global" className="global-section" aria-labelledby="global-heading">
       <div className="global-shell">
-        <header className="global-header">
-          <h2 id="global-heading">Beyond<br />borders</h2>
-          <div className="global-intro">
-            <p className="global-location">Temple University · Philadelphia · Fall 2025</p>
-            <p>A semester of building with local teammates, presenting in English, and finding my place in a new community.</p>
+        <div className="global-feature">
+          <header className="global-header">
+            <h2 id="global-heading">Beyond<br />borders.</h2>
+            <p className="global-location">Temple University<br />Philadelphia · Fall 2025</p>
+            <p className="global-intro">Learning, building, and connecting<br />in a different part of the world.</p>
             <a className="global-link" href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer">
-              View exchange certificate <ArrowUpRight size={18} aria-hidden="true" />
+              Exchange certificate <ArrowUpRight size={18} aria-hidden="true" />
               <span className="sr-only"> (PDF, opens in a new tab)</span>
             </a>
-          </div>
-        </header>
-
-        <div className="global-layout">
-          <div className="global-life">
+          </header>
+          <div className="global-photos">
             <figure className="global-photo">
-              <img src="/portfolio/global/temple-classmates.webp" alt="Tsung-Yuan with classmates in a classroom at Temple University" width={1065} height={799} loading="lazy" decoding="async" />
-              <figcaption>New classmates. Different perspectives. A shared semester.</figcaption>
+              <img src="/portfolio/global/temple-campus.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1050} height={1400} loading="lazy" decoding="async" />
+              <figcaption>Temple University</figcaption>
             </figure>
-            <div className="global-community">
-              <img src="/portfolio/global/temple-fencing.webp" alt="Tsung-Yuan and fellow fencers in fencing gear at a tournament" width={512} height={384} loading="lazy" decoding="async" />
-              <div>
-                <h3>Finding community through fencing.</h3>
-                <p>I joined the fencing club, trained three days a week, and placed sixth out of 49 in an individual tournament during my first month of learning.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="global-stories">
-            <article>
-              <h3>Building across cultures.</h3>
-              <p>At OwlHacks, I teamed up with local students whose ways of discussing ideas and choosing tools differed from mine. Working together taught me that cross-cultural collaboration takes more than a shared language.</p>
-              <a className="global-link" href="/certificates/owl-hacks-2025-second-place.pdf" target="_blank" rel="noreferrer">
-                2nd place · Health ML track <ArrowUpRight size={18} aria-hidden="true" />
-                <span className="sr-only"> — view certificate (PDF, opens in a new tab)</span>
-              </a>
-            </article>
-            <article>
-              <h3>Finding my voice in English.</h3>
-              <p>As the only international student in my presentation class, I worked through unfamiliar topics and learned to use pauses, eye contact, and gestures to make an idea land.</p>
-              <p className="global-outcome">Five presentations. The highest final-presentation score in class.</p>
-            </article>
-            <article>
-              <h3>Turning data into a story.</h3>
-              <p>In Scripting for Data, I used Python, Pandas, NumPy, and Matplotlib to explore data and work with APIs. My final project analyzed salaries in the US tech industry.</p>
-              <p className="global-outcome">Full marks on the final data-analysis project.</p>
-            </article>
+            <figure className="global-photo">
+              <img src="/portfolio/global/philadelphia-life.webp" alt="Tsung-Yuan jumping in front of Philadelphia City Hall" width={1050} height={1400} loading="lazy" decoding="async" />
+              <figcaption>Philadelphia</figcaption>
+            </figure>
           </div>
         </div>
+        <ul className="global-highlights" aria-label="Exchange highlights">
+          <li>
+            <h3>Build together.</h3>
+            <a className="global-link" href="/certificates/owl-hacks-2025-second-place.pdf" target="_blank" rel="noreferrer">
+              OwlHacks · Health ML runner-up <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="sr-only"> — certificate (PDF, opens in a new tab)</span>
+            </a>
+          </li>
+          <li>
+            <h3>Speak with confidence.</h3>
+            <p>Top final-presentation score in class.</p>
+          </li>
+          <li>
+            <h3>Let data tell the story.</h3>
+            <p>Full marks · US tech salary analysis.</p>
+          </li>
+        </ul>
       </div>
     </section>
   );

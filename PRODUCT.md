@@ -23,3 +23,7 @@ The user supplied a Temple University exchange reflection and authorized adding 
 - Use specific experiences and outcomes to support professional claims.
 - Preserve original photographs and avoid invented achievements.
 - Keep the homepage concise and readable on mobile.
+
+## Content presentation preference
+
+The user rejected long exchange stories and the dim classroom group photograph. Keep this section photo-led with a short introduction and three brief takeaways. Use original photos from the supplied iecs folder: 1-3.jpeg (Temple entrance) and 8-1.jpeg (Philadelphia City Hall).

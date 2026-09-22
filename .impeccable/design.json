@@ -23,7 +23,7 @@
       "kind": "custom",
       "description": "Solid, uppercase two-line heading inherited from the dark Kanit portfolio.",
       "html": "<h2 class=\"ds-global-heading\">Beyond<br>borders</h2>",
-      "css": ".ds-global-heading { margin:0; color:var(--mist); font-family:var(--font-kanit), Kanit, sans-serif; font-size:clamp(3.5rem,7.8vw,6rem); font-weight:900; line-height:0.9; letter-spacing:-0.035em; text-transform:uppercase; }"
+      "css": ".ds-global-heading { margin:0; color:var(--mist); font-family:var(--font-kanit), Kanit, sans-serif; font-size:clamp(3.5rem,6.5vw,6rem); font-weight:900; line-height:0.9; letter-spacing:-0.035em; text-transform:uppercase; }"
     },
     {
       "name": "Certificate link",
@@ -35,17 +35,16 @@
   ],
   "narrative": {
     "northStar": "Dark Kanit portfolio",
-    "overview": "This records the completed Beyond Borders section within the existing portfolio. Large, solid lettering and original exchange photographs carry the section; concise stories sit directly on a dark surface. This is a scoped implementation record, not a redesign specification for other sections.",
+    "overview": "Compact photo-led exchange section: two original portraits, a short introduction, and three brief takeaways. Replaces the previous essay layout after user feedback.",
     "keyCharacteristics": [
-      "Solid uppercase display type.",
-      "Original photographs with restrained captions.",
-      "Flat story rows and underlined evidence links."
+      "Two full portrait photographs, aligned at the bottom.",
+      "A short introduction and three one-line outcomes.",
+      "Incumbent dark background and solid Kanit heading."
     ],
     "rules": [],
     "dos": [
-      "Do preserve the incumbent dark palette and Kanit typography when extending this section.",
-      "Do retain original photographs, source-backed claims, and working certificate links.",
-      "Do keep the heading solid and the mobile reading order intact."
+      "Keep text brief and original photos prominent.",
+      "Preserve the original image aspect ratios and visible certificate links."
     ],
     "donts": [
       "Don't treat this scoped record as authorization to restyle unrelated sections."
