@@ -62,10 +62,13 @@
 .exchange-company-visit { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
 .exchange-visit-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
 .exchange-visit-copy > p + p { margin-top: 0; }
-.exchange-company-photos { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: var(--exchange-gap); margin-top: 1.5rem; }
 .exchange-campus-stories { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem var(--exchange-gap); }
-.exchange-campus-stories > div { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
-.exchange-campus-stories figure { width: 100%; }
+.exchange-visit-gallery { display: grid; gap: 1.5rem; margin-top: 2rem; }
+.exchange-visit-gallery > h3 { margin-bottom: 0; }
+.exchange-photo-row { display: flex; align-items: start; gap: 1.5rem; }
+.exchange-photo-row > figure { flex-basis: 0; }
+.exchange-photo-row a { display: block; border-radius: 12px; }
+.exchange-photo-row a:hover { outline: 1px solid var(--exchange-muted); outline-offset: 4px; }
 .exchange-campus-reflection { max-width: 44rem; margin-top: 2rem; }
 .exchange-campus-list { margin-top: 2rem; }
 .exchange-campus-list dl > div { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--exchange-rule); font-size: 1rem; line-height: 1.95; }
@@ -90,8 +93,8 @@
   .exchange-contents a { flex-basis: 50%; font-size: .85rem; }
   .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-teamwork, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
   .exchange-teacher { max-width: 20rem; justify-self: center; }
-  .exchange-campus-stories > div { display: block; grid-row: auto; }
-  .exchange-campus-stories figure { margin: 1.5rem auto 0; max-width: 20rem; }
+  .exchange-photo-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  .exchange-photo-row > figure { width: 100%; max-width: 24rem; justify-self: center; }
   .exchange-page figcaption { font-size: .78rem; }
   .exchange-closing-notes { margin-top: 2rem; }
   .exchange-footer { font-size: .75rem; }
@@ -133,7 +136,6 @@
 @media (max-width: 767px) {
   .exchange-artifact-pair, .exchange-volleyball, .exchange-career-intro { grid-template-columns: 1fr; gap: 2rem; }
   .exchange-volleyball figure, .exchange-career-intro > figure { justify-self: center; max-width: 20rem; }
-  .exchange-company-photos { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (min-width: 768px) and (max-width: 959px) {

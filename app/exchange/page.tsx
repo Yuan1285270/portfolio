@@ -27,6 +27,52 @@ function WorkLink({ href, title, detail }: { href: string; title: string; detail
   return <a className="exchange-work-link" href={href} target="_blank" rel="noreferrer"><span>{title}<small>{detail} · 另開分頁</small></span><ArrowUpRight size={20} aria-hidden="true" /></a>;
 }
 
+type VisitPhoto = { file: string; width: number; height: number; caption: string; alt: string };
+
+function VisitPhotoRow({ photos }: { photos: VisitPhoto[] }) {
+  return (
+    <div className="exchange-photo-row">
+      {photos.map(({ file, width, height, caption, alt }) => (
+        <figure key={file} style={{ flexGrow: width / height }}>
+          <a href={`/portfolio/exchange/${file}.webp`} target="_blank" rel="noreferrer" aria-label={`${caption}，另開分頁看大圖`}>
+            <img src={`/portfolio/exchange/${file}.webp`} alt={alt} width={width} height={height} loading="lazy" decoding="async" />
+          </a>
+          <figcaption>{caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+const campusPhotos: VisitPhoto[][] = [
+  [
+    { file: "stanford-arcade", width: 1200, height: 1600, caption: "Stanford · 史丹佛大學", alt: "史丹佛大學石造拱廊，透過層層拱門看向內側庭院" },
+    { file: "princeton-visit", width: 1200, height: 1600, caption: "Princeton · 普林斯頓大學", alt: "普林斯頓大學積雪的庭院與亮著暖光的拱廊" },
+  ],
+  [
+    { file: "upenn-visit", width: 1200, height: 1600, caption: "UPenn · 賓州大學", alt: "賓州大學校園的磚牆入口與後方建築" },
+    { file: "harvard-visit", width: 1200, height: 1600, caption: "Harvard · 哈佛大學周邊", alt: "哈佛大學周邊掛著 Harvard 招牌的紀念品店" },
+    { file: "mit-visit", width: 1200, height: 1600, caption: "MIT · 麻省理工學院", alt: "MIT 的校園標誌與街景" },
+  ],
+  [
+    { file: "ucla-visit", width: 1200, height: 900, caption: "UCLA · 加州大學洛杉磯分校", alt: "加州大學洛杉磯分校掛著 UCLA 標誌的校園建築" },
+    { file: "washington-visit", width: 946, height: 1264, caption: "UW · 華盛頓大學", alt: "華盛頓大學廣場上的磚造高塔與校名旗幟" },
+    { file: "ucla-walkway", width: 585, height: 439, caption: "UCLA · 雨後的校園步道", alt: "UCLA 校園雨後的樹蔭步道，兩側樹木向中央伸展" },
+  ],
+];
+
+const companyPhotos: VisitPhoto[][] = [
+  [
+    { file: "google-silicon-valley", width: 1200, height: 1600, caption: "矽谷 · Google 園區", alt: "林琮原在矽谷 Google 園區的彩色標誌旁留影" },
+    { file: "google-seattle-exterior", width: 472, height: 629, caption: "西雅圖 · Google 辦公室", alt: "西雅圖 Google 辦公室的玻璃外牆與 Google 標誌" },
+    { file: "google-bike-workshop", width: 479, height: 639, caption: "Google · 腳踏車工作坊", alt: "西雅圖 Google 辦公室內的腳踏車工作坊與工具牆" },
+  ],
+  [
+    { file: "google-seattle-cafe", width: 873, height: 655, caption: "Google · 辦公室內的咖啡廳", alt: "西雅圖 Google 辦公室內的咖啡廳與座位空間" },
+    { file: "amazon-spheres", width: 1600, height: 1200, caption: "西雅圖 · Amazon Spheres", alt: "西雅圖 Amazon Spheres 的玻璃球體建築" },
+  ],
+];
+
 const chapters = [
   ["speaking", "英文課堂"],
   ["learning", "課堂作品"],
@@ -217,15 +263,8 @@ export default function ExchangePage() {
               <p>這趟也參訪了矽谷 Google 園區、西雅圖 Google 辦公室，以及 Amazon Spheres 和 Amazon Go。走進辦公室，最意外的是那些和工作桌放在一起的生活設施：小廚房、冥想室、腳踏車工作坊，甚至有跑步機升降桌。</p>
               <p>和員工聊天時，我才知道這些設施不一定每個人都會用。除了寫程式的工作桌，公司也花很多心思安排交流、休息和生活的空間，這是實際參訪後讓我印象很深的地方。</p>
             </div>
-            <div className="exchange-company-photos">
-              <figure>
-                <img src="/portfolio/exchange/google-seattle-cafe.webp" alt="參訪西雅圖 Google 辦公室時拍下的咖啡廳與座位空間" width={873} height={655} loading="lazy" decoding="async" />
-                <figcaption>西雅圖 Google 辦公室內的咖啡廳。</figcaption>
-              </figure>
-              <figure>
-                <img src="/portfolio/exchange/amazon-spheres.webp" alt="西雅圖 Amazon Spheres 的玻璃球體建築" width={1600} height={1200} loading="lazy" decoding="async" />
-                <figcaption>Amazon Spheres · 西雅圖</figcaption>
-              </figure>
+            <div className="exchange-visit-gallery" aria-label="科技公司參訪照片">
+              {companyPhotos.map((photos) => <VisitPhotoRow key={photos[0].file} photos={photos} />)}
             </div>
           </div>
         </section>
@@ -235,18 +274,14 @@ export default function ExchangePage() {
           <div className="exchange-campus-stories">
             <div className="exchange-prose">
               <p>我一個人去波士頓待了三天，逛了 Harvard 和 MIT。我特別喜歡 MIT 的博物館，逛完真的會讓人對學術又多一點憧憬。</p>
-              <figure>
-                <img src="/portfolio/exchange/mit-visit.webp" alt="MIT 的校園標誌與街景" width={1200} height={1600} loading="lazy" decoding="async" />
-                <figcaption>波士頓獨旅 · MIT 校園</figcaption>
-              </figure>
             </div>
             <div className="exchange-prose">
               <p>從美東到西岸，我還走訪了五所大學。校園建築、圖書館，甚至紀念品店，都讓我感覺到學校很用心經營自己的形象。我也開始留意，校友、捐款和產業連結怎麼圍繞著一所大學。</p>
-              <figure>
-                <img src="/portfolio/exchange/princeton-visit.webp" alt="積雪中的普林斯頓大學校園" width={1200} height={1600} loading="lazy" decoding="async" />
-                <figcaption>Princeton 校園</figcaption>
-              </figure>
             </div>
+          </div>
+          <div className="exchange-visit-gallery" aria-label="大學參訪照片">
+            <h3>走訪七所大學</h3>
+            {campusPhotos.map((photos) => <VisitPhotoRow key={photos[0].file} photos={photos} />)}
           </div>
           <div className="exchange-campus-list">
             <h3>這學期走訪的校園</h3>
