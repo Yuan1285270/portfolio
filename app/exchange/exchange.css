@@ -51,7 +51,10 @@
 .exchange-note p + p { margin-top: 1rem; }
 .exchange-note .exchange-source { color: var(--exchange-muted); font-size: .78rem; margin-bottom: 1rem; }
 .exchange-note blockquote { font-size: 1.16rem; font-weight: 300; line-height: 1.6; margin-bottom: 1rem; }
-.exchange-teamwork { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: center; }
+.exchange-teamwork > .exchange-prose { max-width: 44rem; }
+.exchange-teamwork-media { display: grid; grid-template-columns: minmax(0, .751381fr) minmax(0, 1fr); align-items: start; gap: 1.5rem; width: 100%; max-width: 36rem; margin: 2rem auto 0; }
+.exchange-project-screen a { display: block; border-radius: 12px; }
+.exchange-project-screen a:hover { outline: 1px solid var(--exchange-muted); outline-offset: 4px; }
 .exchange-film { width: 100%; }
 .exchange-film video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; border-radius: 12px; background: #17191b; }
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
@@ -91,7 +94,9 @@
   .exchange-hero-photo { max-width: 20rem; justify-self: center; }
   .exchange-contents { gap: .25rem 0; }
   .exchange-contents a { flex-basis: 50%; font-size: .85rem; }
-  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-teamwork, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-teamwork-media { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-project-screen { width: 100%; max-width: 306px; justify-self: center; }
   .exchange-teacher { max-width: 20rem; justify-self: center; }
   .exchange-photo-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
   .exchange-photo-row > figure { width: 100%; max-width: 24rem; justify-self: center; }
@@ -139,7 +144,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 959px) {
-  .exchange-hero, .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-career-intro, .exchange-volleyball, .exchange-teamwork { grid-template-columns: 1fr; gap: 1.5rem; }
+  .exchange-hero, .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-career-intro, .exchange-volleyball { grid-template-columns: 1fr; gap: 1.5rem; }
   .exchange-speaking > .exchange-prose, .exchange-course-row > .exchange-prose, .exchange-daily-stories .exchange-prose { max-width: 44rem; }
   .exchange-course-files, .exchange-tableau, .exchange-daily-photo { max-width: 32rem; }
 }
@@ -147,6 +152,9 @@
 @media (max-width: 959px) {
   .exchange-page { max-width: 48rem; }
   .exchange-hero-photo, .exchange-teacher, .exchange-volleyball figure, .exchange-career-intro > figure { max-width: 20rem; justify-self: center; }
-  .exchange-film { max-width: 18rem; justify-self: center; }
+  .exchange-film { justify-self: center; }
   .exchange-tableau, .exchange-daily-photo { width: 100%; max-width: none; }
+}
+@media (max-width: 767px) {
+  .exchange-film { max-width: 18rem; }
 }

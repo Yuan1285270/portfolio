@@ -208,6 +208,13 @@ export default function ExchangePage() {
             <p>這組隊友都很有主見，大家一直提出想法，習慣用的工具也不同。討論很熱烈，但要收斂成一個能在時間內完成的作品，就沒有那麼容易。英文之外，還得適應彼此怎麼討論、怎麼做決定。</p>
             <p className="exchange-outcome">最後，我們拿到 Next Frontier Health Machine Learning Track 第二名。</p>
           </div>
+          <div className="exchange-teamwork-media">
+          <figure className="exchange-project-screen">
+            <a href="/portfolio/exchange/owlhacks-kim-tasks.png" target="_blank" rel="noreferrer" aria-label="查看 OwlHacks 作品 KIM Tasks 的原始截圖，另開分頁">
+              <img src="/portfolio/exchange/owlhacks-kim-tasks.png" alt="OwlHacks 作品 KIM Tasks 的任務介面，顯示點數與 Bed、Table / Desk、Dishes 三個任務選項" width={306} height={724} loading="lazy" decoding="async" />
+            </a>
+            <figcaption>作品畫面 · KIM Tasks<br />點圖查看原始截圖</figcaption>
+          </figure>
           <figure className="exchange-film">
             <video controls playsInline preload="none" width={540} height={960} poster="/portfolio/showreels/owlhacks-2025.jpg" aria-label="OwlHacks 2025 活動紀錄，直式影片，28 秒">
               <source src="/portfolio/showreels/owlhacks-2025.mp4" type="video/mp4" />
@@ -215,6 +222,7 @@ export default function ExchangePage() {
             </video>
             <figcaption>OwlHacks 2025 · 活動現場紀錄 · 28 秒</figcaption>
           </figure>
+          </div>
         </section>
 
         <section className="exchange-chapter exchange-living" id="living" aria-labelledby="living-title">
