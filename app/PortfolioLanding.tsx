@@ -99,6 +99,14 @@ const momentRowTwo = [
 
 const showreels = [
   {
+    title: "TCSE 2026",
+    eyebrow: "English Oral Presentation",
+    duration: "00:47",
+    src: "/portfolio/showreels/tcse-2026.mp4",
+    poster: "/portfolio/showreels/tcse-2026.jpg",
+    description: "The complete original cut of the research presentation on coordinated social-media behavior detection.",
+  },
+  {
     title: "OwlHacks 2025",
     eyebrow: "Philadelphia · Hackathon",
     duration: "00:28",
@@ -137,14 +145,6 @@ const showreels = [
     src: "/portfolio/showreels/ncpc-2024.mp4",
     poster: "/portfolio/showreels/ncpc-2024.jpg",
     description: "A short walk through Taiwan's national collegiate programming final.",
-  },
-  {
-    title: "TCSE 2026",
-    eyebrow: "English Oral Presentation",
-    duration: "00:47",
-    src: "/portfolio/showreels/tcse-2026.mp4",
-    poster: "/portfolio/showreels/tcse-2026.jpg",
-    description: "The complete original cut of the research presentation on coordinated social-media behavior detection.",
   },
   {
     title: "In America",

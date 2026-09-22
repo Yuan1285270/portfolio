@@ -32,6 +32,9 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, /<title>Tsung-Yuan Lin — CS Student \+ AI &amp; Full-Stack Developer<\/title>/i);
   assert.match(html, /Hi, I(?:&#x27;|')m Yuan/i);
   assert.match(html, /Short stories/i);
+  assert.match(html, /aria-label="1 of 8 — TCSE 2026"/i);
+  const videoStatus = html.match(/<p class="video-status"[^>]*>(.*?)<\/p>/)?.[1];
+  assert.equal(videoStatus?.replace(/<!--.*?-->/g, ""), "01 / 08 · TCSE 2026");
   assert.match(html, /In America/i);
   assert.match(html, /Looking forward to/i);
   assert.match(html, /working together\./i);
