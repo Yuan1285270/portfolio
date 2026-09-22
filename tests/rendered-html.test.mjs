@@ -44,6 +44,8 @@ test("server-renders Tsung-Yuan's portfolio and social metadata", async () => {
   assert.match(html, />C1</i);
   assert.match(html, /IELTS Academic · C1/i);
   assert.match(html, /Cross-Strait Maker · 3rd Tier Prize/i);
+  assert.match(html, /IT Month · Individual Outstanding Award/i);
+  assert.match(html, /IT Month · Team 2nd Place/i);
   assert.match(html, /Portrait certificates/i);
   assert.match(html, /Landscape records/i);
   assert.match(html, /Capabilities/i);
@@ -108,6 +110,8 @@ test("ships the finished portfolio source without starter artifacts", async () =
     access(new URL("../public/portfolio/showreels/owlhacks-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/showreels/american-life-2025.mp4", import.meta.url)),
     access(new URL("../public/portfolio/awards/ielts-c1.jpg", import.meta.url)),
+    access(new URL("../public/portfolio/awards/it-month-outstanding.jpg", import.meta.url)),
+    access(new URL("../public/portfolio/awards/it-month-team-second.jpg", import.meta.url)),
     access(new URL("../public/portfolio/awards/cross-strait-third-prize.jpg", import.meta.url)),
     access(new URL("../public/portfolio/moments-v2/it-month-faculty.jpg", import.meta.url)),
     access(new URL("../public/portfolio/moments-v2/sei-smart-finance-2026.jpg", import.meta.url)),
