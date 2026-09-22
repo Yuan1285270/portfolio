@@ -1,21 +1,64 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-22T05:19:42Z",
-  "title": "Design System: Beyond Borders extension",
+  "generatedAt": "2026-09-22T11:48:52Z",
+  "title": "Design System: Beyond Borders and exchange extension",
   "extensions": {
     "motion": [
       {
         "name": "global-link-color",
         "value": "color 180ms ease",
         "purpose": "Evidence-link hover color."
+      },
+      {
+        "name": "exchange-reduced-motion",
+        "value": "scroll-behavior: auto",
+        "purpose": "Disable inherited smooth scrolling for the exchange route when reduced motion is requested."
       }
     ],
     "breakpoints": [
       {
         "name": "global-single-column-max",
         "value": "767px"
+      },
+      {
+        "name": "exchange-single-column-max",
+        "value": "767px"
       }
-    ]
+    ],
+    "colorMeta": {
+      "exchange-video": {
+        "role": "neutral",
+        "displayName": "Video canvas",
+        "tonalRamp": [
+          "oklch(15% 0.005 250)",
+          "oklch(26% 0.005 250)",
+          "oklch(38% 0.005 250)",
+          "oklch(49% 0.005 250)",
+          "oklch(61% 0.005 250)",
+          "oklch(72% 0.005 250)",
+          "oklch(84% 0.005 250)",
+          "oklch(95% 0.005 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "exchange-display": {
+        "displayName": "Chinese reading display",
+        "purpose": "Intentional route-local heading role; Chinese fallback fonts, lighter than the homepage display."
+      },
+      "exchange-body": {
+        "displayName": "Chinese reading body",
+        "purpose": "Long-form reflection with generous leading."
+      },
+      "exchange-evidence": {
+        "displayName": "Coursework excerpt",
+        "purpose": "Compact readable content inside native disclosures."
+      },
+      "exchange-source": {
+        "displayName": "Evidence provenance",
+        "purpose": "Ancillary coursework source labels; primary evidence remains in the larger reading roles."
+      }
+    }
   },
   "components": [
     {
@@ -26,30 +69,55 @@
       "css": ".ds-global-heading { margin:0; color:var(--mist); font-family:var(--font-kanit), Kanit, sans-serif; font-size:clamp(3.5rem,6.5vw,6rem); font-weight:900; line-height:0.9; letter-spacing:-0.035em; text-transform:uppercase; }"
     },
     {
-      "name": "Certificate link",
+      "name": "Homepage exchange link",
       "kind": "custom",
-      "description": "Underlined evidence link with visible keyboard focus and a 44px minimum target.",
-      "html": "<a class=\"ds-global-link\" href=\"/certificates/temple-exchange-fall-2025.pdf\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"View exchange certificate (PDF, opens in a new tab)\">View exchange certificate<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a>",
+      "description": "Underlined link to the standalone reflection, retaining the homepage target size and keyboard focus.",
+      "html": "<a class=\"ds-global-link\" href=\"/exchange\" target=\"_blank\" rel=\"noreferrer\" aria-label=\"Explore my exchange (opens in a new tab)\">Explore my exchange<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a>",
       "css": ".ds-global-link { display:inline-flex; align-items:center; gap:0.5rem; min-height:44px; font-family:var(--font-kanit), Kanit, sans-serif; font-size:0.9rem; color:var(--mist); text-decoration:underline; text-underline-offset:5px; text-decoration-color:#778793; transition:color 180ms ease; } .ds-global-link:hover { color:#ffffff; } .ds-global-link:focus-visible { outline:2px solid var(--mist); outline-offset:5px; }"
+    },
+    {
+      "name": "Exchange chapter navigation",
+      "kind": "nav",
+      "description": "A wrapping row of chapter anchors becomes two columns on mobile.",
+      "html": "<nav class=\"ds-exchange-nav\" lang=\"zh-Hant\" aria-label=\"心得章節\"><a href=\"#speaking\">把想法說清楚</a><a href=\"#learning\">讓判斷有依據</a><a href=\"#teamwork\">在差異中合作</a><a href=\"#living\">走進日常生活</a></nav>",
+      "css": ".ds-exchange-nav{display:flex;flex-wrap:wrap;gap:.25rem 2.5rem;padding:1rem 0;border-top:1px solid #38424a;border-bottom:1px solid #38424a;background:var(--ink);color:var(--mist);font-family:var(--font-kanit),\"PingFang TC\",\"Microsoft JhengHei\",sans-serif;}.ds-exchange-nav a{display:flex;align-items:center;min-height:44px;font-size:.95rem;color:inherit;text-decoration:none}.ds-exchange-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-exchange-nav a:focus-visible{outline:2px solid var(--mist);outline-offset:6px;}@media(max-width:767px){.ds-exchange-nav{gap:.25rem 0}.ds-exchange-nav a{flex-basis:50%;font-size:.85rem}}"
+    },
+    {
+      "name": "Coursework disclosure",
+      "kind": "custom",
+      "refersTo": "exchange-evidence-summary",
+      "description": "Native details reveals a real coursework excerpt; the plus rotates when open.",
+      "html": "<details class=\"ds-exchange-note\" lang=\"zh-Hant\"><summary>看寫作修訂摘記<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><div><p class=\"ds-exchange-source\">Persuasive Writing · Writing Analysis / Research Paper</p><p>辨認沒有足夠證據支持的主觀推測。</p></div></details>",
+      "css": ".ds-exchange-note{margin-top:1.5rem;border-top:1px solid #38424a;border-bottom:1px solid #38424a;color:var(--mist);background:var(--ink);font-family:var(--font-kanit),\"PingFang TC\",\"Microsoft JhengHei\",sans-serif;}.ds-exchange-note summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 0;font-size:.92rem}.ds-exchange-note summary::-webkit-details-marker{display:none}.ds-exchange-note summary:focus-visible{outline:2px solid var(--mist);outline-offset:6px;}.ds-exchange-note summary svg{flex-shrink:0}.ds-exchange-note[open] summary svg{transform:rotate(45deg)}.ds-exchange-note>div{padding:.5rem 0 1.5rem}.ds-exchange-note p{font-size:.92rem;line-height:1.9}.ds-exchange-note .ds-exchange-source{color:#aebbc7;font-size:.78rem;margin-bottom:1rem}"
+    },
+    {
+      "name": "Exchange resource link",
+      "kind": "custom",
+      "description": "Ruled resource row with PDF and new-tab metadata.",
+      "html": "<a class=\"ds-exchange-resource\" lang=\"zh-Hant\" href=\"/certificates/temple-exchange-fall-2025.pdf\" target=\"_blank\" rel=\"noreferrer\"><span>交換證明<small>Temple University · PDF · 另開分頁</small></span><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a>",
+      "css": ".ds-exchange-resource{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.25rem 0;border-bottom:1px solid #38424a;font-size:1.1rem;color:var(--mist);background:var(--ink);text-decoration:none;font-family:var(--font-kanit),\"PingFang TC\",\"Microsoft JhengHei\",sans-serif;}.ds-exchange-resource small{display:block;font-size:.8rem;color:#aebbc7;margin-top:.4rem}.ds-exchange-resource svg{flex-shrink:0}.ds-exchange-resource:hover span{text-decoration:underline;text-underline-offset:4px}.ds-exchange-resource:focus-visible{outline:2px solid var(--mist);outline-offset:6px;}"
     }
   ],
   "narrative": {
     "northStar": "Dark Kanit portfolio",
-    "overview": "Photo-led exchange section for admissions and job applications: heading, exchange context, first-day, classroom, and group photographs, and exchange certificate only.",
+    "overview": "The international-experience surfaces inherit the portfolio's ink background, mist text, solid Kanit headings, and personal photography. The homepage remains a concise, photo-led introduction for admissions and job applications. The standalone Traditional Chinese reading page extends that identity with calmer heading weights and generous line spacing.\n\nThis is a scoped record of the homepage exchange section and `/exchange`, not authority to restyle unrelated sections. Route strategy and its annotated field-note structure remain in `.impeccable/surfaces/app-exchange-page-tsx.md`; the production direction contract is in `app/layout.tsx` (seed `cfb92fc1`).",
     "keyCharacteristics": [
-      "Aligned rectangular collage: full first-day strip at left, classroom portrait and group stacked at right; preserve this arrangement on mobile.",
-      "Brief context only; no achievement slogans or classroom-score claims.",
-      "Existing dark background and solid Kanit heading."
+      "Dark ink and mist, with muted context and thin structural dividers.",
+      "A compact aligned homepage collage and a spacious, responsive reading page.",
+      "Real photographs at their original proportions and grounded, inspectable coursework excerpts."
     ],
     "rules": [],
     "dos": [
-      "Keep text brief and original photos prominent.",
-      "Retain every person horizontally in the group photo and keep certificate links visible."
+      "Do keep the homepage text brief and original photos prominent.",
+      "Do preserve the approved homepage collage columns and complete first-day strip.",
+      "Do use generous Chinese reading leading and visible keyboard focus on the exchange page.",
+      "Do ground reflection and coursework excerpts in the source map and preserve original photo proportions."
     ],
     "donts": [
-      "Do not restore the three takeaway blocks or classroom-score claims.",
-      "Do not restyle unrelated sections.",
-      "Do not rotate, skew, stretch, or perspective-correct the first-day photograph. Preserve its original proportions and composition."
+      "Don't restore homepage takeaway blocks, classroom-score claims, or achievement slogans.",
+      "Don't rotate, skew, stretch, or perspective-correct photographs.",
+      "Don't restyle unrelated portfolio sections or promote route-specific reading choices into global defaults.",
+      "Don't expose administrative documents or grade records in public downloads."
     ]
   }
 }

@@ -1800,6 +1800,10 @@ button:focus-visible {
   object-fit: contain;
 }
 
+.global-photo--fencing img {
+  object-position: center;
+}
+
 .global-photo--classroom img {
   object-position: center 20%;
 }

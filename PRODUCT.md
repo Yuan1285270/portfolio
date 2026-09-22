@@ -41,3 +41,6 @@ The user subsequently replaced the entrance photograph with Desktop/IMG_4135.JPG
 The user requested a balanced, aligned photo composition and authorized selecting another photo. Pair the full first-day strip with a classroom presentation (iecs/3-2.png) above the existing group photo in an aligned rectangular collage. No achievement copy or image distortion.
 
 The user approved the aligned collage layout but rejected the low-resolution presentation photo. Replace only that image with the high-resolution classroom instructor portrait (iecs/3-1.jpeg), keeping the layout and other photos.
+
+## Exchange reflection page
+The user requested a standalone URL linked from the homepage in a new tab, using their exchange reflections and coursework to present grounded growth for graduate admissions and employment. Implement /exchange in Traditional Chinese within the existing portfolio. They approved the homepage collage, chose fencing for its bottom-right frame, and requested Exchange folder organization with originals preserved. Focus on specific revisions, communication, evidence, collaboration, and participation; no classroom-score boasting. Public downloads are limited to reviewed sharing excerpts and the existing exchange certificate. Keep administrative documents and grade records local.

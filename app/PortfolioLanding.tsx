@@ -1080,9 +1080,9 @@ function GlobalSection() {
             <h2 id="global-heading">Beyond<br />borders.</h2>
             <p className="global-location">Temple University<br />Philadelphia · Fall 2025</p>
             <p className="global-intro">Learning, building, and connecting<br />in a different part of the world.</p>
-            <a className="global-link" href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer">
-              Exchange certificate <ArrowUpRight size={18} aria-hidden="true" />
-              <span className="sr-only"> (PDF, opens in a new tab)</span>
+            <a className="global-link" href="/exchange" target="_blank" rel="noreferrer">
+              Explore my exchange <ArrowUpRight size={18} aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </header>
           <div className="global-photos">
@@ -1098,11 +1098,11 @@ function GlobalSection() {
               </div>
               <figcaption className="sr-only">With my instructor at Temple</figcaption>
             </figure>
-            <figure className="global-photo global-photo--group">
+            <figure className="global-photo global-photo--fencing">
               <div className="global-photo-frame">
-                <img src="/portfolio/global/temple-exchange-group.webp" alt="Tsung-Yuan and fellow exchange students holding their certificates at Temple University" width={1800} height={1350} loading="lazy" decoding="async" />
+                <img src="/portfolio/global/temple-fencing.webp" alt="Tsung-Yuan sitting with his Temple fencing teammates beside the piste" width={1164} height={866} loading="lazy" decoding="async" />
               </div>
-              <figcaption className="sr-only">Exchange classmates</figcaption>
+              <figcaption className="sr-only">Temple fencing club</figcaption>
             </figure>
           </div>
         </div>
