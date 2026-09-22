@@ -51,8 +51,9 @@
 .exchange-note p + p { margin-top: 1rem; }
 .exchange-note .exchange-source { color: var(--exchange-muted); font-size: .78rem; margin-bottom: 1rem; }
 .exchange-note blockquote { font-size: 1.16rem; font-weight: 300; line-height: 1.6; margin-bottom: 1rem; }
-.exchange-teamwork { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); align-items: center; }
-.exchange-film video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; background: #17191b; }
+.exchange-teamwork { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: start; }
+.exchange-film { width: 100%; max-width: 16rem; justify-self: start; }
+.exchange-film video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; border-radius: 12px; background: #17191b; }
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
 .exchange-club-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: start; }
 .exchange-friends { margin-bottom: 1.5rem; }
@@ -105,6 +106,7 @@
 .exchange-work-link svg { flex-shrink: 0; }
 .exchange-work-link:hover span { text-decoration: underline; text-underline-offset: 4px; }
 .exchange-course-files { min-width: 0; }
+.exchange-prose .exchange-course-files { margin-top: 1rem; }
 .exchange-course-files .exchange-work-link { border-bottom: 1px solid var(--exchange-rule); }
 .exchange-presentation-work .exchange-artifact-context { margin-top: 1rem; color: var(--exchange-muted); font-size: .85rem; }
 .exchange-tableau { min-width: 0; }
@@ -123,7 +125,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 959px) {
-  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-career-intro, .exchange-volleyball { grid-template-columns: 1fr; gap: 1.5rem; }
+  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-career-intro, .exchange-volleyball, .exchange-teamwork { grid-template-columns: 1fr; gap: 1.5rem; }
   .exchange-speaking > .exchange-prose, .exchange-course-row > .exchange-prose, .exchange-daily-stories .exchange-prose { max-width: 44rem; }
   .exchange-course-files, .exchange-tableau, .exchange-daily-photo { max-width: 32rem; }
 }

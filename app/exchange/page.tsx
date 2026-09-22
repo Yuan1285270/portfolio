@@ -110,8 +110,8 @@ export default function ExchangePage() {
             <article className="exchange-course-row">
               <div className="exchange-prose">
               <h3>persuasive writing</h3>
-              <p>雖然辛苦，我其實很喜歡這堂課。老師每次開頭都讓大家上台做一小段 elevator speech，也會帶二戰時期的雜誌來，甚至表演過雜耍。</p>
               <p>學期中後開始寫研究文章，我的題目是賓州是否應開放醫療輔助死亡（MAID），從找文獻、列題綱一路寫到草稿和修訂。同學互相做 peer review，圖書館也有專人協助找可引用的資料。以前修過的學術寫作課，在這時候派上了用場。</p>
+              <p>雖然辛苦，我其實很喜歡這堂課。老師每次開頭都讓大家上台做一小段 elevator speech，也會帶二戰時期的雜誌來，甚至表演過雜耍。</p>
               <details className="exchange-note">
                 <summary>我在 Writing Analysis 改了什麼 <Plus size={18} aria-hidden="true" /></summary>
                 <div>
@@ -120,11 +120,15 @@ export default function ExchangePage() {
                   <p>我也整理了冗句和過於口語的用法。期末回顧時，我寫下自己開始會站在讀者的角度想：句子太長、代名詞指得不清楚，或少交代了一小段背景，都可能讓讀者跟不上。</p>
                 </div>
               </details>
-              </div>
               <div className="exchange-course-files">
                 <WorkLink href="/portfolio/exchange/works/persuasive-writing-research-paper.pdf" title="期末研究文章：醫療輔助死亡" detail="2025 年課堂文章 · 英文 · 7 頁 PDF" />
                 <WorkLink href="/portfolio/exchange/works/writing-analysis.pdf" title="Writing Analysis" detail="原句與我的修改分析 · 4 頁 PDF" />
               </div>
+              </div>
+              <figure className="exchange-teacher exchange-writing-teacher">
+                <img src="/portfolio/exchange/writing-teacher.webp" alt="林琮原與 persuasive writing 老師在教室門口合照" width={1200} height={1600} loading="lazy" decoding="async" />
+                <figcaption>和 persuasive writing 老師合照。</figcaption>
+              </figure>
             </article>
             <article className="exchange-course-row">
               <div className="exchange-prose">
@@ -152,7 +156,7 @@ export default function ExchangePage() {
             <p className="exchange-outcome">最後，我們拿到 Next Frontier Health Machine Learning Track 第二名。</p>
           </div>
           <figure className="exchange-film">
-            <video controls playsInline preload="none" poster="/portfolio/showreels/owlhacks-2025.jpg" aria-label="OwlHacks 2025 活動紀錄，28 秒">
+            <video controls playsInline preload="none" width={540} height={960} poster="/portfolio/showreels/owlhacks-2025.jpg" aria-label="OwlHacks 2025 活動紀錄，直式影片，28 秒">
               <source src="/portfolio/showreels/owlhacks-2025.mp4" type="video/mp4" />
               你的瀏覽器不支援影片播放。<a href="/portfolio/showreels/owlhacks-2025.mp4">開啟活動影片</a>
             </video>

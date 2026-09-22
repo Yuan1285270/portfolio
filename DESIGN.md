@@ -142,7 +142,7 @@ These surfaces have no added shadows. Photographs provide depth, while whitespac
 
 ## Shapes
 
-Photographs and the native video share the existing photo radius. Do not rotate, skew, stretch, or perspective-correct photographs. The homepage's approved cover crops preserve image proportions; reading images use automatic height. The video is a 16:9 frame with native controls.
+Photographs and the native video share the existing photo radius. Do not rotate, skew, stretch, or perspective-correct photographs. The homepage's approved cover crops preserve image proportions; reading images use automatic height. The OwlHacks video is natively 540×960: use a 9:16 frame with native controls, automatic height and a 16rem maximum width, aligned with the shared media column. Its poster is also 9:16.
 
 ## Components
 
@@ -161,6 +161,8 @@ Native `details` / `summary` reveals specific coursework excerpts on demand. The
 Original PDF links sit with the relevant course and announce format, page count, selection and new-tab behavior. Two equal presentation previews sit below the presentation story. Writing and Data science each have a successive row: prose on the left and that course's PDF links or Tableau preview on the right. Scripting for Data has its own prose block below. Preview images use automatic height. The sharing PDF has 11 selected pages. All original work remains dated to 2025, without implying present-day policy or validated deployment.
 
 Long story rows share `--exchange-story-columns` (1.35:1) and the 1.5–3rem gap. Teacher, career-fair and volleyball portraits are top-aligned at the start of the media track, capped at 20rem. SSC and exchange-completion stories each pair their text and photo in a row; never force photo alignment by inserting blank space below shorter copy. These rows stack below 960px. Company and presentation photo pairs share the page edges and common gap, stacking below 768px. This supersedes the former parallel course columns and bottom-aligned daily photo composition.
+
+Learning leads the media: persuasive writing begins with the research and revision process, with its PDF links following that prose. The user-supplied IMG_6686.jpeg portrait of the writing teacher sits alongside at its full 3:4 display ratio; honor EXIF orientation and never distort it. It is distinct from the presentation teacher portrait. OwlHacks keeps the collaboration account before its compact portrait video; this row also stacks below 960px.
 
 ### Photographs and film
 
