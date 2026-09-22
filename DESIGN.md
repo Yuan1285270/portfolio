@@ -53,13 +53,13 @@ A compact photographic interlude between About and Awards, within the incumbent 
 
 ## Layout and content
 
-The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, two original portrait photographs on the right. The photo grid uses `1.15fr 0.9fr`, aligned at the bottom, preserving full 3:4 images. Temple campus and Philadelphia City Hall photos are from the user-supplied iecs directory (1-3.jpeg and 8-1.jpeg). Captions identify each location. The original class and fencing photographs are no longer displayed.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, two original portrait photographs on the right. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. The Temple entrance (iecs/1-3.jpeg) is bottom-cropped into a square frame, with a -1.2deg CSS rotation and 1.04 scale to level the red beam. The exchange group (iecs/0.jpg) uses a 2:1 bottom-aligned crop to remove excess ceiling while retaining the entire horizontal group. Captions identify the campus and exchange classmates. The original class and fencing photographs are no longer displayed.
 
 Three short takeaways below the feature describe OwlHacks teamwork, English presentations, and the salary-analysis project. A single top rule groups them; no cards or long paragraphs. Both existing certificate links remain accessible.
 
 ## Responsive behavior
 
-At 767px and below, the feature and takeaway grids become single columns; the two-photo composition remains side by side. Heading size is `clamp(3.5rem, 6.5vw, 6rem)`. Mobile photo captions remain below their images.
+At 767px and below, the feature and takeaway grids become single columns; the photos also stack vertically so the group remains readable. Heading size is `clamp(3.5rem, 6.5vw, 6rem)`. Mobile photo captions remain below their images.
 
 ## Visual tokens
 

@@ -27,3 +27,5 @@ The user supplied a Temple University exchange reflection and authorized adding 
 ## Content presentation preference
 
 The user rejected long exchange stories and the dim classroom group photograph. Keep this section photo-led with a short introduction and three brief takeaways. Use original photos from the supplied iecs folder: 1-3.jpeg (Temple entrance) and 8-1.jpeg (Philadelphia City Hall).
+
+The user subsequently requested leveling/cropping the Temple entrance around its red beam and adding a group photograph. The group source is iecs/0.jpg, replacing the Philadelphia jump photo; preserve all people horizontally.

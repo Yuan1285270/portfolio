@@ -1086,13 +1086,17 @@ function GlobalSection() {
             </a>
           </header>
           <div className="global-photos">
-            <figure className="global-photo">
-              <img src="/portfolio/global/temple-campus.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1050} height={1400} loading="lazy" decoding="async" />
+            <figure className="global-photo global-photo--campus">
+              <div className="global-photo-frame">
+                <img src="/portfolio/global/temple-campus.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1050} height={1400} loading="lazy" decoding="async" />
+              </div>
               <figcaption>Temple University</figcaption>
             </figure>
-            <figure className="global-photo">
-              <img src="/portfolio/global/philadelphia-life.webp" alt="Tsung-Yuan jumping in front of Philadelphia City Hall" width={1050} height={1400} loading="lazy" decoding="async" />
-              <figcaption>Philadelphia</figcaption>
+            <figure className="global-photo global-photo--group">
+              <div className="global-photo-frame">
+                <img src="/portfolio/global/temple-exchange-group.webp" alt="Tsung-Yuan and fellow exchange students holding their certificates at Temple University" width={1800} height={1350} loading="lazy" decoding="async" />
+              </div>
+              <figcaption>Exchange classmates</figcaption>
             </figure>
           </div>
         </div>
