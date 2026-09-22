@@ -59,6 +59,8 @@
 .exchange-film video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: contain; border-radius: 12px; background: #17191b; }
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
 .exchange-club-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: start; }
+.exchange-fencing-film { width: 100%; margin: 0 auto 2rem; }
+.exchange-fencing-film video { display: block; width: 100%; height: auto; object-fit: contain; border-radius: 12px; background: #17191b; }
 .exchange-friends { margin-bottom: 1.5rem; }
 .exchange-career .exchange-chapter-heading { margin-bottom: 1rem; }
 .exchange-career-club { max-width: 44rem; }

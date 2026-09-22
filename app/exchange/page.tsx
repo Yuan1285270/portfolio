@@ -230,6 +230,13 @@ export default function ExchangePage() {
             <h2 id="living-title">每週三天，<br />去擊劍社報到。</h2>
             <p>擊劍社是我在美國最喜歡的社團。一週練三次，每次兩小時，從沒碰過這項運動，到跟著大家出門比賽。社團還會用讓人付錢拿派砸我們的方式募款，大家玩得很開心。</p>
           </div>
+          <figure className="exchange-fencing-film">
+            <video controls playsInline preload="none" width={1206} height={644} poster="/portfolio/showreels/temple-fencing.jpg" aria-label="Temple 擊劍社比賽紀錄，2 分 50 秒">
+              <source src="/portfolio/showreels/temple-fencing.mp4" type="video/mp4" />
+              你的瀏覽器不支援影片播放。<a href="/portfolio/showreels/temple-fencing.mp4">開啟擊劍影片</a>
+            </video>
+            <figcaption>擊劍社 · 比賽紀錄 · 2 分 50 秒</figcaption>
+          </figure>
           <div className="exchange-club-grid">
             <figure className="exchange-fencing">
               <img src="/portfolio/global/temple-fencing.webp" alt="林琮原與擊劍社隊友穿著擊劍服，並肩坐在場邊" width={1164} height={866} loading="lazy" decoding="async" />
