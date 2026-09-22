@@ -31,6 +31,7 @@ const chapters = [
   ["career", "科技業與職涯"],
   ["campuses", "大學與旅途"],
   ["daily", "費城生活"],
+  ["sharing", "返國分享"],
 ];
 
 export default function ExchangePage() {
@@ -83,7 +84,7 @@ export default function ExchangePage() {
 
         <section className="exchange-chapter exchange-learning" id="learning" aria-labelledby="learning-title">
           <div className="exchange-chapter-heading">
-            <h2 id="learning-title">查了字典，<br />還是讀不完。</h2>
+            <h2 id="learning-title">寫作與資料科學</h2>
             <p>這學期修了五門課。程式作業有原本資工系的底子可以接上，Persuasive Writing 的閱讀量就真的讓我吃不消。一直查字典，還是讀不完，每週還有 essay 要寫。</p>
           </div>
           <div className="exchange-work-grid">
@@ -137,19 +138,22 @@ export default function ExchangePage() {
             <h2 id="living-title">每週三天，<br />去擊劍社報到。</h2>
             <p>擊劍社是我在美國最喜歡的社團。一週練三次，每次兩小時，從沒碰過這項運動，到跟著大家出門比賽。社團還會用讓人付錢拿派砸我們的方式募款，大家玩得很開心。</p>
           </div>
-          <figure className="exchange-fencing">
-            <img src="/portfolio/global/temple-fencing.webp" alt="林琮原與擊劍社隊友穿著擊劍服，並肩坐在場邊" width={1164} height={866} loading="lazy" decoding="async" />
-            <figcaption>和擊劍社的隊友坐在場邊。</figcaption>
-          </figure>
-          <div className="exchange-life-notes">
-            <figure>
-              <img src="/portfolio/exchange/friends.webp" alt="林琮原與朋友們在校園室內自拍" width={1080} height={512} loading="lazy" decoding="async" />
-              <figcaption>在 Temple 認識的朋友。</figcaption>
+          <div className="exchange-club-grid">
+            <figure className="exchange-fencing">
+              <img src="/portfolio/global/temple-fencing.webp" alt="林琮原與擊劍社隊友穿著擊劍服，並肩坐在場邊" width={1164} height={866} loading="lazy" decoding="async" />
+              <figcaption>擊劍社 · 和隊友一起參加比賽。</figcaption>
             </figure>
             <div className="exchange-prose">
+              <figure className="exchange-friends">
+                <img src="/portfolio/exchange/friends.webp" alt="林琮原與朋友們在校園室內自拍" width={1080} height={512} loading="lazy" decoding="async" />
+                <figcaption>在 Temple 認識的朋友。</figcaption>
+              </figure>
               <p>跟一群當地同學聊天，比課堂英文難多了。他們私下用的字、內梗，還有不同地方的口音，我常常需要抓一個人幫忙「英翻英」，到後來才稍微好一點。</p>
-              <p>排球課也是我交朋友的地方。我本來就會打，教練示範時常找我搭配，也請我幫忙收器材。下課後，大家還會另外約球、一起去看校隊比賽。在寫不完的作業中間，這堂課剛好讓我喘口氣。</p>
             </div>
+          </div>
+          <div className="exchange-volleyball exchange-prose">
+            <h3>排球課</h3>
+            <p>排球課也是我交朋友的地方。我本來就會打，教練示範時常找我搭配，也請我幫忙收器材。下課後，大家還會另外約球、一起去看校隊比賽。在寫不完的作業中間，這堂課剛好讓我喘口氣。</p>
           </div>
         </section>
 
@@ -158,40 +162,47 @@ export default function ExchangePage() {
             <h2 id="career-title">先去求職博覽會<br />看看。</h2>
             <p>我去學校的 STEM 求職博覽會，主要是想看看美國大學生怎麼找工作。和攤位上的人資聊聊，也看著朋友在現場到處加 LinkedIn。以前聽過 networking，這次終於看到同學實際怎麼做。</p>
           </div>
-          <div className="exchange-career-story">
-            <figure>
-              <img src="/portfolio/exchange/google-visit.webp" alt="林琮原在 Google 園區的大型標誌旁留影" width={1200} height={1600} loading="lazy" decoding="async" />
-              <figcaption>Google 參訪留影。</figcaption>
-            </figure>
-            <div className="exchange-prose">
-              <p>金融交易科技社則讓我多認識了一個方向。社課聊交易，群組裡有人分享趨勢、學校資源和實習資訊。我開始接觸 Quant，才更具體地想到，資工學的東西也能用在金融市場和量化交易。</p>
+          <div className="exchange-prose exchange-career-club">
+            <p>金融交易科技社則讓我多認識了一個方向。社課聊交易，群組裡有人分享趨勢、學校資源和實習資訊。我開始接觸 Quant，才更具體地想到，資工學的東西也能用在金融市場和量化交易。</p>
+          </div>
+          <div className="exchange-company-visit">
+            <h3>Google 與 Amazon 參訪</h3>
+            <div className="exchange-visit-copy exchange-prose">
               <p>這趟也參訪了矽谷 Google 園區、西雅圖 Google 辦公室，以及 Amazon Spheres 和 Amazon Go。走進辦公室，最意外的是那些和工作桌放在一起的生活設施：小廚房、冥想室、腳踏車工作坊，甚至有跑步機升降桌。</p>
               <p>以前想像科技業，比較容易想到技術和職稱。這次和員工聊天、看到實際的工作空間，才多了一些可以想像自己未來生活的細節。</p>
-              <figure className="exchange-career-detail">
+            </div>
+            <div className="exchange-company-photos">
+              <figure>
+                <img src="/portfolio/exchange/google-visit.webp" alt="林琮原在 Google 園區的大型標誌旁留影" width={1200} height={1600} loading="lazy" decoding="async" />
+                <figcaption>Google 園區</figcaption>
+              </figure>
+              <figure>
                 <img src="/portfolio/exchange/amazon-spheres.webp" alt="西雅圖 Amazon Spheres 的玻璃球體建築" width={1600} height={1200} loading="lazy" decoding="async" />
-                <figcaption>西雅圖的 Amazon Spheres。</figcaption>
+                <figcaption>Amazon Spheres · 西雅圖</figcaption>
               </figure>
             </div>
           </div>
         </section>
 
         <section className="exchange-chapter exchange-campuses" id="campuses" aria-labelledby="campuses-title">
-          <div className="exchange-chapter-heading">
-            <h2 id="campuses-title">很喜歡 MIT 博物館。</h2>
-            <p>我一個人去波士頓待了三天，逛了 Harvard 和 MIT。我特別喜歡 MIT 的博物館，逛完真的會讓人對學術又多一點憧憬。</p>
-          </div>
-          <div className="exchange-campus-photos">
-            <figure>
-              <img src="/portfolio/exchange/mit-visit.webp" alt="MIT 的校園標誌與街景" width={1200} height={1600} loading="lazy" decoding="async" />
-              <figcaption>波士頓獨旅，逛到 MIT。</figcaption>
-            </figure>
-            <figure>
-              <img src="/portfolio/exchange/princeton-visit.webp" alt="林琮原走訪積雪中的普林斯頓大學校園" width={1200} height={1600} loading="lazy" decoding="async" />
-              <figcaption>下過雪的 Princeton。</figcaption>
-            </figure>
+          <h2 id="campuses-title">很喜歡 MIT 博物館。</h2>
+          <div className="exchange-campus-stories">
+            <div className="exchange-prose">
+              <p>我一個人去波士頓待了三天，逛了 Harvard 和 MIT。我特別喜歡 MIT 的博物館，逛完真的會讓人對學術又多一點憧憬。</p>
+              <figure>
+                <img src="/portfolio/exchange/mit-visit.webp" alt="MIT 的校園標誌與街景" width={1200} height={1600} loading="lazy" decoding="async" />
+                <figcaption>波士頓獨旅 · MIT 校園</figcaption>
+              </figure>
+            </div>
+            <div className="exchange-prose">
+              <p>另外也走訪了 Stanford、Princeton、UPenn、UCLA 和 University of Washington。校園建築、圖書館，甚至紀念品店，都讓我感覺到學校很用心經營自己的形象。我也開始留意，校友、捐款和產業連結怎麼圍繞著一所大學。</p>
+              <figure>
+                <img src="/portfolio/exchange/princeton-visit.webp" alt="積雪中的普林斯頓大學校園" width={1200} height={1600} loading="lazy" decoding="async" />
+                <figcaption>Princeton 校園</figcaption>
+              </figure>
+            </div>
           </div>
           <div className="exchange-campus-reflection exchange-prose">
-            <p>另外也走訪了 Stanford、Princeton、UPenn、UCLA 和 University of Washington。校園建築、圖書館，甚至紀念品店，都讓我感覺到學校很用心經營自己的形象。我也開始留意，校友、捐款和產業連結怎麼圍繞著一所大學。</p>
             <p>逛的時候很嚮往，寫心得時卻一直想到費用。這麼好的環境，什麼樣的學生有機會進來？如果光是學費就很難負擔，再多資源也未必輪得到自己。這是參訪後留在我心裡的問題，也讓我更能理解，這次交換得到的學費互免和獎學金有多重要。</p>
           </div>
         </section>
@@ -215,17 +226,30 @@ export default function ExchangePage() {
           </div>
         </section>
 
-        <section className="exchange-closing" aria-labelledby="closing-title">
-          <div>
-            <h2 id="closing-title">回來以後</h2>
-            <p>我把選課、社團、語言練習和生活經驗整理成分享簡報，也完成交換心得與獎學金成果報告。想把自己當初不知道、後來才弄懂的事情，留給下一個準備出發的人。</p>
-            <p>謝謝家人、師長、行政人員和朋友，也謝謝逢甲的學費互免與南投縣出國獎學金。以後如果有能力，我也希望能資助想出國、卻卡在經費的學生。</p>
+        <section className="exchange-closing" id="sharing" aria-labelledby="closing-title">
+          <h2 id="closing-title">獎學金與返國分享</h2>
+          <div className="exchange-sharing-story">
+            <figure>
+              <img src="/portfolio/moments-v2/exchange-scholarship.jpg" alt="林琮原在南投縣出國學習獎助學金成果發表活動中，手持出國獎學金牌合照" width={1400} height={874} loading="lazy" decoding="async" />
+              <figcaption>南投縣出國學習獎助學金成果發表 · 2026 年 1 月 21 日</figcaption>
+            </figure>
+            <div className="exchange-prose">
+              <p>這次交換獲得南投縣出國獎學金支持，加上逢甲大學的學費互免，讓我能完成在 Temple 的一學期。</p>
+              <p>返國後，我在南投縣的出國學習獎助學金成果發表記者會上，分享課堂、社團和科技業參訪的經驗。活動在旭光高中舉行，縣府教育處的紀錄也收錄了我的分享。</p>
+              <a className="exchange-text-link" href="https://ntctie.eduweb.tw/Ch/Module/News/Detail.php?ID=189" target="_blank" rel="noreferrer">閱讀教育處活動紀錄<span className="sr-only">（另開分頁）</span><ArrowUpRight size={18} aria-hidden="true" /></a>
+            </div>
           </div>
-          <div className="exchange-resources">
-            <h3>延伸紀錄</h3>
-            <a href="/portfolio/exchange/exchange-sharing-selected.pdf" target="_blank" rel="noreferrer"><span>返國分享簡報<small>節選 4 頁 · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
-            <a href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer"><span>交換證明<small>Temple University · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
-            <Link href="/#projects"><span>回到我的專案</span><ArrowRight size={22} aria-hidden="true" /></Link>
+          <div className="exchange-closing-notes">
+            <div className="exchange-prose">
+              <p>我也把選課、住宿、語言練習和生活經驗整理成交換分享簡報，回應準備出發的同學對花費、交朋友、英文和課業安排的疑問。這些是我當初也想知道、到了當地才慢慢弄懂的事。</p>
+              <p>謝謝家人、師長、行政人員和朋友一路上的幫忙。以後如果有能力，我也希望能資助想出國、卻卡在經費的學生。</p>
+            </div>
+            <div className="exchange-resources">
+              <h3>延伸紀錄</h3>
+              <a href="/portfolio/exchange/exchange-sharing-selected.pdf" target="_blank" rel="noreferrer"><span>出國獎學金成果分享<small>簡報節選 4 頁 · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
+              <a href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer"><span>交換證明<small>Temple University · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
+              <Link href="/#projects"><span>回到我的專案</span><ArrowRight size={22} aria-hidden="true" /></Link>
+            </div>
           </div>
         </section>
       </main>

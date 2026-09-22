@@ -1,83 +1,94 @@
 .exchange-page {
   --exchange-muted: #aebbc7;
-  max-width: 90rem;
+  --exchange-rule: #38424a;
+  --exchange-gap: clamp(1.5rem, 4vw, 3.5rem);
+  max-width: 78rem;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 5vw, 5rem);
+  padding: 0 clamp(1.5rem, 4vw, 4rem);
   color: var(--mist);
   font-family: var(--font-kanit), "PingFang TC", "Microsoft JhengHei", sans-serif;
   font-weight: 400;
 }
 .exchange-page a, .exchange-page summary { -webkit-tap-highlight-color: transparent; }
 .exchange-page :focus-visible { outline: 2px solid var(--mist); outline-offset: 6px; }
-.exchange-skip { position: fixed; left: 1.5rem; top: -6rem; z-index: 50; padding: 1rem; background: var(--mist); color: var(--ink); }
-.exchange-skip:focus { top: 1rem; }
+.exchange-skip { position: fixed; left: 1.5rem; top: 1rem; z-index: 50; padding: 1rem; background: var(--mist); color: var(--ink); transform: translateY(-200%); opacity: 0; pointer-events: none; }
+.exchange-skip:focus-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
 .exchange-topbar { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; min-height: 6rem; font-size: .9rem; }
 .exchange-topbar > span { color: var(--exchange-muted); }
 .exchange-return, .exchange-text-link { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; }
 .exchange-return:hover, .exchange-text-link:hover { color: white; }
-.exchange-hero { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: clamp(2rem, 7vw, 7rem); padding: 3rem 0 5rem; }
-.exchange-hero h1 { font-size: clamp(3rem, 5.8vw, 5.3rem); line-height: 1.23; font-weight: 600; letter-spacing: -.035em; }
-.exchange-meta { margin-top: 1.7rem; font-size: .95rem; line-height: 1.6; color: var(--exchange-muted); }
-.exchange-lead { max-width: 29rem; margin: 1.6rem 0 1rem; font-size: 1.08rem; line-height: 1.95; }
+.exchange-hero { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: var(--exchange-gap); padding: 2rem 0 3.5rem; }
+.exchange-hero h1 { font-size: clamp(3rem, 5.8vw, 5rem); line-height: 1.23; font-weight: 600; letter-spacing: -.035em; }
+.exchange-meta { margin-top: 1.5rem; font-size: .95rem; line-height: 1.6; color: var(--exchange-muted); }
+.exchange-lead { max-width: 29rem; margin: 1.5rem 0 1rem; font-size: 1.05rem; line-height: 1.9; }
 .exchange-text-link { font-size: .95rem; text-decoration: underline; text-underline-offset: 6px; }
 .exchange-page figure { min-width: 0; }
-.exchange-page figure img { width: 100%; height: auto; border-radius: 12px; }
+.exchange-page figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .exchange-page figcaption { margin-top: .75rem; font-size: .8rem; line-height: 1.6; color: var(--exchange-muted); }
-.exchange-hero-photo { max-width: 31rem; justify-self: end; width: 100%; }
-.exchange-contents { display: flex; flex-wrap: wrap; gap: .25rem 2.5rem; padding: 1rem 0; border-top: 1px solid #38424a; border-bottom: 1px solid #38424a; }
-.exchange-contents a { display: flex; align-items: center; min-height: 44px; font-size: .95rem; }
+.exchange-hero-photo { max-width: 22rem; justify-self: end; width: 100%; }
+.exchange-contents { display: flex; flex-wrap: wrap; gap: .25rem 2rem; padding: .75rem 0; border-top: 1px solid var(--exchange-rule); border-bottom: 1px solid var(--exchange-rule); }
+.exchange-contents a { display: flex; align-items: center; min-height: 44px; font-size: .9rem; }
 .exchange-contents a:hover { text-decoration: underline; text-underline-offset: 6px; }
-.exchange-chapter { padding-top: clamp(4.5rem, 8vw, 8rem); scroll-margin-top: 2rem; }
-.exchange-page h2 { font-size: clamp(2rem, 3.5vw, 3.25rem); line-height: 1.4; font-weight: 500; letter-spacing: -.025em; margin-bottom: 1.75rem; text-wrap: balance; }
-.exchange-page h3 { font-size: 1.3rem; line-height: 1.65; font-weight: 500; margin-bottom: 1rem; }
-.exchange-prose p, .exchange-work-grid p, .exchange-closing p, .exchange-chapter-heading > p { font-size: 1rem; line-height: 2; }
-.exchange-prose > p + p, .exchange-work-grid article > p + p, .exchange-closing p + p { margin-top: 1rem; }
-.exchange-speaking { display: grid; grid-template-columns: 1.12fr .8fr; gap: clamp(2rem, 7vw, 7rem); align-items: center; }
-.exchange-speaking .exchange-prose { max-width: 35rem; }
-.exchange-teacher { max-width: 28rem; justify-self: end; width: 100%; }
-.exchange-chapter-heading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; margin-bottom: 2.5rem; }
-.exchange-chapter-heading h2 { margin: 0; }
-.exchange-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); }
-.exchange-work-grid article { padding-top: 1.5rem; border-top: 1px solid #38424a; min-width: 0; }
-.exchange-note { margin-top: 1.5rem; border-top: 1px solid #38424a; border-bottom: 1px solid #38424a; }
+.exchange-chapter { padding-top: clamp(3.5rem, 6vw, 5.5rem); scroll-margin-top: 1.5rem; }
+.exchange-page h2 { font-size: clamp(1.8rem, 2.7vw, 2.4rem); line-height: 1.4; font-weight: 500; letter-spacing: -.025em; margin-bottom: 1.5rem; text-wrap: balance; }
+.exchange-page h3 { font-size: 1.2rem; line-height: 1.65; font-weight: 500; margin-bottom: 1rem; }
+.exchange-prose p, .exchange-work-grid p, .exchange-chapter-heading > p { font-size: 1rem; line-height: 1.95; }
+.exchange-prose > p + p, .exchange-work-grid article > p + p { margin-top: 1rem; }
+.exchange-speaking { display: grid; grid-template-columns: 1.5fr .8fr; gap: var(--exchange-gap); align-items: center; }
+.exchange-teacher { max-width: 20rem; justify-self: end; width: 100%; }
+.exchange-chapter-heading { max-width: 44rem; margin-bottom: 2rem; }
+.exchange-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
+.exchange-work-grid article { padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); min-width: 0; }
+.exchange-note { margin-top: 1.5rem; border-top: 1px solid var(--exchange-rule); border-bottom: 1px solid var(--exchange-rule); }
 .exchange-note summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 56px; padding: .8rem 0; font-size: .92rem; }
 .exchange-note summary::-webkit-details-marker { display: none; }
 .exchange-note summary svg { flex-shrink: 0; }
 .exchange-note[open] summary svg { transform: rotate(45deg); }
 .exchange-note > div { padding: .5rem 0 1.5rem; }
-.exchange-note p, .exchange-note li { font-size: .92rem; line-height: 1.9; }
+.exchange-note p { font-size: .92rem; line-height: 1.9; }
 .exchange-note p + p { margin-top: 1rem; }
 .exchange-note .exchange-source { color: var(--exchange-muted); font-size: .78rem; margin-bottom: 1rem; }
 .exchange-note blockquote { font-size: 1.16rem; font-weight: 300; line-height: 1.6; margin-bottom: 1rem; }
-.exchange-teamwork { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.exchange-teamwork { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); align-items: center; }
 .exchange-film video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; background: #17191b; }
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
-.exchange-fencing { max-width: 62rem; margin: 0 auto; }
-.exchange-life-notes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; margin-top: 3rem; }
-.exchange-career-story { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
-.exchange-career-detail { margin-top: 2rem; }
-.exchange-campus-photos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 3rem); max-width: 58rem; margin: 0 auto; }
-.exchange-campus-reflection { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); margin-top: 2.5rem; }
-.exchange-campus-reflection > p + p { margin-top: 0; }
-.exchange-closing { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2.5rem, 8vw, 8rem); padding: clamp(4rem, 8vw, 8rem) 0; margin-top: clamp(4rem, 8vw, 8rem); border-top: 1px solid #38424a; }
-.exchange-resources { align-self: center; }
-.exchange-resources a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid #38424a; font-size: 1.1rem; }
+.exchange-club-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: start; }
+.exchange-friends { margin-bottom: 1.5rem; }
+.exchange-volleyball { max-width: 44rem; margin-top: 2rem; }
+.exchange-career .exchange-chapter-heading { margin-bottom: 1rem; }
+.exchange-career-club { max-width: 44rem; }
+.exchange-company-visit { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-visit-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
+.exchange-visit-copy > p + p { margin-top: 0; }
+.exchange-company-photos { display: grid; grid-template-columns: 9fr 16fr; align-items: start; gap: 1.5rem; max-width: 58rem; margin: 1.5rem auto 0; }
+.exchange-campus-stories { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem var(--exchange-gap); }
+.exchange-campus-stories > div { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
+.exchange-campus-stories figure { width: 100%; max-width: 22rem; }
+.exchange-campus-reflection { max-width: 44rem; margin-top: 2rem; }
+.exchange-closing { padding: clamp(3.5rem, 6vw, 5.5rem) 0 3.5rem; margin-top: clamp(3.5rem, 6vw, 5.5rem); border-top: 1px solid var(--exchange-rule); scroll-margin-top: 2rem; }
+.exchange-sharing-story { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: center; }
+.exchange-sharing-story .exchange-text-link { margin-top: 1rem; }
+.exchange-closing-notes { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); margin-top: 2.5rem; }
+.exchange-resources a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--exchange-rule); font-size: 1rem; }
 .exchange-resources a:hover span { text-decoration: underline; text-underline-offset: 4px; }
 .exchange-resources small { display: block; font-size: .8rem; color: var(--exchange-muted); margin-top: .4rem; }
 .exchange-resources svg { flex-shrink: 0; }
-.exchange-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid #38424a; padding: 1.5rem 0; font-size: .85rem; color: var(--exchange-muted); }
+.exchange-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--exchange-rule); padding: 1.5rem 0; font-size: .85rem; color: var(--exchange-muted); }
 .exchange-footer a { display: flex; align-items: center; min-height: 44px; }
 @media (max-width: 767px) {
   .exchange-topbar { min-height: 5rem; font-size: .8rem; }
-  .exchange-hero { grid-template-columns: 1fr; padding-top: 2rem; padding-bottom: 3rem; gap: 2rem; }
+  .exchange-hero { grid-template-columns: 1fr; padding-top: 1.5rem; padding-bottom: 2.5rem; gap: 2rem; }
   .exchange-hero h1 { font-size: clamp(3rem, 10.5vw, 4.2rem); }
-  .exchange-hero-photo { max-width: none; }
+  .exchange-hero-photo { max-width: 22rem; justify-self: start; }
   .exchange-contents { gap: .25rem 0; }
   .exchange-contents a { flex-basis: 50%; font-size: .85rem; }
-  .exchange-speaking, .exchange-chapter-heading, .exchange-work-grid, .exchange-teamwork, .exchange-life-notes, .exchange-career-story, .exchange-campus-reflection, .exchange-closing { grid-template-columns: 1fr; gap: 2rem; }
-  .exchange-teacher { max-width: none; }
-  .exchange-chapter-heading { margin-bottom: 2rem; }
-  .exchange-life-notes { margin-top: 2rem; }
+  .exchange-speaking, .exchange-work-grid, .exchange-teamwork, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-teacher { max-width: 18rem; justify-self: start; }
+  .exchange-campus-stories > div { display: block; grid-row: auto; }
+  .exchange-campus-stories figure { margin-top: 1.5rem; max-width: 18rem; }
+  .exchange-company-photos { gap: .75rem; }
+  .exchange-page figcaption { font-size: .78rem; }
+  .exchange-closing-notes { margin-top: 2rem; }
   .exchange-footer { font-size: .75rem; }
 }
 @media (prefers-reduced-motion: reduce) {

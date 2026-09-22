@@ -37,30 +37,30 @@ typography:
     lineHeight: 1.5
   exchange-display:
     fontFamily: 'var(--font-kanit), "PingFang TC", "Microsoft JhengHei", sans-serif'
-    fontSize: "clamp(3rem, 5.8vw, 5.3rem)"
+    fontSize: "clamp(3rem, 5.8vw, 5rem)"
     fontWeight: 600
     lineHeight: 1.23
     letterSpacing: "-0.035em"
   exchange-display-mobile:
     fontSize: "clamp(3rem, 10.5vw, 4.2rem)"
   exchange-headline:
-    fontSize: "clamp(2rem, 3.5vw, 3.25rem)"
+    fontSize: "clamp(1.8rem, 2.7vw, 2.4rem)"
     fontWeight: 500
     lineHeight: 1.4
     letterSpacing: "-0.025em"
   exchange-title:
-    fontSize: "1.3rem"
+    fontSize: "1.2rem"
     fontWeight: 500
     lineHeight: 1.65
   exchange-body:
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 2
-  exchange-lead:
-    fontSize: "1.08rem"
     lineHeight: 1.95
+  exchange-lead:
+    fontSize: "1.05rem"
+    lineHeight: 1.9
   exchange-navigation:
-    fontSize: "0.95rem"
+    fontSize: "0.9rem"
   exchange-topbar:
     fontSize: "0.9rem"
   exchange-evidence:
@@ -73,7 +73,7 @@ typography:
   exchange-source:
     fontSize: "0.78rem"
   exchange-resource:
-    fontSize: "1.1rem"
+    fontSize: "1rem"
   exchange-footer-mobile:
     fontSize: "0.75rem"
 rounded:
@@ -120,7 +120,7 @@ The exchange-video token is an intentional local addition for the native video's
 
 The homepage retains solid uppercase Kanit 900 for its two-line heading, with the incumbent display, title, body, intro, caption, and label tokens unchanged. The reading page uses Kanit for Latin text and the explicit PingFang TC / Microsoft JhengHei fallback stack for Traditional Chinese, with body weight 400.
 
-Exchange display and headline roles use lighter weights and taller leading to keep Chinese headings clear. Body paragraphs use the exchange-body role; the introduction uses exchange-lead. The narrower speaking column is capped at 35rem and the lead at 29rem. Captions and resource metadata use the existing caption step with 1.6 leading for captions; mobile chapter links and desktop footer use the existing label size.
+Exchange display and headline roles use lighter weights and taller leading to keep Chinese headings clear. Body paragraphs use the exchange-body role; the introduction uses exchange-lead. Chapter introductions and standalone prose are capped at 44rem and the lead at 29rem. Captions and resource metadata use the existing caption step with 1.6 leading for captions; mobile chapter links and desktop footer use the existing label size.
 
 The additional exchange type roles are deliberate additions, including navigation, topbar, evidence disclosures, quotations, source labels, resource titles, and the mobile footer. They document the reading surface's real hierarchy rather than changing the homepage ramp. Mobile topbar text uses the caption size; mobile display has its own fluid range. Source labels are ancillary to readable body evidence.
 
@@ -128,7 +128,11 @@ The additional exchange type roles are deliberate additions, including navigatio
 
 The homepage exchange section remains between About and Awards. Its 82rem shell uses a `0.85fr 1.3fr` feature grid, stacking below 768px. Photos form one aligned rectangle: a full first-day strip at left spanning two rows, with a classroom instructor portrait above fencing at right. Photo columns remain `1fr 2.25fr`, with equal rows and consistent gaps; retain this collage on mobile. The only current homepage changes are the bottom-right fencing image and its `/exchange` link.
 
-The exchange page has a 90rem maximum shell and fluid horizontal padding from 1.5rem to 5rem. Desktop uses paired copy/media compositions, two-column coursework, and a wide fencing figure capped at 62rem. Chapter spacing grows from 4.5rem to 8rem. Career content pairs a Google portrait with copy and a landscape Amazon photograph. MIT and Princeton form a paired portrait gallery capped at 58rem. Below that gallery, two reflective paragraphs share a desktop row. At 767px and below, copy/media pairs stack into a single column; the campus photographs remain paired with a 1rem minimum gap, the portrait uses the available width, and chapter navigation becomes two links per row. Reading photos use full width and automatic height.
+The exchange page has a 78rem maximum shell and fluid horizontal padding from 1.5rem to 4rem. The opening portrait is capped at 22rem and the teacher portrait at 20rem. Chapter introductions sit above their related content, with a 44rem prose measure, rather than in a separate headline column. Gaps use `--exchange-gap` (1.5rem–3.5rem); chapter spacing grows from 3.5rem to 5.5rem.
+
+The fencing photograph and friends photograph/text form one paired composition, followed by a separate volleyball paragraph. Career-fair and finance-club copy precedes a clearly labeled company-visit subsection. Its photographs use 9:16 grid columns so the original 3:4 Google portrait and 4:3 Amazon landscape share one height without cropping. Each university paragraph stays with its own 22rem-wide photograph; desktop subgrid aligns the photos, while mobile keeps each paragraph and photo together in reading order. The closing pairs the scholarship-event photograph with the event account and an official source link, followed by reflective copy and resources.
+
+At 767px and below, content pairs stack. The teacher and campus portraits are capped at 18rem; the company photo pair remains together with a .75rem gap, retaining original proportions. Chapter navigation wraps to two links per row.
 
 Homepage first-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Classroom: high-resolution `iecs/3-1.jpeg`, encoded at 1600 × 2133; the approved homepage cover crop uses `object-position: center 20%` to retain faces and upper bodies. Fencing replaces the former certificate group in the lower-right frame. The reading page displays the complete original proportions of its Philadelphia portrait, instructor photo, fencing photo, friends photo, and Google, Amazon, MIT and Princeton photographs. Homepage captions remain screen-reader-only; reading-page captions are visible.
 
@@ -148,7 +152,7 @@ The underlined “Explore my exchange” link now opens `/exchange` in a new tab
 
 ### Reading navigation and links
 
-The topbar provides a return to the homepage exchange section. Chapter links navigate to seven topics named directly: English classes, coursework, OwlHacks, fencing and friends, career exploration, campus visits, and Philadelphia life. The reading surface uses 44px minimum targets for text and navigation links and a 2px mist focus outline with 6px offset. Hover communicates interactivity through white text or underlining. A skip link becomes visible on keyboard focus. The footer returns to the title.
+The topbar provides a return to the homepage exchange section. Chapter links navigate to eight topics named directly: English classes, coursework, OwlHacks, fencing and friends, career exploration, campus visits, Philadelphia life, and return sharing. The reading surface uses 44px minimum targets for text and navigation links and a 2px mist focus outline with 6px offset. Hover communicates interactivity through white text or underlining. A skip link becomes visible on keyboard focus, with opacity and pointer events disabled while hidden. The footer returns to the title.
 
 ### Coursework disclosures
 
@@ -160,7 +164,7 @@ Photos remain actual evidence with descriptive alternatives. The OwlHacks film u
 
 ### Closing resources
 
-Ruled resource links pair a readable title with muted metadata and an arrow. The selected sharing PDF and exchange certificate explicitly announce PDF format and a new tab. The project return link stays in the current tab. Public downloads contain reviewed excerpts; administrative and grade records stay local.
+Ruled resource links pair a readable title with muted metadata and an arrow. The selected scholarship-sharing PDF and exchange certificate explicitly announce PDF format and a new tab. The closing separately links to the education department’s 2026-01-21 event record and shows the existing event photograph. The project return link stays in the current tab. Public downloads contain reviewed excerpts; administrative and grade records stay local.
 
 ## Do's and Don'ts
 
