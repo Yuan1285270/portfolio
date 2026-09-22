@@ -1718,7 +1718,7 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-/* Beyond Borders: two original photographs and three concise takeaways. */
+/* Beyond Borders: original exchange photographs and the certificate. */
 .global-section {
   padding: clamp(4rem, 7vw, 7rem) clamp(1.5rem, 5vw, 6rem);
   background: var(--ink);
@@ -1786,47 +1786,15 @@ button:focus-visible {
 }
 
 .global-photo--campus img {
-  transform: rotate(1.2deg) scale(1.04);
+  /* Rectify the gate's beam and right post independently; rotation alone
+     cannot correct the camera's upward-looking perspective. */
+  transform: translateY(-4.5%) matrix(1, -0.0182, -0.1387, 1, 0, 0) scale(1.16);
 }
 
 .global-photo figcaption {
   margin-top: 0.75rem;
   font-size: 0.8rem;
   color: #aebbc7;
-}
-
-.global-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  list-style: none;
-  gap: 2rem;
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  padding-top: 1.75rem;
-  border-top: 1px solid #38424a;
-}
-
-.global-highlights h3 {
-  margin-bottom: 0.5rem;
-  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  font-weight: 500;
-  line-height: 1.3;
-}
-
-.global-highlights p,
-.global-highlights .global-link {
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: #aebbc7;
-}
-
-.global-highlights .global-link {
-  align-items: flex-start;
-  min-height: 44px;
-}
-
-.global-highlights .global-link svg {
-  margin-top: 3px;
-  flex-shrink: 0;
 }
 
 .global-link {
@@ -1859,20 +1827,6 @@ button:focus-visible {
   .global-photos {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .global-highlights {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-top: 2rem;
-  }
-
-  .global-highlights h3 {
-    margin-bottom: 0.15rem;
-  }
-
-  .global-highlights .global-link {
-    align-items: center;
   }
 }
 

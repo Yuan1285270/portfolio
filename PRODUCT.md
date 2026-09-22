@@ -8,7 +8,11 @@ web
 
 ## Product Purpose
 
-Tsung-Yuan Lin's personal portfolio presents his software projects, awards, education, and international experience, with contact links for collaboration and opportunities.
+Tsung-Yuan Lin's personal portfolio supports graduate-school admissions and job applications by presenting his software projects, awards, education, and international experience.
+
+## Primary Audience
+
+Graduate admissions reviewers, faculty, recruiters, and hiring managers. Prioritize clear evidence of academic ability, technical work, communication, and collaboration. Select photographs for their relevance to these audiences as well as visual quality.
 
 ## Capabilities and Constraints
 
@@ -26,6 +30,6 @@ The user supplied a Temple University exchange reflection and authorized adding 
 
 ## Content presentation preference
 
-The user rejected long exchange stories and the dim classroom group photograph. Keep this section photo-led with a short introduction and three brief takeaways. Use original photos from the supplied iecs folder: 1-3.jpeg (Temple entrance) and 8-1.jpeg (Philadelphia City Hall).
+The user rejected long exchange stories and the dim classroom group photograph. Keep this section photo-led with a short introduction. Current photos are iecs/1-3.jpeg (Temple entrance) and iecs/0.jpg (exchange students with certificates). Preserve all people horizontally in the group photo. The user clarified that admissions and job-application relevance should guide photo selection; the certificate group photo is more relevant here than recreational alternatives.
 
-The user subsequently requested leveling/cropping the Temple entrance around its red beam and adding a group photograph. The group source is iecs/0.jpg, replacing the Philadelphia jump photo; preserve all people horizontally.
+The user explicitly rejected all three takeaway blocks and classroom score claims. Do not restore them or replace them with achievement slogans. Keep the section limited to the heading, exchange context, photographs, and exchange certificate.

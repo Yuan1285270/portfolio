@@ -47,22 +47,18 @@ components:
 
 # Design System: Beyond Borders extension
 
-## Scope and direction
+## Scope
 
-A compact photographic interlude between About and Awards, within the incumbent dark Kanit portfolio. User feedback rejected the essay-like density and dim group photo. The revised section keeps one short introduction and three brief achievements; detailed stories and the fencing note are removed. Existing Awards still provides competition evidence.
+Photo-led exchange section between About and Awards, for graduate admissions and job applications. Keep the existing dark Kanit portfolio style. Content is limited to the heading, brief exchange context, two photographs, and an exchange-certificate link. The user explicitly removed the three takeaway blocks, classroom score claims, and achievement slogans; do not restore them.
 
-## Layout and content
+## Layout and photographs
 
-The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, with two photographs on the right. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. The Temple entrance (iecs/1-3.jpeg) is bottom-cropped into a square frame, with a clockwise 1.2deg CSS rotation and 1.04 scale, corrected following user feedback on the direction. The exchange group (iecs/0.jpg) uses a 2:1 bottom-aligned crop to remove excess ceiling while retaining the entire horizontal group. Captions identify the campus and exchange classmates. The original class and fencing photographs are no longer displayed.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. Both grids stack below 768px.
 
-Three short takeaways below the feature describe OwlHacks teamwork, English presentations, and the salary-analysis project. A single top rule groups them; no cards or long paragraphs. Both existing certificate links remain accessible.
+Temple entrance: iecs/1-3.jpeg, square bottom crop. Correct the red beam and right post independently using a CSS affine matrix rather than rotation alone. Current transform: `translateY(-4.5%) matrix(1, -0.0182, -0.1387, 1, 0, 0) scale(1.16)`. Exchange group: iecs/0.jpg, 2:1 bottom crop retaining all people horizontally. Images have 12px corners and location/context captions.
 
-## Responsive behavior
+## Type and interaction
 
-At 767px and below, the feature and takeaway grids become single columns; the photos also stack vertically so the group remains readable. Heading size is `clamp(3.5rem, 6.5vw, 6rem)`. Mobile photo captions remain below their images.
+Solid uppercase Kanit 900 heading, `clamp(3.5rem, 6.5vw, 6rem)`, line-height 0.9, tracking -0.035em. Secondary text #aebbc7 over #0c0c0c. Keep the PDF certificate link underlined with a 44px target, visible focus, and new-tab announcement. No highlight rows or divider beneath the photographs.
 
-## Visual tokens
-
-Background is the incumbent `--ink` (#0c0c0c); foreground is `--mist` (#d7e2ea); secondary text is #aebbc7. Heading is Kanit 900, line-height 0.9, tracking -0.035em. Images have 12px corners. Links retain 44px target height, underlining, an arrow, new-tab PDF announcements, and visible focus outlines.
-
-This is a scoped record and does not authorize restyling unrelated sections.
+This scoped record does not authorize restyling unrelated sections.

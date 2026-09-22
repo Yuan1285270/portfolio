@@ -1100,23 +1100,6 @@ function GlobalSection() {
             </figure>
           </div>
         </div>
-        <ul className="global-highlights" aria-label="Exchange highlights">
-          <li>
-            <h3>Build together.</h3>
-            <a className="global-link" href="/certificates/owl-hacks-2025-second-place.pdf" target="_blank" rel="noreferrer">
-              OwlHacks · Health ML runner-up <ArrowUpRight size={16} aria-hidden="true" />
-              <span className="sr-only"> — certificate (PDF, opens in a new tab)</span>
-            </a>
-          </li>
-          <li>
-            <h3>Speak with confidence.</h3>
-            <p>Top final-presentation score in class.</p>
-          </li>
-          <li>
-            <h3>Let data tell the story.</h3>
-            <p>Full marks · US tech salary analysis.</p>
-          </li>
-        </ul>
       </div>
     </section>
   );
