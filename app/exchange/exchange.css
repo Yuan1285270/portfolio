@@ -54,13 +54,12 @@
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
 .exchange-club-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--exchange-gap); align-items: start; }
 .exchange-friends { margin-bottom: 1.5rem; }
-.exchange-volleyball { max-width: 44rem; margin-top: 2rem; }
 .exchange-career .exchange-chapter-heading { margin-bottom: 1rem; }
 .exchange-career-club { max-width: 44rem; }
 .exchange-company-visit { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
 .exchange-visit-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
 .exchange-visit-copy > p + p { margin-top: 0; }
-.exchange-company-photos { display: grid; grid-template-columns: 9fr 16fr; align-items: start; gap: 1.5rem; max-width: 58rem; margin: 1.5rem auto 0; }
+.exchange-company-photos { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 1.5rem; max-width: 58rem; margin: 1.5rem auto 0; }
 .exchange-campus-stories { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem var(--exchange-gap); }
 .exchange-campus-stories > div { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
 .exchange-campus-stories figure { width: 100%; max-width: 22rem; }
@@ -86,11 +85,38 @@
   .exchange-teacher { max-width: 18rem; justify-self: start; }
   .exchange-campus-stories > div { display: block; grid-row: auto; }
   .exchange-campus-stories figure { margin-top: 1.5rem; max-width: 18rem; }
-  .exchange-company-photos { gap: .75rem; }
   .exchange-page figcaption { font-size: .78rem; }
   .exchange-closing-notes { margin-top: 2rem; }
   .exchange-footer { font-size: .75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html:has(.exchange-page) { scroll-behavior: auto; }
+}
+
+/* Original coursework sits with its course, while photos retain their proportions. */
+.exchange-presentation-work { grid-column: 1 / -1; }
+.exchange-presentation-work > p { max-width: 46rem; font-size: 1rem; line-height: 1.95; }
+.exchange-artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.exchange-artifact-pair figure > a, .exchange-tableau > a { display: block; border-radius: 12px; }
+.exchange-work-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; min-height: 44px; color: var(--mist); font-size: .95rem; line-height: 1.6; }
+.exchange-work-link small { display: block; color: var(--exchange-muted); font-size: .78rem; margin-top: .3rem; }
+.exchange-work-link svg { flex-shrink: 0; }
+.exchange-work-link:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.exchange-course-files { margin-top: 1rem; }
+.exchange-course-files .exchange-work-link { border-bottom: 1px solid var(--exchange-rule); }
+.exchange-presentation-work .exchange-artifact-context { margin-top: 1rem; color: var(--exchange-muted); font-size: .85rem; }
+.exchange-tableau { margin-top: 1.5rem; }
+.exchange-scripting { display: grid; grid-template-columns: .6fr 1.4fr; gap: var(--exchange-gap); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-volleyball { display: grid; grid-template-columns: 1.5fr .8fr; max-width: none; gap: var(--exchange-gap); align-items: center; margin-top: 3rem; }
+.exchange-volleyball figure { max-width: 15rem; justify-self: end; }
+.exchange-career-intro { display: grid; grid-template-columns: 1.5fr .8fr; gap: var(--exchange-gap); align-items: center; }
+.exchange-career-intro > figure { max-width: 16rem; justify-self: end; }
+.exchange-daily .exchange-work-grid article { display: flex; flex-direction: column; }
+.exchange-daily-photo { margin-top: auto; padding-top: 1.5rem; }
+.exchange-daily-reflection { max-width: 44rem; margin-top: 2rem; }
+@media (max-width: 767px) {
+  .exchange-artifact-pair, .exchange-volleyball, .exchange-career-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-scripting { grid-template-columns: 1fr; gap: 0; }
+  .exchange-volleyball figure, .exchange-career-intro > figure { justify-self: start; max-width: 16rem; }
+  .exchange-company-photos { grid-template-columns: 1fr; gap: 1.5rem; }
 }

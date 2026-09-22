@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://portfolio.tsungyuan.dev/exchange" },
   openGraph: {
     title: "在 Temple 的一學期",
-    description: "課堂、擊劍、朋友，還有離開費城後的幾趟旅行。林琮原 · Fall 2025",
+    description: "課堂、擊劍、朋友，還有學期中的幾趟旅行。林琮原 · Fall 2025",
     url: "https://portfolio.tsungyuan.dev/exchange",
     locale: "zh_TW",
     type: "article",
@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     images: ["/portfolio/exchange/friends.webp"],
   },
 };
+
+function WorkLink({ href, title, detail }: { href: string; title: string; detail: string }) {
+  return <a className="exchange-work-link" href={href} target="_blank" rel="noreferrer"><span>{title}<small>{detail} · 另開分頁</small></span><ArrowUpRight size={20} aria-hidden="true" /></a>;
+}
 
 const chapters = [
   ["speaking", "英文課堂"],
@@ -48,7 +52,7 @@ export default function ExchangePage() {
           <div className="exchange-hero-copy">
             <h1 id="exchange-title">在 Temple<br />的一學期</h1>
             <p className="exchange-meta" lang="en">Temple University · Philadelphia<br />Fall 2025 / Exchange semester</p>
-            <p className="exchange-lead">簡報課第一天，我下課後跑去問老師，外國人是不是退選比較好。後來我留了下來。這裡記下那五次簡報，也記下擊劍社的朋友、第一次逛美國求職博覽會，和幾趟離開費城的旅行。</p>
+            <p className="exchange-lead">我想體驗美式教育，也想親自去矽谷看看。到了 Temple，生活是五門課、兩個社團，還有每週一次的英文輔導。課堂上的嘗試、一起練擊劍的朋友，以及幾趟旅行，慢慢成了這一學期的樣子。</p>
             <a className="exchange-text-link" href="#speaking">開始閱讀 <ArrowRight size={18} aria-hidden="true" /></a>
           </div>
           <figure className="exchange-hero-photo">
@@ -64,9 +68,9 @@ export default function ExchangePage() {
         <section className="exchange-chapter exchange-speaking" id="speaking" aria-labelledby="speaking-title">
           <div className="exchange-prose">
             <h2 id="speaking-title">老師說，他聽得懂。</h2>
-            <p>我擔心自己的口音會影響簡報。老師聽完，回我一句：「You have an accent, but I understand every single word you say.」所以我就硬著頭皮留下來了。</p>
+            <p>簡報課第一天，我下課後去問老師，外國人是不是退選比較好。我擔心自己的口音會影響簡報。老師聽完，回我一句：「You have an accent, but I understand every single word you say.」所以我就硬著頭皮留下來了。</p>
             <p>真正上起課來，還有另一個麻煩：班上一大半是運動傳播相關科系的同學，報告常在講球賽。我原本對球賽沒什麼興趣，人名、術語都不熟，剛開始常常不知道大家在說什麼。</p>
-            <p>自己的簡報也有得改。第一次自評，我寫下緊張時會低頭、卡住。後來學了停頓、手勢和眼神交流，卻又在六分鐘裡塞進太多內容，忙著講完，反而顧不到聽眾。第四、第五次刪掉一些內容，表現才比較自然。</p>
+            <p>自己的簡報也有得改。第一次自評，我寫下緊張時會低頭、卡住。後來發現自己在六分鐘裡塞了太多內容，忙著講完，反而顧不到聽眾。第四、第五次調整內容量後，才有餘裕練習眼神交流和語調。和同學熟了，也慢慢知道台下的人其實希望我講得好，上台就沒那麼緊張了。</p>
             <details className="exchange-note">
               <summary>看當時的簡報自評 <Plus size={18} aria-hidden="true" /></summary>
               <div>
@@ -80,40 +84,59 @@ export default function ExchangePage() {
             <img src="/portfolio/global/temple-classroom.webp" alt="林琮原與簡報課老師在 Temple 教室合照" width={1600} height={2133} loading="lazy" decoding="async" />
             <figcaption>和簡報課老師合照。課程結束後，他還寄信邀請我回課堂分享心得。</figcaption>
           </figure>
+          <div className="exchange-presentation-work">
+            <h3>Presentation for Digital Workplace</h3>
+            <p>五次簡報從自我介紹、Marvel，接著是 Data Scientist、AI 招募偏見，到最後的政策提案。我用《魔球》（Moneyball）把資料科學連到同學熟悉的運動，也練習向非技術背景的人解釋自己的專業。後續做課堂訪談時，三位同學原本都不熟悉 AI 招募偏見，卻都在意篩選是否公平，希望有人把關。</p>
+            <div className="exchange-artifact-pair">
+              <figure>
+                <a href="/portfolio/exchange/works/data-scientist-presentation.pdf" target="_blank" rel="noreferrer" aria-label="閱讀 Data Scientist 簡報節選，PDF，另開分頁"><img src="/portfolio/exchange/data-scientist-slide.webp" alt="Data Scientist 簡報以 Moneyball 介紹運動中的資料分析" width={1100} height={619} loading="lazy" decoding="async" /></a>
+                <figcaption><WorkLink href="/portfolio/exchange/works/data-scientist-presentation.pdf" title="Data Scientist" detail="第 3 次簡報 · 節選 12 頁 · PDF" /></figcaption>
+              </figure>
+              <figure>
+                <a href="/portfolio/exchange/works/ai-hiring-policy.pdf" target="_blank" rel="noreferrer" aria-label="閱讀 AI 招募政策提案，PDF，另開分頁"><img src="/portfolio/exchange/ai-hiring-slide.webp" alt="期末政策提案簡報中的履歷匿名化流程圖" width={1100} height={619} loading="lazy" decoding="async" /></a>
+                <figcaption><WorkLink href="/portfolio/exchange/works/ai-hiring-policy.pdf" title="AI 招募與匿名履歷提案" detail="第 5 次簡報 · 節選 10 頁 · PDF" /></figcaption>
+              </figure>
+            </div>
+            <p className="exchange-artifact-context">期末提案主張由政府提供免費工具，在履歷進入篩選模型前移除姓名、性別等資訊。以上保留 2025 年的課堂簡報內容，展示當時的論證與提案。</p>
+          </div>
         </section>
 
         <section className="exchange-chapter exchange-learning" id="learning" aria-labelledby="learning-title">
           <div className="exchange-chapter-heading">
             <h2 id="learning-title">寫作與資料科學</h2>
-            <p>這學期修了五門課。程式作業有原本資工系的底子可以接上，Persuasive Writing 的閱讀量就真的讓我吃不消。一直查字典，還是讀不完，每週還有 essay 要寫。</p>
+            <p>這學期修了五門課。程式作業有原本資工系的底子可以接上，persuasive writing 的閱讀量就真的讓我吃不消。一直查字典，還是讀不完，每週還有 essay 要寫。</p>
           </div>
           <div className="exchange-work-grid">
             <article>
-              <h3>寫作課裡的反覆修改</h3>
+              <h3>persuasive writing</h3>
               <p>雖然辛苦，我其實很喜歡這堂課。老師每次開頭都讓大家上台做一小段 elevator speech，也會帶二戰時期的雜誌來，甚至表演過雜耍。</p>
-              <p>學期中後開始寫研究文章，我選了醫療倫理議題，從找文獻、列題綱一路寫到草稿和修訂。同學互相做 peer review，圖書館也有專人協助找可引用的資料。以前修過的學術寫作課，在這時候派上了用場。</p>
+              <p>學期中後開始寫研究文章，我的題目是賓州是否應開放醫療輔助死亡（MAID），從找文獻、列題綱一路寫到草稿和修訂。同學互相做 peer review，圖書館也有專人協助找可引用的資料。以前修過的學術寫作課，在這時候派上了用場。</p>
               <details className="exchange-note">
                 <summary>我在 Writing Analysis 改了什麼 <Plus size={18} aria-hidden="true" /></summary>
                 <div>
-                  <p className="exchange-source">Persuasive Writing · Writing Analysis / Research Paper</p>
+                  <p className="exchange-source">persuasive writing · Writing Analysis / Research Paper</p>
                   <p>這份作業要我逐句檢查自己的文章。有些句子是沒有足夠證據的主觀推測；有些用了「這些論點」之類的指稱，卻沒交代清楚指的是哪一段。</p>
-                  <p>我也整理了冗句和過於口語的用法，重新檢查引用與 APA／MLA 格式。比起只修單字，這些地方得回頭看整段的意思。</p>
+                  <p>我也整理了冗句和過於口語的用法。期末回顧時，我寫下自己開始會站在讀者的角度想：句子太長、代名詞指得不清楚，或少交代了一小段背景，都可能讓讀者跟不上。</p>
                 </div>
               </details>
+              <div className="exchange-course-files">
+                <WorkLink href="/portfolio/exchange/works/persuasive-writing-research-paper.pdf" title="期末研究文章：醫療輔助死亡" detail="2025 年課堂文章 · 英文 · 7 頁 PDF" />
+                <WorkLink href="/portfolio/exchange/works/writing-analysis.pdf" title="Writing Analysis" detail="原句與我的修改分析 · 4 頁 PDF" />
+              </div>
             </article>
             <article>
-              <h3>資料課，以及怎麼向同學介紹它</h3>
-              <p>Scripting for Data 每週都有 Python 作業，練習用 Pandas、NumPy、Matplotlib 做探索性資料分析，也接觸 API。期末我做了美國科技業薪資分析，將學期中的操作用在同一份專案裡。</p>
-              <p>Data Science 則有很多閱讀、小組活動和 Tableau、Excel 練習。幾乎每堂都要和同學討論，大家熟了以後，最後一堂課還集資請全班吃甜甜圈。</p>
-              <details className="exchange-note">
-                <summary>從 Data Scientist 講到 AI 招募偏見 <Plus size={18} aria-hidden="true" /></summary>
-                <div>
-                  <p className="exchange-source">Presentation 3 Outline / Presentation 5 Policy Outline</p>
-                  <p>我把資料科學帶進簡報課，向不同科系的同學介紹 Data Scientist 的工作。第三次簡報用了《魔球》（Moneyball）的例子，連到班上同學熟悉的運動，也談到資料工作者需要和非技術背景的同事溝通。</p>
-                  <p>後續簡報延伸到 AI 招募中的歧視問題。最後的課堂政策提案，是由政府提供免費工具，在履歷進入篩選模型前移除姓名、性別等資訊。這是當時提出的方案，還沒有做成產品或驗證成效。</p>
-                </div>
-              </details>
+              <h3>Data science</h3>
+              <p>Data science 每週有延伸閱讀，幾乎每堂都有練習和小組討論。我用 Tableau 比較疫情資料的總數、人口與每十萬人比例，也用 Excel 檢查商品名稱、促銷代碼和價格欄位裡的錯誤。資料怎麼整理、選哪個尺度呈現，都會影響後面的解讀。</p>
+              <p>小組相處得很好，最後一堂課還一起集資請全班吃甜甜圈。這門通識課讓我學到資料科學基礎，也認識了很多不同科系的同學。</p>
+              <figure className="exchange-tableau">
+                <a href="/portfolio/exchange/works/tableau-assignment.pdf" target="_blank" rel="noreferrer" aria-label="閱讀 Tableau 作業圖表，PDF，另開分頁"><img src="/portfolio/exchange/tableau-map.webp" alt="Tableau 課堂作業：美國各郡疫情資料的地圖" width={1379} height={812} loading="lazy" decoding="async" /></a>
+                <figcaption><WorkLink href="/portfolio/exchange/works/tableau-assignment.pdf" title="Tableau 資料視覺化作業" detail="原作業圖表節選 · 7 頁 PDF" /></figcaption>
+              </figure>
             </article>
+          </div>
+          <div className="exchange-scripting exchange-prose">
+            <h3>Scripting for Data</h3>
+            <p>這是五門課中，我在技術實作上學到最多的一門。每週都有 Python 作業，練習 Pandas、NumPy、Matplotlib、探索性資料分析和 API；期末做的是美國科技業薪資分析。原本資工系的訓練，讓我在新的語言環境裡仍然能接上課程。</p>
           </div>
         </section>
 
@@ -151,13 +174,18 @@ export default function ExchangePage() {
               <p>跟一群當地同學聊天，比課堂英文難多了。他們私下用的字、內梗，還有不同地方的口音，我常常需要抓一個人幫忙「英翻英」，到後來才稍微好一點。</p>
             </div>
           </div>
-          <div className="exchange-volleyball exchange-prose">
-            <h3>排球課</h3>
-            <p>排球課也是我交朋友的地方。我本來就會打，教練示範時常找我搭配，也請我幫忙收器材。下課後，大家還會另外約球、一起去看校隊比賽。在寫不完的作業中間，這堂課剛好讓我喘口氣。</p>
+          <div className="exchange-volleyball">
+            <div className="exchange-prose">
+              <h3>排球課</h3>
+              <p>排球課也是我交朋友的地方。我本來就會打，教練示範時常找我搭配，也請我幫忙收器材。除了重新練基本動作，也學了很多英文的排球術語。下課後，大家還會另外約球、一起去看校隊比賽。在寫不完的作業中間，這堂課剛好讓我喘口氣。</p>
+            </div>
+            <figure><img src="/portfolio/exchange/volleyball-game.webp" alt="林琮原穿著逢甲上衣，在 Temple 排球比賽觀眾席留影" width={1000} height={1333} loading="lazy" decoding="async" /><figcaption>去看 Temple 校隊的排球比賽。</figcaption></figure>
           </div>
         </section>
 
         <section className="exchange-chapter exchange-career" id="career" aria-labelledby="career-title">
+          <div className="exchange-career-intro">
+          <div>
           <div className="exchange-chapter-heading">
             <h2 id="career-title">先去求職博覽會<br />看看。</h2>
             <p>我去學校的 STEM 求職博覽會，主要是想看看美國大學生怎麼找工作。和攤位上的人資聊聊，也看著朋友在現場到處加 LinkedIn。以前聽過 networking，這次終於看到同學實際怎麼做。</p>
@@ -165,16 +193,19 @@ export default function ExchangePage() {
           <div className="exchange-prose exchange-career-club">
             <p>金融交易科技社則讓我多認識了一個方向。社課聊交易，群組裡有人分享趨勢、學校資源和實習資訊。我開始接觸 Quant，才更具體地想到，資工學的東西也能用在金融市場和量化交易。</p>
           </div>
+          </div>
+          <figure><img src="/portfolio/exchange/career-fair.webp" alt="Temple 求職博覽會現場，學生與企業攤位的人員交談" width={1200} height={1600} loading="lazy" decoding="async" /><figcaption>學校的 STEM 求職博覽會。</figcaption></figure>
+          </div>
           <div className="exchange-company-visit">
             <h3>Google 與 Amazon 參訪</h3>
             <div className="exchange-visit-copy exchange-prose">
               <p>這趟也參訪了矽谷 Google 園區、西雅圖 Google 辦公室，以及 Amazon Spheres 和 Amazon Go。走進辦公室，最意外的是那些和工作桌放在一起的生活設施：小廚房、冥想室、腳踏車工作坊，甚至有跑步機升降桌。</p>
-              <p>以前想像科技業，比較容易想到技術和職稱。這次和員工聊天、看到實際的工作空間，才多了一些可以想像自己未來生活的細節。</p>
+              <p>和員工聊天時，我才知道這些設施不一定每個人都會用。除了寫程式的工作桌，公司也花很多心思安排交流、休息和生活的空間，這是實際參訪後讓我印象很深的地方。</p>
             </div>
             <div className="exchange-company-photos">
               <figure>
-                <img src="/portfolio/exchange/google-visit.webp" alt="林琮原在 Google 園區的大型標誌旁留影" width={1200} height={1600} loading="lazy" decoding="async" />
-                <figcaption>Google 園區</figcaption>
+                <img src="/portfolio/exchange/google-seattle-cafe.webp" alt="參訪西雅圖 Google 辦公室時拍下的咖啡廳與座位空間" width={873} height={655} loading="lazy" decoding="async" />
+                <figcaption>西雅圖 Google 辦公室內的咖啡廳。</figcaption>
               </figure>
               <figure>
                 <img src="/portfolio/exchange/amazon-spheres.webp" alt="西雅圖 Amazon Spheres 的玻璃球體建築" width={1600} height={1200} loading="lazy" decoding="async" />
@@ -216,13 +247,18 @@ export default function ExchangePage() {
             <article>
               <h3>每週去 SSC 聊一小時</h3>
               <p>Student Success Center 的英文輔導，多半是在聊天。輔導員也是學生，除了課業，我還會問生活和文化上的問題。有些對他們來說是常識的事，我以前根本沒機會知道。</p>
-              <p>我很喜歡遇到的老師願意給建議的方式。不懂可以問，答得不完整也可以繼續講。這種上課的感覺，讓我比較敢在還沒想得很完整時先開口。</p>
+              <figure className="exchange-daily-photo"><img src="/portfolio/exchange/ssc-tutor.webp" alt="林琮原與 Student Success Center 的輔導員合照" width={1000} height={750} loading="lazy" decoding="async" /><figcaption>和 SSC 的學生輔導員合照。</figcaption></figure>
             </article>
             <article>
               <h3>這趟有很多人幫忙</h3>
               <p>出發前可能會覺得，去國外就應該少跟台灣人混在一起。我回來後反而很想提醒下一屆：也要認識同鄉的夥伴。遇到一些生活上的麻煩，有人能幫忙真的差很多。</p>
               <p>交換要處理的事情從申請文件、推薦信、經費就開始了。到美國後，我也靠著朋友互相幫忙，才把這趟走完。照片裡有很多出去玩的時候，背後也有這些比較不會拍下來的事。</p>
+              <figure className="exchange-daily-photo"><img src="/portfolio/exchange/exchange-classmates.webp" alt="林琮原與其他同學在交換結業時一起合照" width={1200} height={900} loading="lazy" decoding="async" /><figcaption>交換結業時，和大家一起合照。</figcaption></figure>
             </article>
+          </div>
+          <div className="exchange-daily-reflection exchange-prose">
+            <p>如果要說在 Temple 最喜歡什麼，我在百字心得裡寫的是「人」。我遇到把音樂、藝術當成人生方向的同學，也看到有人換過幾次科系，繼續找自己想做的事。老師給方法和建議，讓我覺得不會因為還做不好，就被否定。</p>
+            <p>這裡的生活步調比我在台灣慢一些，讓我有時間思考、探索，也更了解自己想追求什麼。原本擔心應付不了的英文寫作和報告，慢慢變成每天都在使用語言的日常，即使犯錯也比較敢開口了。</p>
           </div>
         </section>
 
@@ -246,7 +282,7 @@ export default function ExchangePage() {
             </div>
             <div className="exchange-resources">
               <h3>延伸紀錄</h3>
-              <a href="/portfolio/exchange/exchange-sharing-selected.pdf" target="_blank" rel="noreferrer"><span>出國獎學金成果分享<small>簡報節選 4 頁 · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
+              <a href="/portfolio/exchange/works/scholarship-sharing.pdf" target="_blank" rel="noreferrer"><span>出國獎學金成果分享<small>簡報節選 11 頁 · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
               <a href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer"><span>交換證明<small>Temple University · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
               <Link href="/#projects"><span>回到我的專案</span><ArrowRight size={22} aria-hidden="true" /></Link>
             </div>

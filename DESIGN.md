@@ -130,9 +130,9 @@ The homepage exchange section remains between About and Awards. Its 82rem shell 
 
 The exchange page has a 78rem maximum shell and fluid horizontal padding from 1.5rem to 4rem. The opening portrait is capped at 22rem and the teacher portrait at 20rem. Chapter introductions sit above their related content, with a 44rem prose measure, rather than in a separate headline column. Gaps use `--exchange-gap` (1.5rem–3.5rem); chapter spacing grows from 3.5rem to 5.5rem.
 
-The fencing photograph and friends photograph/text form one paired composition, followed by a separate volleyball paragraph. Career-fair and finance-club copy precedes a clearly labeled company-visit subsection. Its photographs use 9:16 grid columns so the original 3:4 Google portrait and 4:3 Amazon landscape share one height without cropping. Each university paragraph stays with its own 22rem-wide photograph; desktop subgrid aligns the photos, while mobile keeps each paragraph and photo together in reading order. The closing pairs the scholarship-event photograph with the event account and an official source link, followed by reflective copy and resources.
+The fencing photograph and friends photograph/text form one paired composition, followed by volleyball prose and a compact game portrait. Career-fair and finance-club copy is paired with its own fair photograph, preceding a clearly labeled company-visit subsection. Google cafe and Amazon landscape photographs use equal columns and their original proportions. Each university paragraph stays with its own 22rem-wide photograph; desktop subgrid aligns the photos, while mobile keeps each paragraph and photo together in reading order. The daily section aligns its SSC and exchange-completion photos beneath their respective text. The closing pairs the scholarship-event photograph with the event account and an official source link, followed by reflective copy and resources.
 
-At 767px and below, content pairs stack. The teacher and campus portraits are capped at 18rem; the company photo pair remains together with a .75rem gap, retaining original proportions. Chapter navigation wraps to two links per row.
+At 767px and below, content pairs stack, including company photos and coursework previews. The teacher and campus portraits are capped at 18rem; career-fair and volleyball portraits at 16rem. Chapter navigation wraps to two links per row.
 
 Homepage first-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Classroom: high-resolution `iecs/3-1.jpeg`, encoded at 1600 × 2133; the approved homepage cover crop uses `object-position: center 20%` to retain faces and upper bodies. Fencing replaces the former certificate group in the lower-right frame. The reading page displays the complete original proportions of its Philadelphia portrait, instructor photo, fencing photo, friends photo, and Google, Amazon, MIT and Princeton photographs. Homepage captions remain screen-reader-only; reading-page captions are visible.
 
@@ -157,6 +157,8 @@ The topbar provides a return to the homepage exchange section. Chapter links nav
 ### Coursework disclosures
 
 Native `details` / `summary` reveals specific coursework excerpts on demand. The summary has a 56px minimum target, thin dividers above and below, and a plus icon that rotates into a close mark when open. Evidence uses a smaller reading role, an optional quotation, or short annotated paragraphs. Source labels identify the coursework. No classroom scores, invented mastery, or fabricated quotes are presented.
+
+Original PDF links sit with the relevant course and announce format, page count, selection and new-tab behavior. Two equal presentation previews sit below the presentation story. The writing and Data science columns contain writing PDFs and the Tableau preview respectively; Scripting for Data has its own row below. Preview images use automatic height. The sharing PDF has 11 selected pages. All original work remains dated to 2025, without implying present-day policy or validated deployment.
 
 ### Photographs and film
 
