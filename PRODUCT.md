@@ -33,3 +33,5 @@ The user supplied a Temple University exchange reflection and authorized adding 
 The user rejected long exchange stories and the dim classroom group photograph. Keep this section photo-led with a short introduction. Current photos are iecs/1-3.jpeg (Temple entrance) and iecs/0.jpg (exchange students with certificates). Preserve all people horizontally in the group photo. The user clarified that admissions and job-application relevance should guide photo selection; the certificate group photo is more relevant here than recreational alternatives.
 
 The user explicitly rejected all three takeaway blocks and classroom score claims. Do not restore them or replace them with achievement slogans. Keep the section limited to the heading, exchange context, photographs, and exchange certificate.
+
+The user explicitly forbids distorting photographs. For the campus photo, use the newly supplied Desktop/IMG_3806.jpeg with its original proportions and composition. No CSS rotation, skew, affine matrix, or perspective correction. Desktop/IMG_4135.JPG is another supplied first-day-of-school photo, not a replacement for the requested group photo unless requested.

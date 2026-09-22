@@ -1088,7 +1088,7 @@ function GlobalSection() {
           <div className="global-photos">
             <figure className="global-photo global-photo--campus">
               <div className="global-photo-frame">
-                <img src="/portfolio/global/temple-campus.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1050} height={1400} loading="lazy" decoding="async" />
+                <img src="/portfolio/global/temple-campus-original.webp" alt="Tsung-Yuan beneath the Temple University entrance sign" width={1200} height={1600} loading="lazy" decoding="async" />
               </div>
               <figcaption>Temple University</figcaption>
             </figure>

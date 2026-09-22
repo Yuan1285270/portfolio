@@ -1770,10 +1770,6 @@ button:focus-visible {
   border-radius: 12px;
 }
 
-.global-photo--campus .global-photo-frame {
-  aspect-ratio: 1;
-}
-
 .global-photo--group .global-photo-frame {
   aspect-ratio: 2;
 }
@@ -1786,9 +1782,7 @@ button:focus-visible {
 }
 
 .global-photo--campus img {
-  /* Rectify the gate's beam and right post independently; rotation alone
-     cannot correct the camera's upward-looking perspective. */
-  transform: translateY(-4.5%) matrix(1, -0.0182, -0.1387, 1, 0, 0) scale(1.16);
+  height: auto;
 }
 
 .global-photo figcaption {
