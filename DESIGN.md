@@ -158,7 +158,9 @@ The topbar provides a return to the homepage exchange section. Chapter links nav
 
 Native `details` / `summary` reveals specific coursework excerpts on demand. The summary has a 56px minimum target, thin dividers above and below, and a plus icon that rotates into a close mark when open. Evidence uses a smaller reading role, an optional quotation, or short annotated paragraphs. Source labels identify the coursework. No classroom scores, invented mastery, or fabricated quotes are presented.
 
-Original PDF links sit with the relevant course and announce format, page count, selection and new-tab behavior. Two equal presentation previews sit below the presentation story. The writing and Data science columns contain writing PDFs and the Tableau preview respectively; Scripting for Data has its own row below. Preview images use automatic height. The sharing PDF has 11 selected pages. All original work remains dated to 2025, without implying present-day policy or validated deployment.
+Original PDF links sit with the relevant course and announce format, page count, selection and new-tab behavior. Two equal presentation previews sit below the presentation story. Writing and Data science each have a successive row: prose on the left and that course's PDF links or Tableau preview on the right. Scripting for Data has its own prose block below. Preview images use automatic height. The sharing PDF has 11 selected pages. All original work remains dated to 2025, without implying present-day policy or validated deployment.
+
+Long story rows share `--exchange-story-columns` (1.35:1) and the 1.5–3rem gap. Teacher, career-fair and volleyball portraits are top-aligned at the start of the media track, capped at 20rem. SSC and exchange-completion stories each pair their text and photo in a row; never force photo alignment by inserting blank space below shorter copy. These rows stack below 960px. Company and presentation photo pairs share the page edges and common gap, stacking below 768px. This supersedes the former parallel course columns and bottom-aligned daily photo composition.
 
 ### Photographs and film
 

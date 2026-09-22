@@ -1,7 +1,8 @@
 .exchange-page {
   --exchange-muted: #aebbc7;
   --exchange-rule: #38424a;
-  --exchange-gap: clamp(1.5rem, 4vw, 3.5rem);
+  --exchange-gap: clamp(1.5rem, 4vw, 3rem);
+  --exchange-story-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   max-width: 78rem;
   margin: 0 auto;
   padding: 0 clamp(1.5rem, 4vw, 4rem);
@@ -32,13 +33,14 @@
 .exchange-chapter { padding-top: clamp(3.5rem, 6vw, 5.5rem); scroll-margin-top: 1.5rem; }
 .exchange-page h2 { font-size: clamp(1.8rem, 2.7vw, 2.4rem); line-height: 1.4; font-weight: 500; letter-spacing: -.025em; margin-bottom: 1.5rem; text-wrap: balance; }
 .exchange-page h3 { font-size: 1.2rem; line-height: 1.65; font-weight: 500; margin-bottom: 1rem; }
-.exchange-prose p, .exchange-work-grid p, .exchange-chapter-heading > p { font-size: 1rem; line-height: 1.95; }
-.exchange-prose > p + p, .exchange-work-grid article > p + p { margin-top: 1rem; }
-.exchange-speaking { display: grid; grid-template-columns: 1.5fr .8fr; gap: var(--exchange-gap); align-items: center; }
-.exchange-teacher { max-width: 20rem; justify-self: end; width: 100%; }
+.exchange-prose p, .exchange-chapter-heading > p { font-size: 1rem; line-height: 1.95; }
+.exchange-prose > p + p { margin-top: 1rem; }
+.exchange-speaking { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: start; }
+.exchange-teacher { max-width: 20rem; justify-self: start; width: 100%; }
 .exchange-chapter-heading { max-width: 44rem; margin-bottom: 2rem; }
-.exchange-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
-.exchange-work-grid article { padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); min-width: 0; }
+.exchange-courses, .exchange-daily-stories { display: grid; gap: 2.5rem; }
+.exchange-course-row, .exchange-daily-stories article { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: start; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-course-row > *, .exchange-daily-stories article > * { min-width: 0; }
 .exchange-note { margin-top: 1.5rem; border-top: 1px solid var(--exchange-rule); border-bottom: 1px solid var(--exchange-rule); }
 .exchange-note summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 56px; padding: .8rem 0; font-size: .92rem; }
 .exchange-note summary::-webkit-details-marker { display: none; }
@@ -59,7 +61,7 @@
 .exchange-company-visit { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
 .exchange-visit-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); }
 .exchange-visit-copy > p + p { margin-top: 0; }
-.exchange-company-photos { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 1.5rem; max-width: 58rem; margin: 1.5rem auto 0; }
+.exchange-company-photos { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: var(--exchange-gap); margin-top: 1.5rem; }
 .exchange-campus-stories { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem var(--exchange-gap); }
 .exchange-campus-stories > div { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
 .exchange-campus-stories figure { width: 100%; max-width: 22rem; }
@@ -81,7 +83,7 @@
   .exchange-hero-photo { max-width: 22rem; justify-self: start; }
   .exchange-contents { gap: .25rem 0; }
   .exchange-contents a { flex-basis: 50%; font-size: .85rem; }
-  .exchange-speaking, .exchange-work-grid, .exchange-teamwork, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-teamwork, .exchange-club-grid, .exchange-visit-copy, .exchange-campus-stories, .exchange-sharing-story, .exchange-closing-notes { grid-template-columns: 1fr; gap: 2rem; }
   .exchange-teacher { max-width: 18rem; justify-self: start; }
   .exchange-campus-stories > div { display: block; grid-row: auto; }
   .exchange-campus-stories figure { margin-top: 1.5rem; max-width: 18rem; }
@@ -96,27 +98,32 @@
 /* Original coursework sits with its course, while photos retain their proportions. */
 .exchange-presentation-work { grid-column: 1 / -1; }
 .exchange-presentation-work > p { max-width: 46rem; font-size: 1rem; line-height: 1.95; }
-.exchange-artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.exchange-artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); margin-top: 1.5rem; }
 .exchange-artifact-pair figure > a, .exchange-tableau > a { display: block; border-radius: 12px; }
 .exchange-work-link { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; min-height: 44px; color: var(--mist); font-size: .95rem; line-height: 1.6; }
 .exchange-work-link small { display: block; color: var(--exchange-muted); font-size: .78rem; margin-top: .3rem; }
 .exchange-work-link svg { flex-shrink: 0; }
 .exchange-work-link:hover span { text-decoration: underline; text-underline-offset: 4px; }
-.exchange-course-files { margin-top: 1rem; }
+.exchange-course-files { min-width: 0; }
 .exchange-course-files .exchange-work-link { border-bottom: 1px solid var(--exchange-rule); }
 .exchange-presentation-work .exchange-artifact-context { margin-top: 1rem; color: var(--exchange-muted); font-size: .85rem; }
-.exchange-tableau { margin-top: 1.5rem; }
-.exchange-scripting { display: grid; grid-template-columns: .6fr 1.4fr; gap: var(--exchange-gap); margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
-.exchange-volleyball { display: grid; grid-template-columns: 1.5fr .8fr; max-width: none; gap: var(--exchange-gap); align-items: center; margin-top: 3rem; }
-.exchange-volleyball figure { max-width: 15rem; justify-self: end; }
-.exchange-career-intro { display: grid; grid-template-columns: 1.5fr .8fr; gap: var(--exchange-gap); align-items: center; }
-.exchange-career-intro > figure { max-width: 16rem; justify-self: end; }
-.exchange-daily .exchange-work-grid article { display: flex; flex-direction: column; }
-.exchange-daily-photo { margin-top: auto; padding-top: 1.5rem; }
+.exchange-tableau { min-width: 0; }
+.exchange-scripting { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-scripting p { max-width: 44rem; }
+.exchange-volleyball { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: start; margin-top: 3rem; }
+.exchange-volleyball figure { width: 100%; max-width: 20rem; justify-self: start; }
+.exchange-career-intro { display: grid; grid-template-columns: var(--exchange-story-columns); gap: var(--exchange-gap); align-items: start; }
+.exchange-career-intro > figure { width: 100%; max-width: 20rem; justify-self: start; }
+.exchange-daily-photo { width: 100%; }
 .exchange-daily-reflection { max-width: 44rem; margin-top: 2rem; }
 @media (max-width: 767px) {
   .exchange-artifact-pair, .exchange-volleyball, .exchange-career-intro { grid-template-columns: 1fr; gap: 2rem; }
-  .exchange-scripting { grid-template-columns: 1fr; gap: 0; }
   .exchange-volleyball figure, .exchange-career-intro > figure { justify-self: start; max-width: 16rem; }
   .exchange-company-photos { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .exchange-speaking, .exchange-course-row, .exchange-daily-stories article, .exchange-career-intro, .exchange-volleyball { grid-template-columns: 1fr; gap: 1.5rem; }
+  .exchange-speaking > .exchange-prose, .exchange-course-row > .exchange-prose, .exchange-daily-stories .exchange-prose { max-width: 44rem; }
+  .exchange-course-files, .exchange-tableau, .exchange-daily-photo { max-width: 32rem; }
 }

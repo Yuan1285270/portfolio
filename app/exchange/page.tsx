@@ -106,8 +106,9 @@ export default function ExchangePage() {
             <h2 id="learning-title">寫作與資料科學</h2>
             <p>這學期修了五門課。程式作業有原本資工系的底子可以接上，persuasive writing 的閱讀量就真的讓我吃不消。一直查字典，還是讀不完，每週還有 essay 要寫。</p>
           </div>
-          <div className="exchange-work-grid">
-            <article>
+          <div className="exchange-courses">
+            <article className="exchange-course-row">
+              <div className="exchange-prose">
               <h3>persuasive writing</h3>
               <p>雖然辛苦，我其實很喜歡這堂課。老師每次開頭都讓大家上台做一小段 elevator speech，也會帶二戰時期的雜誌來，甚至表演過雜耍。</p>
               <p>學期中後開始寫研究文章，我的題目是賓州是否應開放醫療輔助死亡（MAID），從找文獻、列題綱一路寫到草稿和修訂。同學互相做 peer review，圖書館也有專人協助找可引用的資料。以前修過的學術寫作課，在這時候派上了用場。</p>
@@ -119,15 +120,18 @@ export default function ExchangePage() {
                   <p>我也整理了冗句和過於口語的用法。期末回顧時，我寫下自己開始會站在讀者的角度想：句子太長、代名詞指得不清楚，或少交代了一小段背景，都可能讓讀者跟不上。</p>
                 </div>
               </details>
+              </div>
               <div className="exchange-course-files">
                 <WorkLink href="/portfolio/exchange/works/persuasive-writing-research-paper.pdf" title="期末研究文章：醫療輔助死亡" detail="2025 年課堂文章 · 英文 · 7 頁 PDF" />
                 <WorkLink href="/portfolio/exchange/works/writing-analysis.pdf" title="Writing Analysis" detail="原句與我的修改分析 · 4 頁 PDF" />
               </div>
             </article>
-            <article>
+            <article className="exchange-course-row">
+              <div className="exchange-prose">
               <h3>Data science</h3>
               <p>Data science 每週有延伸閱讀，幾乎每堂都有練習和小組討論。我用 Tableau 比較疫情資料的總數、人口與每十萬人比例，也用 Excel 檢查商品名稱、促銷代碼和價格欄位裡的錯誤。資料怎麼整理、選哪個尺度呈現，都會影響後面的解讀。</p>
               <p>小組相處得很好，最後一堂課還一起集資請全班吃甜甜圈。這門通識課讓我學到資料科學基礎，也認識了很多不同科系的同學。</p>
+              </div>
               <figure className="exchange-tableau">
                 <a href="/portfolio/exchange/works/tableau-assignment.pdf" target="_blank" rel="noreferrer" aria-label="閱讀 Tableau 作業圖表，PDF，另開分頁"><img src="/portfolio/exchange/tableau-map.webp" alt="Tableau 課堂作業：美國各郡疫情資料的地圖" width={1379} height={812} loading="lazy" decoding="async" /></a>
                 <figcaption><WorkLink href="/portfolio/exchange/works/tableau-assignment.pdf" title="Tableau 資料視覺化作業" detail="原作業圖表節選 · 7 頁 PDF" /></figcaption>
@@ -243,16 +247,20 @@ export default function ExchangePage() {
             <h2 id="daily-title">費城的日常，<br />也有很多第一次。</h2>
             <p>冬天的 Center City 有 Christmas Village、聖誕樹和溜冰場。我也在這裡看了人生第一場 NFL、MLB 和 NBA。雖然簡報課的球賽話題曾經讓我很頭痛，現場的大螢幕和重低音，還是很容易讓人跟著興奮起來。</p>
           </div>
-          <div className="exchange-work-grid">
+          <div className="exchange-daily-stories">
             <article>
+              <div className="exchange-prose">
               <h3>每週去 SSC 聊一小時</h3>
               <p>Student Success Center 的英文輔導，多半是在聊天。輔導員也是學生，除了課業，我還會問生活和文化上的問題。有些對他們來說是常識的事，我以前根本沒機會知道。</p>
+              </div>
               <figure className="exchange-daily-photo"><img src="/portfolio/exchange/ssc-tutor.webp" alt="林琮原與 Student Success Center 的輔導員合照" width={1000} height={750} loading="lazy" decoding="async" /><figcaption>和 SSC 的學生輔導員合照。</figcaption></figure>
             </article>
             <article>
+              <div className="exchange-prose">
               <h3>這趟有很多人幫忙</h3>
               <p>出發前可能會覺得，去國外就應該少跟台灣人混在一起。我回來後反而很想提醒下一屆：也要認識同鄉的夥伴。遇到一些生活上的麻煩，有人能幫忙真的差很多。</p>
               <p>交換要處理的事情從申請文件、推薦信、經費就開始了。到美國後，我也靠著朋友互相幫忙，才把這趟走完。照片裡有很多出去玩的時候，背後也有這些比較不會拍下來的事。</p>
+              </div>
               <figure className="exchange-daily-photo"><img src="/portfolio/exchange/exchange-classmates.webp" alt="林琮原與其他同學在交換結業時一起合照" width={1200} height={900} loading="lazy" decoding="async" /><figcaption>交換結業時，和大家一起合照。</figcaption></figure>
             </article>
           </div>
