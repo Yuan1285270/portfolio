@@ -39,3 +39,5 @@ The user explicitly forbids distorting photographs. For the campus photo, use th
 The user subsequently replaced the entrance photograph with Desktop/IMG_4135.JPG (First Day of School strip). Display it complete at its original proportions, without geometric transforms. Keep the exchange group photo.
 
 The user requested a balanced, aligned photo composition and authorized selecting another photo. Pair the full first-day strip with a classroom presentation (iecs/3-2.png) above the existing group photo in an aligned rectangular collage. No achievement copy or image distortion.
+
+The user approved the aligned collage layout but rejected the low-resolution presentation photo. Replace only that image with the high-resolution classroom instructor portrait (iecs/3-1.jpeg), keeping the layout and other photos.

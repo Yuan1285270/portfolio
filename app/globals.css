@@ -1800,8 +1800,8 @@ button:focus-visible {
   object-fit: contain;
 }
 
-.global-photo--presentation img {
-  object-position: center 80%;
+.global-photo--classroom img {
+  object-position: center 20%;
 }
 
 .global-link {

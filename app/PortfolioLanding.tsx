@@ -1092,11 +1092,11 @@ function GlobalSection() {
               </div>
               <figcaption className="sr-only">First day at Temple</figcaption>
             </figure>
-            <figure className="global-photo global-photo--presentation">
+            <figure className="global-photo global-photo--classroom">
               <div className="global-photo-frame">
-                <img src="/portfolio/global/temple-presentation.webp" alt="Tsung-Yuan giving a classroom presentation at Temple University" width={854} height={844} loading="lazy" decoding="async" />
+                <img src="/portfolio/global/temple-classroom.webp" alt="Tsung-Yuan with his instructor in a Temple University classroom" width={1600} height={2133} loading="lazy" decoding="async" />
               </div>
-              <figcaption className="sr-only">Classroom presentation</figcaption>
+              <figcaption className="sr-only">With my instructor at Temple</figcaption>
             </figure>
             <figure className="global-photo global-photo--group">
               <div className="global-photo-frame">

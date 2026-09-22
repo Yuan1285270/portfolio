@@ -53,9 +53,9 @@ Photo-led exchange section between About and Awards, for graduate admissions and
 
 ## Layout and photographs
 
-The 82rem shell uses a `0.85fr 1.3fr` feature grid, stacking below 768px. The photos form one aligned rectangle: a full first-day strip on the left spanning two rows, with a classroom presentation and exchange group stacked on the right. Photo columns are `1fr 2.25fr`, with equal rows and consistent gaps; retain this collage on mobile.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid, stacking below 768px. The photos form one aligned rectangle: a full first-day strip on the left spanning two rows, with a classroom instructor portrait and exchange group stacked on the right. Photo columns are `1fr 2.25fr`, with equal rows and consistent gaps; retain this collage on mobile.
 
-First-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Presentation: `iecs/3-2.png`, bottom-aligned proportional cover crop that retains the presenter. Exchange group: `iecs/0.jpg`, proportional cover crop retaining every person horizontally. Never rotate, skew, stretch, or perspective-correct photographs. All frames have 12px corners. Captions are screen-reader-only to keep aligned photo edges.
+First-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Classroom: high-resolution `iecs/3-1.jpeg`, encoded at 1600 × 2133; proportional cover crop with `object-position: center 20%` retains both faces and upper bodies. Exchange group: `iecs/0.jpg`, proportional cover crop retaining every person horizontally. Never rotate, skew, stretch, or perspective-correct photographs. All frames have 12px corners. Captions are screen-reader-only to keep aligned photo edges.
 
 ## Type and interaction
 
