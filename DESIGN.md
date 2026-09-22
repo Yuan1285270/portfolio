@@ -53,7 +53,7 @@ A compact photographic interlude between About and Awards, within the incumbent 
 
 ## Layout and content
 
-The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, two original portrait photographs on the right. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. The Temple entrance (iecs/1-3.jpeg) is bottom-cropped into a square frame, with a -1.2deg CSS rotation and 1.04 scale to level the red beam. The exchange group (iecs/0.jpg) uses a 2:1 bottom-aligned crop to remove excess ceiling while retaining the entire horizontal group. Captions identify the campus and exchange classmates. The original class and fencing photographs are no longer displayed.
+The 82rem shell uses a `0.85fr 1.3fr` feature grid: heading and introduction on the left, with two photographs on the right. The photo grid uses `0.85fr 1.2fr`, aligned at the bottom. The Temple entrance (iecs/1-3.jpeg) is bottom-cropped into a square frame, with a clockwise 1.2deg CSS rotation and 1.04 scale, corrected following user feedback on the direction. The exchange group (iecs/0.jpg) uses a 2:1 bottom-aligned crop to remove excess ceiling while retaining the entire horizontal group. Captions identify the campus and exchange classmates. The original class and fencing photographs are no longer displayed.
 
 Three short takeaways below the feature describe OwlHacks teamwork, English presentations, and the salary-analysis project. A single top rule groups them; no cards or long paragraphs. Both existing certificate links remain accessible.
 

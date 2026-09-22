@@ -1786,7 +1786,7 @@ button:focus-visible {
 }
 
 .global-photo--campus img {
-  transform: rotate(-1.2deg) scale(1.04);
+  transform: rotate(1.2deg) scale(1.04);
 }
 
 .global-photo figcaption {
