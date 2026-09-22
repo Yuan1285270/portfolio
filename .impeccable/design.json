@@ -79,7 +79,7 @@
       "name": "Exchange chapter navigation",
       "kind": "nav",
       "description": "A wrapping row of chapter anchors becomes two columns on mobile.",
-      "html": "<nav class=\"ds-exchange-nav\" lang=\"zh-Hant\" aria-label=\"心得章節\"><a href=\"#speaking\">把想法說清楚</a><a href=\"#learning\">讓判斷有依據</a><a href=\"#teamwork\">在差異中合作</a><a href=\"#living\">走進日常生活</a></nav>",
+      "html": "<nav class=\"ds-exchange-nav\" lang=\"zh-Hant\" aria-label=\"心得章節\"><a href=\"#speaking\">英文課堂</a><a href=\"#learning\">課堂作品</a><a href=\"#teamwork\">OwlHacks</a><a href=\"#living\">擊劍與朋友</a><a href=\"#career\">科技業與職涯</a><a href=\"#campuses\">大學與旅途</a><a href=\"#daily\">費城生活</a></nav>",
       "css": ".ds-exchange-nav{display:flex;flex-wrap:wrap;gap:.25rem 2.5rem;padding:1rem 0;border-top:1px solid #38424a;border-bottom:1px solid #38424a;background:var(--ink);color:var(--mist);font-family:var(--font-kanit),\"PingFang TC\",\"Microsoft JhengHei\",sans-serif;}.ds-exchange-nav a{display:flex;align-items:center;min-height:44px;font-size:.95rem;color:inherit;text-decoration:none}.ds-exchange-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-exchange-nav a:focus-visible{outline:2px solid var(--mist);outline-offset:6px;}@media(max-width:767px){.ds-exchange-nav{gap:.25rem 0}.ds-exchange-nav a{flex-basis:50%;font-size:.85rem}}"
     },
     {

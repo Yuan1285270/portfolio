@@ -49,16 +49,16 @@
 .exchange-note p + p { margin-top: 1rem; }
 .exchange-note .exchange-source { color: var(--exchange-muted); font-size: .78rem; margin-bottom: 1rem; }
 .exchange-note blockquote { font-size: 1.16rem; font-weight: 300; line-height: 1.6; margin-bottom: 1rem; }
-.exchange-note ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
-.exchange-note table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; font-size: .85rem; }
-.exchange-note caption { text-align: left; margin-bottom: .6rem; }
-.exchange-note td, .exchange-note th { text-align: left; border-bottom: 1px solid #38424a; padding: .65rem .6rem .65rem 0; font-weight: 400; }
-.exchange-note th { color: var(--exchange-muted); }
 .exchange-teamwork { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
 .exchange-film video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; background: #17191b; }
 .exchange-prose .exchange-outcome { color: var(--exchange-muted); font-size: .92rem; }
 .exchange-fencing { max-width: 62rem; margin: 0 auto; }
 .exchange-life-notes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; margin-top: 3rem; }
+.exchange-career-story { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
+.exchange-career-detail { margin-top: 2rem; }
+.exchange-campus-photos { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 3rem); max-width: 58rem; margin: 0 auto; }
+.exchange-campus-reflection { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); margin-top: 2.5rem; }
+.exchange-campus-reflection > p + p { margin-top: 0; }
 .exchange-closing { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2.5rem, 8vw, 8rem); padding: clamp(4rem, 8vw, 8rem) 0; margin-top: clamp(4rem, 8vw, 8rem); border-top: 1px solid #38424a; }
 .exchange-resources { align-self: center; }
 .exchange-resources a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid #38424a; font-size: 1.1rem; }
@@ -74,9 +74,8 @@
   .exchange-hero-photo { max-width: none; }
   .exchange-contents { gap: .25rem 0; }
   .exchange-contents a { flex-basis: 50%; font-size: .85rem; }
-  .exchange-speaking, .exchange-chapter-heading, .exchange-work-grid, .exchange-teamwork, .exchange-life-notes, .exchange-closing { grid-template-columns: 1fr; gap: 2rem; }
+  .exchange-speaking, .exchange-chapter-heading, .exchange-work-grid, .exchange-teamwork, .exchange-life-notes, .exchange-career-story, .exchange-campus-reflection, .exchange-closing { grid-template-columns: 1fr; gap: 2rem; }
   .exchange-teacher { max-width: none; }
-  .exchange-hero h1 br:nth-of-type(2) { display: none; }
   .exchange-chapter-heading { margin-bottom: 2rem; }
   .exchange-life-notes { margin-top: 2rem; }
   .exchange-footer { font-size: .75rem; }

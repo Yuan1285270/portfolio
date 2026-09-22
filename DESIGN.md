@@ -120,7 +120,7 @@ The exchange-video token is an intentional local addition for the native video's
 
 The homepage retains solid uppercase Kanit 900 for its two-line heading, with the incumbent display, title, body, intro, caption, and label tokens unchanged. The reading page uses Kanit for Latin text and the explicit PingFang TC / Microsoft JhengHei fallback stack for Traditional Chinese, with body weight 400.
 
-Exchange display and headline roles use lighter weights and taller leading to keep Chinese headings clear. Body paragraphs use the exchange-body role; the introduction uses exchange-lead. The narrower speaking column is capped at 35rem and the lead at 29rem. Captions and resource metadata use the existing caption step with 1.6 leading for captions; mobile chapter links, tables, and desktop footer use the existing label size.
+Exchange display and headline roles use lighter weights and taller leading to keep Chinese headings clear. Body paragraphs use the exchange-body role; the introduction uses exchange-lead. The narrower speaking column is capped at 35rem and the lead at 29rem. Captions and resource metadata use the existing caption step with 1.6 leading for captions; mobile chapter links and desktop footer use the existing label size.
 
 The additional exchange type roles are deliberate additions, including navigation, topbar, evidence disclosures, quotations, source labels, resource titles, and the mobile footer. They document the reading surface's real hierarchy rather than changing the homepage ramp. Mobile topbar text uses the caption size; mobile display has its own fluid range. Source labels are ancillary to readable body evidence.
 
@@ -128,9 +128,9 @@ The additional exchange type roles are deliberate additions, including navigatio
 
 The homepage exchange section remains between About and Awards. Its 82rem shell uses a `0.85fr 1.3fr` feature grid, stacking below 768px. Photos form one aligned rectangle: a full first-day strip at left spanning two rows, with a classroom instructor portrait above fencing at right. Photo columns remain `1fr 2.25fr`, with equal rows and consistent gaps; retain this collage on mobile. The only current homepage changes are the bottom-right fencing image and its `/exchange` link.
 
-The exchange page has a 90rem maximum shell and fluid horizontal padding from 1.5rem to 5rem. Desktop uses paired copy/media compositions, two-column coursework, and a wide fencing figure capped at 62rem. Chapter spacing grows from 4.5rem to 8rem. At 767px and below, content pairs stack into a single column, the portrait uses the available width, and chapter navigation becomes two links per row. Reading photos use full width and automatic height.
+The exchange page has a 90rem maximum shell and fluid horizontal padding from 1.5rem to 5rem. Desktop uses paired copy/media compositions, two-column coursework, and a wide fencing figure capped at 62rem. Chapter spacing grows from 4.5rem to 8rem. Career content pairs a Google portrait with copy and a landscape Amazon photograph. MIT and Princeton form a paired portrait gallery capped at 58rem. Below that gallery, two reflective paragraphs share a desktop row. At 767px and below, copy/media pairs stack into a single column; the campus photographs remain paired with a 1rem minimum gap, the portrait uses the available width, and chapter navigation becomes two links per row. Reading photos use full width and automatic height.
 
-Homepage first-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Classroom: high-resolution `iecs/3-1.jpeg`, encoded at 1600 × 2133; the approved homepage cover crop uses `object-position: center 20%` to retain faces and upper bodies. Fencing replaces the former certificate group in the lower-right frame. The reading page displays the complete original proportions of its Philadelphia portrait, instructor photo, fencing photo, and friends photo. Homepage captions remain screen-reader-only; reading-page captions are visible.
+Homepage first-day strip: user-supplied `/Users/yuan/Desktop/IMG_4135.JPG`, proportional WebP encoding, complete original 1:3 composition. Classroom: high-resolution `iecs/3-1.jpeg`, encoded at 1600 × 2133; the approved homepage cover crop uses `object-position: center 20%` to retain faces and upper bodies. Fencing replaces the former certificate group in the lower-right frame. The reading page displays the complete original proportions of its Philadelphia portrait, instructor photo, fencing photo, friends photo, and Google, Amazon, MIT and Princeton photographs. Homepage captions remain screen-reader-only; reading-page captions are visible.
 
 ## Elevation & Depth
 
@@ -148,11 +148,11 @@ The underlined “Explore my exchange” link now opens `/exchange` in a new tab
 
 ### Reading navigation and links
 
-The topbar provides a return to the homepage exchange section. Chapter links navigate to four anchored sections. The reading surface uses 44px minimum targets for text and navigation links and a 2px mist focus outline with 6px offset. Hover communicates interactivity through white text or underlining. A skip link becomes visible on keyboard focus. The footer returns to the title.
+The topbar provides a return to the homepage exchange section. Chapter links navigate to seven topics named directly: English classes, coursework, OwlHacks, fencing and friends, career exploration, campus visits, and Philadelphia life. The reading surface uses 44px minimum targets for text and navigation links and a 2px mist focus outline with 6px offset. Hover communicates interactivity through white text or underlining. A skip link becomes visible on keyboard focus. The footer returns to the title.
 
 ### Coursework disclosures
 
-Native `details` / `summary` reveals specific coursework excerpts on demand. The summary has a 56px minimum target, thin dividers above and below, and a plus icon that rotates into a close mark when open. Evidence uses a smaller reading role, an optional quotation, lists, or a semantic two-column table. Source labels identify the coursework. No classroom scores, invented mastery, or fabricated quotes are presented.
+Native `details` / `summary` reveals specific coursework excerpts on demand. The summary has a 56px minimum target, thin dividers above and below, and a plus icon that rotates into a close mark when open. Evidence uses a smaller reading role, an optional quotation, or short annotated paragraphs. Source labels identify the coursework. No classroom scores, invented mastery, or fabricated quotes are presented.
 
 ### Photographs and film
 
@@ -175,3 +175,7 @@ Ruled resource links pair a readable title with muted metadata and an arrow. The
 - Don't rotate, skew, stretch, or perspective-correct photographs.
 - Don't restyle unrelated portfolio sections or promote route-specific reading choices into global defaults.
 - Don't expose administrative documents or grade records in public downloads.
+
+## Author voice
+
+The exchange narrative follows WRITING_STYLE.md, extracted from the supplied reports and sharing notes with de-ai-flavor. Direct chapter labels replace generic skill claims. Concrete first-person scenes carry the narrative; optional disclosures contain the presentation self-assessments, writing revisions and classroom AI hiring proposal. Personal observations about education costs remain questions, not unsupported population claims. No class scores, fictional achievements or company-employment claims appear.
