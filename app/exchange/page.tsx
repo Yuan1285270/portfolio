@@ -158,17 +158,8 @@ export default function ExchangePage() {
               <h3>persuasive writing</h3>
               <p>學期中後開始寫研究文章，我的題目是賓州是否應開放醫療輔助死亡（MAID），從找文獻、列題綱一路寫到草稿和修訂。同學互相做 peer review，圖書館也有專人協助找可引用的資料。以前修過的學術寫作課，在這時候派上了用場。</p>
               <p>雖然辛苦，我其實很喜歡這堂課。老師每次開頭都讓大家上台做一小段 elevator speech，也會帶二戰時期的雜誌來，甚至表演過雜耍。</p>
-              <details className="exchange-note">
-                <summary>我在 Writing Analysis 改了什麼 <Plus size={18} aria-hidden="true" /></summary>
-                <div>
-                  <p className="exchange-source">persuasive writing · Writing Analysis / Research Paper</p>
-                  <p>這份作業要我逐句檢查自己的文章。有些句子是沒有足夠證據的主觀推測；有些用了「這些論點」之類的指稱，卻沒交代清楚指的是哪一段。</p>
-                  <p>我也整理了冗句和過於口語的用法。期末回顧時，我寫下自己開始會站在讀者的角度想：句子太長、代名詞指得不清楚，或少交代了一小段背景，都可能讓讀者跟不上。</p>
-                </div>
-              </details>
               <div className="exchange-course-files">
                 <WorkLink href="/portfolio/exchange/works/persuasive-writing-research-paper.pdf" title="期末研究文章：醫療輔助死亡" detail="2025 年課堂文章 · 英文 · 7 頁 PDF" />
-                <WorkLink href="/portfolio/exchange/works/writing-analysis.pdf" title="Writing Analysis" detail="原句與我的修改分析 · 4 頁 PDF" />
               </div>
               </div>
               <figure className="exchange-teacher exchange-writing-teacher">
