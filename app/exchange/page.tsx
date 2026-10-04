@@ -350,6 +350,7 @@ export default function ExchangePage() {
             </div>
             <div className="exchange-resources">
               <h3>延伸紀錄</h3>
+              <a href="https://www.iecs.fcu.edu.tw/news/逢甲資工到天普大學：在國際環境中看見更多可能/" target="_blank" rel="noreferrer"><span>逢甲資工到天普大學：在國際環境中看見更多可能<small>逢甲大學資訊工程學系 · 系網刊登心得 · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
               <a href="/portfolio/exchange/works/scholarship-sharing.pdf" target="_blank" rel="noreferrer"><span>出國獎學金成果分享<small>簡報節選 11 頁 · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
               <a href="/certificates/temple-exchange-fall-2025.pdf" target="_blank" rel="noreferrer"><span>交換證明<small>Temple University · PDF · 另開分頁</small></span><ArrowUpRight size={22} aria-hidden="true" /></a>
               <Link href="/#projects"><span>回到我的專案</span><ArrowRight size={22} aria-hidden="true" /></Link>
