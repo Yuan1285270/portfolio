@@ -99,7 +99,16 @@ export default function ExchangePage() {
             <h1 id="exchange-title">在 Temple<br />的一學期</h1>
             <p className="exchange-meta" lang="en">Temple University · Philadelphia<br />Fall 2025 / Exchange semester</p>
             <p className="exchange-lead">我想體驗美式教育，也想親自去矽谷看看。到了 Temple，生活是五門課、兩個社團，還有每週一次的英文輔導。課堂上的嘗試、一起練擊劍的朋友，以及幾趟旅行，慢慢成了這一學期的樣子。</p>
-            <a className="exchange-text-link" href="#speaking">開始閱讀 <ArrowRight size={18} aria-hidden="true" /></a>
+            <div className="exchange-reading-actions">
+              <a className="exchange-text-link" href="#speaking">開始閱讀 <ArrowRight size={18} aria-hidden="true" /></a>
+              <a className="exchange-text-link" href="#coursework">課堂簡報與作業 <ArrowRight size={18} aria-hidden="true" /></a>
+            </div>
+            <nav className="exchange-featured-links" aria-label="相關文章與文件">
+              <WorkLink href="https://www.iecs.fcu.edu.tw/news/逢甲資工到天普大學：在國際環境中看見更多可能/" title="系網刊登心得" detail="逢甲資工" />
+              <WorkLink href="https://ntctie.eduweb.tw/Ch/Module/News/Detail.php?ID=189" title="返國分享記者會" detail="南投縣教育處活動紀錄" />
+              <WorkLink href="/portfolio/exchange/works/scholarship-sharing.pdf" title="獎學金成果分享" detail="簡報節選 · PDF" />
+              <WorkLink href="/certificates/temple-exchange-fall-2025.pdf" title="交換證明" detail="Temple University · PDF" />
+            </nav>
           </div>
           <figure className="exchange-hero-photo">
             <img src="/portfolio/global/philadelphia-life.webp" alt="林琮原在費城市政廳前跳躍留影" width={1050} height={1400} fetchPriority="high" />
@@ -130,7 +139,7 @@ export default function ExchangePage() {
             <img src="/portfolio/global/temple-classroom.webp" alt="林琮原與簡報課老師在 Temple 教室合照" width={1600} height={2133} loading="lazy" decoding="async" />
             <figcaption>和簡報課老師合照。課程結束後，他還寄信邀請我回課堂分享心得。</figcaption>
           </figure>
-          <div className="exchange-presentation-work">
+          <div className="exchange-presentation-work" id="coursework">
             <h3>Presentation for Digital Workplace</h3>
             <p>五次簡報從自我介紹、Marvel，接著是 Data Scientist、AI 招募偏見，到最後的政策提案。我用《魔球》（Moneyball）把資料科學連到同學熟悉的運動，也練習向非技術背景的人解釋自己的專業。後續做課堂訪談時，三位同學原本都不熟悉 AI 招募偏見，卻都在意篩選是否公平，希望有人把關。</p>
             <div className="exchange-artifact-pair">

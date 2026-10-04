@@ -170,6 +170,8 @@ Photos remain actual evidence with descriptive alternatives. The OwlHacks film u
 
 ### Closing resources
 
+The opening introduction also exposes four compact resource links in a two-column ruled grid: the department-published reflection, education department event record, selected scholarship slides, and exchange certificate. They precede the hero photograph in mobile reading order. A separate opening text link jumps to the presentation/coursework sequence. Keep the closing links as convenient references after reading; preserve their original targets and new-tab metadata.
+
 Ruled resource links pair a readable title with muted metadata and an arrow. The selected scholarship-sharing PDF and exchange certificate explicitly announce PDF format and a new tab. The closing separately links to the education department’s 2026-01-21 event record and shows the existing event photograph. The project return link stays in the current tab. Public downloads contain reviewed excerpts; administrative and grade records stay local.
 
 ## Do's and Don'ts

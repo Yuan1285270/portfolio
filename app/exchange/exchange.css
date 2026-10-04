@@ -23,6 +23,12 @@
 .exchange-meta { margin-top: 1.5rem; font-size: .95rem; line-height: 1.6; color: var(--exchange-muted); }
 .exchange-lead { max-width: 29rem; margin: 1.5rem 0 1rem; font-size: 1.05rem; line-height: 1.9; }
 .exchange-text-link { font-size: .95rem; text-decoration: underline; text-underline-offset: 6px; }
+.exchange-reading-actions { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.exchange-featured-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.5rem; margin-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-featured-links .exchange-work-link { align-items: start; border-bottom: 1px solid var(--exchange-rule); }
+.exchange-featured-links .exchange-work-link > span { min-width: 0; }
+.exchange-featured-links .exchange-work-link svg { margin-top: .25rem; }
+.exchange-featured-links .exchange-work-link small { font-size: .8rem; }
 .exchange-page figure { min-width: 0; }
 .exchange-page figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .exchange-page figcaption { margin-top: .75rem; font-size: .8rem; line-height: 1.6; color: var(--exchange-muted); }
@@ -111,7 +117,7 @@
 }
 
 /* Original coursework sits with its course, while photos retain their proportions. */
-.exchange-presentation-work { grid-column: 1 / -1; }
+.exchange-presentation-work { grid-column: 1 / -1; scroll-margin-top: 1.5rem; }
 .exchange-presentation-work > p { max-width: 46rem; font-size: 1rem; line-height: 1.95; }
 .exchange-artifact-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--exchange-gap); margin-top: 1.5rem; }
 .exchange-artifact-pair figure > a, .exchange-tableau > a, .exchange-scripting-chart > a { display: block; border-radius: 12px; }
