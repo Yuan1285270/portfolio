@@ -24,11 +24,11 @@
 .exchange-lead { max-width: 29rem; margin: 1.5rem 0 1rem; font-size: 1.05rem; line-height: 1.9; }
 .exchange-text-link { font-size: .95rem; text-decoration: underline; text-underline-offset: 6px; }
 .exchange-reading-actions { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
-.exchange-featured-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.5rem; margin-top: 1.5rem; border-top: 1px solid var(--exchange-rule); }
-.exchange-featured-links .exchange-work-link { align-items: start; border-bottom: 1px solid var(--exchange-rule); }
-.exchange-featured-links .exchange-work-link > span { min-width: 0; }
-.exchange-featured-links .exchange-work-link svg { margin-top: .25rem; }
-.exchange-featured-links .exchange-work-link small { font-size: .8rem; }
+.exchange-official-records { margin: 2rem 0; padding-top: 1.25rem; border-top: 1px solid var(--exchange-rule); }
+.exchange-page .exchange-official-records h2 { margin-bottom: .5rem; font-size: 1.1rem; font-weight: 500; letter-spacing: 0; }
+.exchange-official-records .exchange-work-link { padding: 1rem 0; border-bottom: 1px solid var(--exchange-rule); font-size: 1.1rem; font-weight: 500; }
+.exchange-official-records .exchange-work-link > span { min-width: 0; }
+.exchange-official-records .exchange-work-link small { font-size: .85rem; font-weight: 400; }
 .exchange-page figure { min-width: 0; }
 .exchange-page figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .exchange-page figcaption { margin-top: .75rem; font-size: .8rem; line-height: 1.6; color: var(--exchange-muted); }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
+import Script from "next/script";
 import { Kanit } from "next/font/google";
 import "./globals.css";
 
@@ -10,16 +10,10 @@ const kanit = Kanit({
   display: "swap",
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
+const analyticsWebsiteId = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID ?? "ab02fb71-9235-490f-8034-51024cfc7c2f";
+
+export function generateMetadata(): Metadata {
+  const metadataBase = new URL("https://portfolio.tsungyuan.dev");
   const title = "Tsung-Yuan Lin — CS Student + AI & Full-Stack Developer";
   const description =
     "Portfolio of Tsung-Yuan Lin, a CS student and AI & Full-Stack Developer with experience in AI systems, software development, research, and hackathons.";
@@ -62,6 +56,17 @@ export default function RootLayout({
       <body className={`${kanit.variable} antialiased`}>
         <div hidden dangerouslySetInnerHTML={{ __html: "<!-- EXCHANGE SURFACE CONTRACT. THESIS: A personal field journal grounded in coursework and real photographs, without classroom-score promotion. OWN-WORLD: The existing ink-and-mist Kanit portfolio; quiet Chinese reading typography and unaltered personal photos. STORY: Follow the actual semester through English classes, coursework, OwlHacks, fencing and friends, career exploration, campus visits and Philadelphia life; inspect coursework excerpts and sharing materials. FIRST VIEWPORT: Left-aligned Chinese title and brief context beside a complete Philadelphia portrait; reading link below. FORM: Annotated field notes, grounded structural candidate 5, seed cfb92fc1. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->" }} />
         {children}
+        {analyticsWebsiteId && (
+          <Script
+            src="https://analytics.tsungyuan.dev/script.js"
+            data-website-id={analyticsWebsiteId}
+            data-domains="portfolio.tsungyuan.dev"
+            data-exclude-search="true"
+            data-exclude-hash="true"
+            data-do-not-track="true"
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

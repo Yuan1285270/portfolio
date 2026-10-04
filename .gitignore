@@ -41,3 +41,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+/output/portfolio-analytics-access.md
+/.deploy/
+/DEPLOYMENT.md
+/deploy/
