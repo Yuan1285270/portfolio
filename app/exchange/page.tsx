@@ -27,6 +27,16 @@ function WorkLink({ href, title, detail }: { href: string; title: string; detail
   return <a className="exchange-work-link" href={href} target="_blank" rel="noreferrer"><span>{title}<small>{detail} · 另開分頁</small></span><ArrowUpRight size={20} aria-hidden="true" /></a>;
 }
 
+function OfficialRecordLink({ href, title, detail, image, width, height }: { href: string; title: string; detail: string; image: string; width: number; height: number }) {
+  return (
+    <a className="exchange-work-link exchange-official-link" href={href} target="_blank" rel="noreferrer" aria-label={`${title}：${detail}（另開分頁）`}>
+      <img src={`/portfolio/exchange/${image}`} alt="" width={width} height={height} decoding="async" />
+      <span>{title}<small>{detail}</small></span>
+      <ArrowUpRight size={20} aria-hidden="true" />
+    </a>
+  );
+}
+
 type VisitPhoto = { file: string; width: number; height: number; caption: string; alt: string };
 
 function VisitPhotoRow({ photos }: { photos: VisitPhoto[] }) {
@@ -100,8 +110,8 @@ export default function ExchangePage() {
             <p className="exchange-meta" lang="en">Temple University · Philadelphia<br />Fall 2025 / Exchange semester</p>
             <nav className="exchange-official-records" aria-labelledby="official-records-title">
               <h2 id="official-records-title">學校刊登與官方紀錄</h2>
-              <WorkLink href="https://www.iecs.fcu.edu.tw/news/逢甲資工到天普大學：在國際環境中看見更多可能/" title="逢甲大學資訊工程學系" detail="刊登我的 Temple 交換心得" />
-              <WorkLink href="https://ntctie.eduweb.tw/Ch/Module/News/Detail.php?ID=189" title="南投縣政府教育處" detail="收錄我的獎學金成果分享" />
+              <OfficialRecordLink href="https://www.iecs.fcu.edu.tw/news/逢甲資工到天普大學：在國際環境中看見更多可能/" title="逢甲大學資訊工程學系" detail="刊登我的 Temple 交換心得" image="official-fcu.webp" width={560} height={197} />
+              <OfficialRecordLink href="https://ntctie.eduweb.tw/Ch/Module/News/Detail.php?ID=189" title="南投縣政府教育處" detail="收錄我的獎學金成果分享" image="official-nantou.webp" width={560} height={420} />
             </nav>
             <p className="exchange-lead">我想體驗美式教育，也想親自去矽谷看看。到了 Temple，生活是五門課、兩個社團，還有每週一次的英文輔導。課堂上的嘗試、一起練擊劍的朋友，以及幾趟旅行，慢慢成了這一學期的樣子。</p>
             <div className="exchange-reading-actions">

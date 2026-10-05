@@ -42,6 +42,7 @@ next-env.d.ts
 /outputs/
 /work/
 /output/portfolio-analytics-access.md
+/output/portfolio-analytics-access.txt
 /.deploy/
 /DEPLOYMENT.md
 /deploy/

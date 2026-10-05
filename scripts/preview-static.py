@@ -8,8 +8,9 @@ from pathlib import Path
 class StaticHandler(SimpleHTTPRequestHandler):
     def translate_path(self, path):
         translated = super().translate_path(path)
-        if not Path(translated).exists() and Path(translated + '.html').is_file():
-            return translated + '.html'
+        html = Path(translated.rstrip('/') + '.html')
+        if not Path(translated).is_file() and html.is_file():
+            return str(html)
         return translated
 
 parser = argparse.ArgumentParser()
